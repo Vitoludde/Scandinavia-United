@@ -52,11 +52,11 @@ focus_tree = {
 		#}
 		
 		completion_reward = {
-			add_political_power = 150
+			add_political_power = 50
 		}
 		
 		complete_tooltip = {
-			add_political_power = 150
+			add_political_power = 50
 		}
 
 		ai_will_do = {
@@ -159,7 +159,7 @@ focus_tree = {
 		#}
 		
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 150
 			add_popularity = {
 				ideology = democratic
 				popularity = 0.25
@@ -228,7 +228,7 @@ focus_tree = {
 		}
 		
 		complete_tooltip = {
-			add_political_power = 150
+			add_political_power = 50
 			add_offsite_building = {
 				type = industrial_complex
 				level = 1
@@ -283,7 +283,7 @@ focus_tree = {
 		}
 		
 		complete_tooltip = {
-			add_political_power = 150
+			add_political_power = 50
 			add_popularity = {
 				ideology = democratic
 				popularity = 0.1
@@ -343,7 +343,7 @@ focus_tree = {
 		}
 		
 		complete_tooltip = {
-			add_political_power = 150
+			add_political_power = 50
 			add_popularity = {
 				ideology = communism
 				popularity = 0.1
@@ -403,7 +403,7 @@ focus_tree = {
 		}
 		
 		complete_tooltip = {
-			add_political_power = 150
+			add_political_power = 50
 			add_stability = -0.1
 			add_offsite_building = {
 				type = industrial_complex
@@ -794,10 +794,6 @@ focus_tree = {
 				receiver = GER
 				state = 666
 			}
-			
-			remove_ideas = {
-				riksdag_non_supportive_army
-			}
 			add_political_power = 200
 			add_stability = 0.25
 			add_war_support = 0.5
@@ -807,9 +803,6 @@ focus_tree = {
 			give_resource_rights = {
 				receiver = GER
 				state = 666
-			}
-			remove_ideas = {
-				riksdag_non_supportive_army
 			}
 			add_political_power = 200
 			add_stability = 0.25
