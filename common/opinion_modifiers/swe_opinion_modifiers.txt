@@ -1,0 +1,17 @@
+opinion_modifiers = {
+	pro_allied_censoring_axis = {
+		value = -100
+	}
+
+	pro_allied_censoring_allied = {
+		value = 100
+	}
+
+	pro_axis_censoring_axis = {
+		value = 100
+	}
+
+	pro_axis_censoring_allied = {
+		value = -100
+	}
+}

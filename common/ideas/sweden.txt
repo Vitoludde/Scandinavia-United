@@ -14,11 +14,60 @@ ideas = {
 			modifier = {
 				drift_defence_factor = 0.1
 				enemy_justify_war_goal_time = 0.1
+			}
+		}
+
+		en_svensk_tiger_2 = {
+			
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_spy_intel
+			
+			modifier = {
+				drift_defence_factor = 0.1
+				enemy_justify_war_goal_time = 0.1
+				operative_slot = 1
 				civilian_intel_to_others = -25
 				airforce_intel_to_others = -25
 				navy_intel_to_others = -25
 				army_intel_to_others = -25
-				new_operative_slot_bonus = 1
+			}
+		}
+
+		c_bureau = {
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_spy_intel
+
+			modifier = {
+				operative_slot = 1
+				subversive_activites_upkeep = -0.5
+				drift_defence_factor = 0.2
+			}
+		}
+
+		samlings_regeringen = {
+			allowed =  {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_constitutional_guarantees
+
+			modifier = {
+				drift_defence_factor = 0.5
+				enemy_justify_war_goal_time = 0.2
+				
 			}
 		}
 
@@ -34,6 +83,34 @@ ideas = {
 			
 			modifier = {
 				stability_factor = -0.1
+			}
+		}
+
+		neutrality_idea_2_sweden = {
+			picture = neutrality_idea
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+
+			cancel = {
+				has_war = yes
+			}
+			
+			removal_cost = -1
+	
+			modifier = {
+				#generate_wargoal_tension = 1.00
+				join_faction_tension = 1.00
+				#lend_lease_tension = 0.50
+				send_volunteers_tension = -1
+				guarantee_tension = 1.0
+				ai_badass_factor = 0.01    # Will receive 1% of the threat from others
+				ai_get_ally_desire_factor = -100
 			}
 		}
 
