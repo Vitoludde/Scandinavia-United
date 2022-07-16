@@ -16,7 +16,7 @@
   SWE_intel_agency:0 "C-Byrån"
   SWE_kalix_linjen:0 "The Kalix Line"
   SWE_samlings_regeringen:0 "Samlings Regeringen"
-  SWE_pro_allied_censoring:0 "Ani-Allied Censorship"
+  SWE_pro_allied_censoring:0 "Anti-Allied Censorship"
   SWE_pro_axis_censoring:0 "Anti-Axis Censorship"
   SWE_neutrality_allies_axis:0 "Balance the powers"
   SWE_permittent_trafik:0 "Permittent Trafik"
@@ -29,4 +29,4 @@
   samlings_regeringen:0 "Samlings Regeringen"
   riksdag_non_supportive_army:0 "Riksdag non supportive of military reforms"
   neutrality_idea_2_sweden:0 "Neutrality Idea"
-  
+

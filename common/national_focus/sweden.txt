@@ -836,7 +836,9 @@ focus_tree = {
 		}
 
 		available = {
-			
+			ENG = {
+				has_government = democratic
+			}
 		}
 
 		bypass = {
@@ -916,7 +918,9 @@ focus_tree = {
 		}
 
 		available = {
-			
+			GER = {
+				has_government = fascism
+			}
 		}
 
 		bypass = {
@@ -1053,7 +1057,17 @@ focus_tree = {
 		}
 
 		available = {
-			
+			OR = {
+				NOR = {
+					has_war_with = GER
+				}
+				DEN = {
+					has_war_with = GER
+				}
+			}
+			GER = {
+				has_government = fascism
+			}
 		}
 
 		bypass = {
@@ -1149,7 +1163,17 @@ focus_tree = {
 		}
 
 		available = {
-			
+			OR = {
+				NOR = {
+					has_war_with = GER
+				}
+				DEN = {
+					has_war_with = GER
+				}
+			}
+			ENG = {
+				has_government = democratic
+			}
 		}
 
 		bypass = {
@@ -1217,6 +1241,75 @@ focus_tree = {
 			}
 			add_ideas = {
 				partial_economic_mobilisation
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = SWE_join_the_war_On_allies_side
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 10
+
+		#allow_branch = {
+		#	<trigger>
+		#}
+
+		x = 13
+		y = 9
+
+		prerequisite = {
+			focus = SWE_support_scandinavian_brothers
+		}
+
+		available = {
+			NOR = {
+				has_war_with = GER
+			}
+			ENG = {
+				has_government = democratic
+			}
+		}
+
+		bypass = {
+			
+		}
+
+		search_filters = {  }
+
+		#select_effect = {
+		#	<command>
+		#}
+		
+		completion_reward = {
+			ENG = {
+				add_to_faction = SWE
+			}
+			add_to_war = { 
+				targeted_alliance = NOR 
+				enemy = GER
+				hostility_reason = asked_to_join
+			}
+			add_ideas = {
+				war_economy
+			}
+		}
+		
+		complete_tooltip = {
+			ENG = {
+				add_to_faction = SWE
+			}
+			add_to_war = { 
+				targeted_alliance = NOR 
+				enemy = GER
+				hostility_reason = asked_to_join
+			}
+			add_ideas = {
+				war_economy
 			}
 		}
 
