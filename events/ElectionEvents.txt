@@ -1,0 +1,29 @@
+add_namespace = election
+# Swedens
+country_event = {
+	id = election.100
+	title = election.100.t
+	desc = election.100.d
+	picture = GFX_report_event_airplane_factory
+
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	trigger = {
+		tag = SWE
+		NOT = {date < 1936.2.1}
+		has_government = democratic
+	}
+
+	option = {
+		ai_chance = {
+			base = 1
+		}
+
+		name = election.100.a
+		remove_ideas = riksdag_non_supportive_army
+	}
+}

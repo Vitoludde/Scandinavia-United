@@ -1,0 +1,445 @@
+focus_tree = {
+	id = sweden_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = SWE
+		}
+	}
+
+	default = yes
+
+	reset_on_civilwar = no
+
+	continuous_focus_position = { x = 50 y = 1000 }
+
+	focus = {
+		id = SWE_enforce_neutrality
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 10
+
+		#allow_branch = {
+		#	<trigger>
+		#}
+
+		x = 1
+		y = 0
+
+		#prerequisite = {
+		#	focus = <focus id>
+		#}
+
+		mutually_exclusive = {
+			focus = SWE_abandon_neutrality
+		}
+
+		#available = {
+		#	<trigger>
+		#}
+
+		#bypass = {
+		#	<trigger>
+		#}
+
+		search_filters = {  }
+
+		#select_effect = {
+		#	<command>
+		#}
+		
+		completion_reward = {
+			add_political_power = 150
+		}
+		
+		complete_tooltip = {
+			add_political_power = 150
+		}
+
+		ai_will_do = {
+			factor = 1
+			#modifier = {
+			#	<modifier>
+			#}
+		}
+	}
+
+	focus = {
+		id = SWE_abandon_neutrality
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 10
+
+		#allow_branch = {
+		#	<trigger>
+		#}
+
+		x = 10
+		y = 0
+
+		#prerequisite = {
+		#	focus = <focus id>
+		#}
+
+		mutually_exclusive = {
+			focus = SWE_enforce_neutrality
+		}
+
+		#available = {
+		#	<trigger>
+		#}
+
+		#bypass = {
+		#	<trigger>
+		#}
+
+		search_filters = {  }
+
+		#select_effect = {
+		#	<command>
+		#}
+		
+		completion_reward = {
+			add_political_power = 150
+		}
+		
+		complete_tooltip = {
+			add_political_power = 150
+		}
+
+		ai_will_do = {
+			factor = 0
+			#modifier = {
+			#	<modifier>
+			#}
+		}
+	}
+
+	# democratic Path
+
+	focus = {
+		id = SWE_hansson
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 10
+
+		#allow_branch = {
+		#	<trigger>
+		#}
+
+		x = 5
+		y = 1
+
+		prerequisite = {
+			focus = SWE_enforce_neutrality
+			focus = SWE_abandon_neutrality
+		}
+
+		#available = {
+		#	<trigger>
+		#}
+
+		#bypass = {
+		#	<trigger>
+		#}
+
+		search_filters = {  }
+
+		#select_effect = {
+		#	<command>
+		#}
+		
+		completion_reward = {
+			add_political_power = 50
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.25
+			}
+		}
+		
+		complete_tooltip = {
+			add_political_power = 150
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.25
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = SWE_saltsjoavtalen
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 10
+
+		#allow_branch = {
+		#	<trigger>
+		#}
+
+		x = 4
+		y = 2
+
+		prerequisite = {
+			focus = SWE_hansson
+		}
+
+		available = {
+			date > 1938.12.1
+		}
+
+		#bypass = {
+		#	<trigger>
+		#}
+
+		search_filters = {  }
+
+		#select_effect = {
+		#	<command>
+		#}
+		
+		completion_reward = {
+			add_political_power = 50
+			add_offsite_building = {
+				type = industrial_complex
+				level = 1
+			}
+		}
+		
+		complete_tooltip = {
+			add_political_power = 150
+			add_offsite_building = {
+				type = industrial_complex
+				level = 1
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = SWE_socialreforms
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 10
+
+		#allow_branch = {
+		#	<trigger>
+		#}
+
+		x = 6
+		y = 2
+
+		prerequisite = {
+			focus = SWE_hansson
+		}
+
+		#available = {
+		#	date > 1938.12.1
+		#}
+
+		#bypass = {
+		#	<trigger>
+		#}
+
+		search_filters = {  }
+
+		#select_effect = {
+		#	<command>
+		#}
+		
+		completion_reward = {
+			add_political_power = 50
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.1
+			}
+			add_stability = 0.2
+		}
+		
+		complete_tooltip = {
+			add_political_power = 150
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.1
+			}
+			add_stability = 0.2
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = SWE_folkhemmet
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 10
+
+		#allow_branch = {
+		#	<trigger>
+		#}
+
+		x = 4
+		y = 3
+
+		prerequisite = {
+			focus = SWE_saltsjoavtalen
+		}
+
+		#available = {
+		#	date > 1938.12.1
+		#}
+
+		#bypass = {
+		#	<trigger>
+		#}
+
+		search_filters = {  }
+
+		#select_effect = {
+		#	<command>
+		#}
+		
+		completion_reward = {
+			add_political_power = 50
+			add_popularity = {
+				ideology = communism
+				popularity = 0.1
+			}
+			add_stability = 0.2
+			add_offsite_building = {
+				type = industrial_complex
+				level = 1
+			}
+		}
+		
+		complete_tooltip = {
+			add_political_power = 150
+			add_popularity = {
+				ideology = communism
+				popularity = 0.1
+			}
+			add_stability = 0.2
+			add_offsite_building = {
+				type = industrial_complex
+				level = 1
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = SWE_ransonering
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 10
+
+		#allow_branch = {
+		#	<trigger>
+		#}
+
+		x = 6
+		y = 3
+
+		prerequisite = {
+			focus = SWE_socialreforms
+		}
+
+		#available = {
+		#	date > 1938.12.1
+		#}
+
+		#bypass = {
+		#	<trigger>
+		#}
+
+		search_filters = {  }
+
+		#select_effect = {
+		#	<command>
+		#}
+		
+		completion_reward = {
+			add_political_power = 50
+			add_stability = -0.1
+			add_offsite_building = {
+				type = industrial_complex
+				level = 1
+			}
+		}
+		
+		complete_tooltip = {
+			add_political_power = 150
+			add_stability = -0.1
+			add_offsite_building = {
+				type = industrial_complex
+				level = 1
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = SWE_Finska_vinter_kriget
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 10
+
+		#allow_branch = {
+		#	<trigger>
+		#}
+
+		x = 5
+		y = 4
+
+		prerequisite = {
+			focus = SWE_ransonering
+			focus = SWE_folkhemmet
+		}
+
+		available = {
+			FIN = {
+				tag = FIN
+				has_war_with = SOV
+			}
+		}
+
+		#bypass = {
+		#	<trigger>
+		#}
+
+		search_filters = {  }
+
+		#select_effect = {
+		#	<command>
+		#}
+		
+		completion_reward = {
+			add_stability = -0.25
+		}
+		
+		complete_tooltip = {
+			add_stability = -0.25
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
