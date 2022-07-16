@@ -1,17 +1,33 @@
 opinion_modifiers = {
 	pro_allied_censoring_axis = {
-		value = -100
+		value = 50
 	}
 
 	pro_allied_censoring_allied = {
-		value = 100
+		value = -50
 	}
 
 	pro_axis_censoring_axis = {
-		value = 100
+		value = -50
 	}
 
 	pro_axis_censoring_allied = {
-		value = -100
+		value = 50
+	}
+
+	support_scandinavian_brothers_allies = {
+		value = 50
+	}
+
+	support_scandinavian_brothers_axis = {
+		value = -50
+	}
+
+	permittent_trafik_axis = {
+		value = 50
+	}
+
+	permittent_trafik_allies = {
+		value = -50
 	}
 }

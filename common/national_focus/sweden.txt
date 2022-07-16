@@ -165,6 +165,9 @@ focus_tree = {
 				popularity = 0.25
 			}
 			add_war_support = -0.1
+			remove_ideas = {
+				riksdag_non_supportive_army
+			}
 		}
 		
 		complete_tooltip = {
@@ -174,6 +177,9 @@ focus_tree = {
 				popularity = 0.25
 			}
 			add_war_support = -0.1
+			remove_ideas = {
+				riksdag_non_supportive_army
+			}
 		}
 
 		ai_will_do = {
@@ -536,7 +542,7 @@ focus_tree = {
 		}
 
 		bypass = {
-			
+			NOT = { has_idea = neutrality_idea}
 		}
 
 		search_filters = {  }
@@ -546,9 +552,12 @@ focus_tree = {
 		#}
 		
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = neutrality_idea
-				add_idea = neutrality_idea_2_sweden
+			IF = {
+				limit = { has_idea = neutrality_idea}
+				swap_ideas = {
+					remove_idea = neutrality_idea
+					add_idea = neutrality_idea_2_sweden
+				}
 			}
 			set_rule = {
 				can_send_volunteers = yes
@@ -557,9 +566,12 @@ focus_tree = {
 		}
 		
 		complete_tooltip = {
-			swap_ideas = {
-				remove_idea = neutrality_idea
-				add_idea = neutrality_idea_2_sweden
+			IF = {
+				limit = { has_idea = neutrality_idea}
+				swap_ideas = {
+					remove_idea = neutrality_idea
+					add_idea = neutrality_idea_2_sweden
+				}
 			}
 			set_rule = {
 				can_send_volunteers = yes
@@ -819,7 +831,7 @@ focus_tree = {
 		#	<trigger>
 		#}
 
-		x = 14
+		x = 16
 		y = 8
 
 		mutually_exclusive = {
@@ -845,36 +857,40 @@ focus_tree = {
 		#}
 		
 		completion_reward = {
-			add_opinion_modifier = {
-				target = any country {
-					is_major = yes
-					is_in_faction_with = ENG
-				}
+			reverse_add_opinion_modifier = {
+				target = ENG
 				modifier = pro_allied_censoring_allied
 			}
-			add_opinion_modifier = {
-				target = any country {
-					is_major = yes
-					is_in_faction_with = ENG
-				}
+			reverse_add_opinion_modifier = {
+				target = FRA
+				modifier = pro_allied_censoring_allied
+			}
+			reverse_add_opinion_modifier = {
+				target = GER
+				modifier = pro_allied_censoring_axis
+			}
+			reverse_add_opinion_modifier = {
+				target = ITA
 				modifier = pro_allied_censoring_axis
 			}
 			add_stability = -0.1
 		}
 		
 		complete_tooltip = {
-			add_opinion_modifier = {
-				target = any country {
-					is_major = yes
-					is_in_faction_with = ENG
-				}
+			reverse_add_opinion_modifier = {
+				target = ENG
 				modifier = pro_allied_censoring_allied
 			}
-			add_opinion_modifier = {
-				target = any country {
-					is_major = yes
-					is_in_faction_with = ENG
-				}
+			reverse_add_opinion_modifier = {
+				target = FRA
+				modifier = pro_allied_censoring_allied
+			}
+			reverse_add_opinion_modifier = {
+				target = GER
+				modifier = pro_allied_censoring_axis
+			}
+			reverse_add_opinion_modifier = {
+				target = ITA
 				modifier = pro_allied_censoring_axis
 			}
 			add_stability = -0.1
@@ -895,7 +911,7 @@ focus_tree = {
 		#	<trigger>
 		#}
 
-		x = 16
+		x = 14
 		y = 8
 
 		mutually_exclusive = {
@@ -921,39 +937,294 @@ focus_tree = {
 		#}
 		
 		completion_reward = {
-			add_opinion_modifier = {
-				target = any country {
-					is_major = yes
-					is_in_faction_with = ENG
-				}
+			reverse_add_opinion_modifier = {
+				target = ENG
 				modifier = pro_axis_censoring_allied
 			}
-			add_opinion_modifier = {
-				target = any country {
-					is_major = yes
-					is_in_faction_with = ENG
-				}
+			reverse_add_opinion_modifier = {
+				target = FRA
+				modifier = pro_axis_censoring_allied
+			}
+			reverse_add_opinion_modifier = {
+				target = GER
+				modifier = pro_axis_censoring_axis
+			}
+			reverse_add_opinion_modifier = {
+				target = ITA
 				modifier = pro_axis_censoring_axis
 			}
 			add_stability = -0.1
 		}
 		
 		complete_tooltip = {
-			add_opinion_modifier = {
-				target = any country {
-					is_major = yes
-					is_in_faction_with = ENG
-				}
-				modifier = pro_allied_censoring_allied
+			reverse_add_opinion_modifier = {
+				target = ENG
+				modifier = pro_axis_censoring_allied
 			}
-			add_opinion_modifier = {
-				target = any country {
-					is_major = yes
-					is_in_faction_with = ENG
-				}
-				modifier = pro_allied_censoring_axis
+			reverse_add_opinion_modifier = {
+				target = FRA
+				modifier = pro_axis_censoring_allied
+			}
+			reverse_add_opinion_modifier = {
+				target = GER
+				modifier = pro_axis_censoring_axis
+			}
+			reverse_add_opinion_modifier = {
+				target = ITA
+				modifier = pro_axis_censoring_axis
 			}
 			add_stability = -0.1
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = SWE_neutrality_allies_axis
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 10
+
+		#allow_branch = {
+		#	<trigger>
+		#}
+
+		x = 15
+		y = 9
+
+		mutually_exclusive = {
+			focus = SWE_support_scandinavian_brothers
+		}
+
+		mutually_exclusive = {
+			focus = SWE_permittent_trafik
+		}
+
+		prerequisite = {
+			focus = SWE_pro_allied_censoring
+			focus = SWE_pro_axis_censoring
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		search_filters = {  }
+
+		#select_effect = {
+		#	<command>
+		#}
+		
+		completion_reward = {
+			
+		}
+		
+		complete_tooltip = {
+			
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = SWE_permittent_trafik
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 10
+
+		#allow_branch = {
+		#	<trigger>
+		#}
+
+		x = 17
+		y = 9
+
+		mutually_exclusive = {
+			focus = SWE_support_scandinavian_brothers
+		}
+
+		mutually_exclusive = {
+			focus = SWE_neutrality_allies_axis
+		}
+
+		prerequisite = {
+			focus = SWE_pro_allied_censoring
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			any_country = {
+				NOT = {tag = GER}
+				is_major = yes
+				has_war_with = SWE
+			}
+		}
+
+		search_filters = {  }
+
+		#select_effect = {
+		#	<command>
+		#}
+		
+		completion_reward = {
+			give_military_access = GER
+			reverse_add_opinion_modifier = {
+				target = NOR
+				modifier = permittent_trafik_allies
+			}
+			reverse_add_opinion_modifier = {
+				target = DEN
+				modifier = permittent_trafik_allies
+			}
+			reverse_add_opinion_modifier = {
+				target = ENG
+				modifier = permittent_trafik_allies
+			}
+			reverse_add_opinion_modifier = {
+				target = FRA
+				modifier = permittent_trafik_allies
+			}
+			reverse_add_opinion_modifier = {
+				target = GER
+				modifier = permittent_trafik_axis
+			}
+		}
+		
+		complete_tooltip = {
+			give_military_access = GER
+			reverse_add_opinion_modifier = {
+				target = NOR
+				modifier = permittent_trafik_allies
+			}
+			reverse_add_opinion_modifier = {
+				target = DEN
+				modifier = permittent_trafik_allies
+			}
+			reverse_add_opinion_modifier = {
+				target = ENG
+				modifier = permittent_trafik_allies
+			}
+			reverse_add_opinion_modifier = {
+				target = FRA
+				modifier = permittent_trafik_allies
+			}
+			reverse_add_opinion_modifier = {
+				target = GER
+				modifier = permittent_trafik_axis
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = SWE_support_scandinavian_brothers
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 10
+
+		#allow_branch = {
+		#	<trigger>
+		#}
+
+		x = 13
+		y = 9
+
+		mutually_exclusive = {
+			focus = SWE_permittent_trafik
+		}
+
+		mutually_exclusive = {
+			focus = SWE_neutrality_allies_axis
+		}
+
+		prerequisite = {
+			focus = SWE_pro_axis_censoring
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			any_country = {
+				NOT = {tag = ENG}
+				is_major = yes
+				has_war_with = SWE
+			}
+		}
+
+		search_filters = {  }
+
+		#select_effect = {
+		#	<command>
+		#}
+		
+		completion_reward = {
+			GER = {
+				remove_resource_rights = 666
+			}
+			reverse_add_opinion_modifier = {
+				target = NOR
+				modifier = support_scandinavian_brothers_allies
+			}
+			reverse_add_opinion_modifier = {
+				target = DEN
+				modifier = support_scandinavian_brothers_allies
+			}
+			reverse_add_opinion_modifier = {
+				target = GER
+				modifier = support_scandinavian_brothers_axis
+			}
+			#remove_ideas = {
+			#	undisturbed_isolation
+			#	isolation 
+			#	civilian_economy 
+			#	low_economic_mobilisation 
+			#}
+			add_ideas = {
+				partial_economic_mobilisation
+			}
+		}
+		
+		complete_tooltip = {
+			GER = {
+				remove_resource_rights = 666
+			}
+			reverse_add_opinion_modifier = {
+				target = NOR
+				modifier = support_scandinavian_brothers_allies
+			}
+			reverse_add_opinion_modifier = {
+				target = DEN
+				modifier = support_scandinavian_brothers_allies
+			}
+			reverse_add_opinion_modifier = {
+				target = GER
+				modifier = support_scandinavian_brothers_axis
+			}
+			remove_ideas = {
+				undisturbed_isolation
+				isolation 
+				civilian_economy 
+				low_economic_mobilisation 
+			}
+			add_ideas = {
+				partial_economic_mobilisation
+			}
 		}
 
 		ai_will_do = {
