@@ -35,6 +35,7 @@ focus_tree = {
 
 		mutually_exclusive = {
 			focus = SWE_abandon_neutrality
+			focus = SWE_return_of_the_king
 		}
 
 		#available = {
@@ -86,6 +87,7 @@ focus_tree = {
 
 		mutually_exclusive = {
 			focus = SWE_enforce_neutrality
+			focus = SWE_return_of_the_king
 		}
 
 		#available = {
@@ -113,6 +115,78 @@ focus_tree = {
 			add_stability = -0.25
 			remove_ideas = {
 				neutrality_idea
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			#modifier = {
+			#	<modifier>
+			#}
+		}
+	}
+
+	focus = {
+		id = SWE_return_of_the_king
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 10
+
+		#allow_branch = {
+		#	<trigger>
+		#}
+
+		x = 3
+		y = 0
+
+		#prerequisite = {
+		#	focus = <focus id>
+		#}
+
+		mutually_exclusive = {
+			focus = SWE_enforce_neutrality
+			focus = SWE_abandon_neutrality
+		}
+
+		#available = {
+		#	<trigger>
+		#}
+
+		#bypass = {
+		#	<trigger>
+		#}
+
+		search_filters = {  }
+
+		#select_effect = {
+		#	<command>
+		#}
+		
+		completion_reward = {
+			remove_ideas = {
+				neutrality_idea
+			}
+			set_political_party = {
+				ideology = neutrality
+				popularity = 75
+			}
+			set_politics = {
+				ruling_party = neutrality
+				elections_allowed = no
+			}
+		}
+		
+		complete_tooltip = {
+			remove_ideas = {
+				neutrality_idea
+			}
+			set_political_party = {
+				ideology = neutrality
+				popularity = 75
+			}
+			set_politics = {
+				ruling_party = neutrality
+				elections_allowed = no
 			}
 		}
 
@@ -1260,7 +1334,7 @@ focus_tree = {
 		#}
 
 		x = 13
-		y = 9
+		y = 10
 
 		prerequisite = {
 			focus = SWE_support_scandinavian_brothers
@@ -1317,4 +1391,143 @@ focus_tree = {
 			factor = 1
 		}
 	}
+
+	focus = {
+		id = SWE_Guarentees_both
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 10
+
+		#allow_branch = {
+		#	<trigger>
+		#}
+
+		x = 15
+		y = 10
+
+		prerequisite = {
+			focus = SWE_neutrality_allies_axis
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		search_filters = {  }
+
+		#select_effect = {
+		#	<command>
+		#}
+		
+		completion_reward = {
+			ENG = {
+				give_guarantee = SWE
+			}
+			FRA = {
+				give_guarantee = SWE
+			}
+			GER = {
+				give_guarantee = SWE
+			}
+			ITA = {
+				give_guarantee = SWE
+			}
+			JAP = {
+				give_guarantee = SWE
+			}
+		}
+		
+		complete_tooltip = {
+			ENG = {
+				give_guarantee = SWE
+			}
+			FRA = {
+				give_guarantee = SWE
+			}
+			GER = {
+				give_guarantee = SWE
+			}
+			ITA = {
+				give_guarantee = SWE
+			}
+			JAP = {
+				give_guarantee = SWE
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = SWE_cave_to_germans
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 10
+
+		#allow_branch = {
+		#	<trigger>
+		#}
+
+		x = 17
+		y = 10
+
+		prerequisite = {
+			focus = SWE_permittent_trafik
+		}
+
+		available = {
+			GER = {
+				has_war_with = ENG
+			}
+		}
+
+		bypass = {
+			
+		}
+
+		search_filters = {  }
+
+		#select_effect = {
+		#	<command>
+		#}
+		
+		completion_reward = {
+			GER = {
+				add_to_faction = SWE
+			}
+			add_to_war = { 
+				targeted_alliance = GER 
+				enemy = ENG
+				hostility_reason = asked_to_join
+			}
+			add_ideas = {
+				war_economy
+			}
+		}
+		
+		complete_tooltip = {
+			GER = {
+				add_to_faction = SWE
+			}
+			add_to_war = { 
+				targeted_alliance = GER 
+				enemy = ENG
+				hostility_reason = asked_to_join
+			}
+			add_ideas = {
+				war_economy
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
 }

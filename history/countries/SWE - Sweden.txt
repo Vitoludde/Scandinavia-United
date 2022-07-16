@@ -192,6 +192,12 @@ set_popularities = {
 	fascism = 3
 }
 
+set_party_name = { 
+    ideology = neutrality 
+    long_name = "Gustaf V"
+    name = "GV"
+}
+
 1939.1.1 = {
 	set_politics = {
 		ruling_party = democratic
@@ -214,7 +220,7 @@ set_stability = 0.9
 recruit_character = SWE_per_albin_hansson
 recruit_character = SWE_sven_olov_lindholm
 recruit_character = SWE_sven_linderot
-recruit_character = SWE_axel_pehrssonbramstorp
+recruit_character = SWE_gustaf_v
 recruit_character = SWE_folke_hogberg
 recruit_character = SWE_erik_af_edholm
 recruit_character = SWE_claes_lindstrom
