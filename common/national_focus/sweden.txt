@@ -271,8 +271,10 @@ focus_tree = {
 		#	<trigger>
 		#}
 
-		x = 14
-		y = 2
+		x = -1
+		y = 1
+		relative_position_id = SWE_hansson
+
 
 		prerequisite = {
 			focus = SWE_hansson
@@ -325,8 +327,9 @@ focus_tree = {
 		#	<trigger>
 		#}
 
-		x = 16
-		y = 2
+		x = 1
+		y = 1
+		relative_position_id = SWE_hansson
 
 		prerequisite = {
 			focus = SWE_hansson
@@ -381,8 +384,9 @@ focus_tree = {
 		#	<trigger>
 		#}
 
-		x = 14
-		y = 3
+		x = 0
+		y = 1
+		relative_position_id = SWE_saltsjoavtalen
 
 		prerequisite = {
 			focus = SWE_saltsjoavtalen
@@ -445,8 +449,9 @@ focus_tree = {
 		#	<trigger>
 		#}
 
-		x = 16
-		y = 3
+		x = 0
+		y = 1
+		relative_position_id = SWE_socialreforms
 
 		prerequisite = {
 			focus = SWE_socialreforms
@@ -501,8 +506,9 @@ focus_tree = {
 		#	<trigger>
 		#}
 
-		x = 15
-		y = 4
+		x = -1
+		y = 1
+		relative_position_id = SWE_ransonering
 
 		prerequisite = {
 			focus = SWE_ransonering
@@ -557,8 +563,9 @@ focus_tree = {
 		#	<trigger>
 		#}
 
-		x = 14
-		y = 5
+		x = -1
+		y = 1
+		relative_position_id = SWE_Finska_vinter_kriget
 
 		prerequisite = {
 			focus = SWE_Finska_vinter_kriget
@@ -604,8 +611,9 @@ focus_tree = {
 		#	<trigger>
 		#}
 
-		x = 16
-		y = 5
+		x = 1
+		y = 1
+		relative_position_id = SWE_Finska_vinter_kriget
 
 		prerequisite = {
 			focus = SWE_Finska_vinter_kriget
@@ -668,8 +676,9 @@ focus_tree = {
 		#	<trigger>
 		#}
 
-		x = 14
-		y = 6
+		x = 0
+		y = 1
+		relative_position_id = SWE_en_svensk_tiger
 
 		prerequisite = {
 			focus = SWE_en_svensk_tiger
@@ -718,8 +727,9 @@ focus_tree = {
 		#	<trigger>
 		#}
 
-		x = 16
-		y = 6
+		x = 0
+		y = 1
+		relative_position_id = SWE_volunteers
 
 		prerequisite = {
 			focus = SWE_volunteers
@@ -838,8 +848,9 @@ focus_tree = {
 		#	<trigger>
 		#}
 
-		x = 15
-		y = 7
+		x = -1
+		y = 1
+		relative_position_id = SWE_kalix_linjen
 
 		prerequisite = {
 			focus = SWE_kalix_linjen
@@ -898,8 +909,9 @@ focus_tree = {
 		#	<trigger>
 		#}
 
-		x = 16
-		y = 8
+		x = 1
+		y = 1
+		relative_position_id = SWE_samlings_regeringen
 
 		mutually_exclusive = {
 			focus = SWE_pro_axis_censoring
@@ -980,8 +992,9 @@ focus_tree = {
 		#	<trigger>
 		#}
 
-		x = 14
-		y = 8
+		x = -1
+		y = 1
+		relative_position_id = SWE_samlings_regeringen
 
 		mutually_exclusive = {
 			focus = SWE_pro_allied_censoring
@@ -1062,8 +1075,9 @@ focus_tree = {
 		#	<trigger>
 		#}
 
-		x = 15
-		y = 9
+		x = -1
+		y = 1
+		relative_position_id = SWE_pro_allied_censoring
 
 		mutually_exclusive = {
 			focus = SWE_support_scandinavian_brothers
@@ -1115,8 +1129,9 @@ focus_tree = {
 		#	<trigger>
 		#}
 
-		x = 17
-		y = 9
+		x = 1
+		y = 1
+		relative_position_id = SWE_pro_allied_censoring
 
 		mutually_exclusive = {
 			focus = SWE_support_scandinavian_brothers
@@ -1221,8 +1236,9 @@ focus_tree = {
 		#	<trigger>
 		#}
 
-		x = 13
-		y = 9
+		x = -1
+		y = 1
+		relative_position_id = SWE_pro_axis_censoring
 
 		mutually_exclusive = {
 			focus = SWE_permittent_trafik
@@ -1333,8 +1349,9 @@ focus_tree = {
 		#	<trigger>
 		#}
 
-		x = 13
-		y = 10
+		x = 0
+		y = 1
+		relative_position_id = SWE_support_scandinavian_brothers
 
 		prerequisite = {
 			focus = SWE_support_scandinavian_brothers
@@ -1402,8 +1419,9 @@ focus_tree = {
 		#	<trigger>
 		#}
 
-		x = 15
-		y = 10
+		x = 0
+		y = 1
+		relative_position_id = SWE_neutrality_allies_axis
 
 		prerequisite = {
 			focus = SWE_neutrality_allies_axis
@@ -1474,8 +1492,9 @@ focus_tree = {
 		#	<trigger>
 		#}
 
-		x = 17
-		y = 10
+		x = 0
+		y = 1
+		relative_position_id = SWE_permittent_trafik
 
 		prerequisite = {
 			focus = SWE_permittent_trafik
