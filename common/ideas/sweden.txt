@@ -86,6 +86,75 @@ ideas = {
 			}
 		}
 
+		SWE_etat_est_moi = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = FRA_la_deluge
+
+			modifier = {
+				drift_defence_factor = 0.25
+				neutrality_drift = 0.1
+			}
+		}
+
+		SWE_etat_est_moi_2 = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = FRA_la_deluge
+
+			modifier = {
+				drift_defence_factor = 0.25
+				neutrality_drift = 0.1
+				stability_factor = 0.25
+			}
+		}
+
+		SWE_lessons_of_war_idea = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_army_war_college
+
+			modifier = {
+				acclimatization_cold_climate_gain_factor = 0.5
+				dig_in_speed_factor = 0.1
+				max_dig_in_factor = 0.1
+				planning_speed = 0.5
+			}
+		}
+
+		SWE_lion_from_the_north_idea = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_army_war_college
+
+			modifier = {
+				acclimatization_cold_climate_gain_factor = 0.5
+				army_core_attack_factor = 0.2
+				army_defence_factor = 0.1
+				army_morale_factor = 0.1
+				army_org_factor = 0.1
+				dig_in_speed_factor = 0.1
+				max_dig_in_factor = 0.1
+				planning_speed = 0.5
+			}
+		}
+
 		neutrality_idea_2_sweden = {
 			picture = neutrality_idea
 			
@@ -111,6 +180,46 @@ ideas = {
 				guarantee_tension = 1.0
 				ai_badass_factor = 0.01    # Will receive 1% of the threat from others
 				ai_get_ally_desire_factor = -100
+			}
+		}
+
+		monarchism_movements = {
+			allowed = {
+				always = no # Triggered via event
+			}
+
+			picture = generic_neutrality_drift_bonus
+			
+			modifier = {
+				neutrality_drift = 0.1
+				stability_factor = -0.1
+			}
+		}
+
+		monarchism_movements_swe = {
+			allowed = {
+				always = no # Triggered via event
+			}
+
+			picture = generic_neutrality_drift_bonus
+			
+			modifier = {
+				neutrality_drift = 0.1
+			}
+		}
+
+		the_swedish_empire = {
+			allowed = {
+				always = no
+			}
+
+			#picture = scaunite_sweden_flag_gfx
+
+			modifier = {
+				compliance_growth_on_our_occupied_states = 0.2
+				resistance_growth_on_our_occupied_states = -0.2
+				subjects_autonomy_gain = -0.25
+				surrender_limit = 0.25
 			}
 		}
 

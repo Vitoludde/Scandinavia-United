@@ -26,7 +26,7 @@ focus_tree = {
 		#	<trigger>
 		#}
 
-		x = 10
+		x = 15
 		y = 0
 
 		#prerequisite = {
@@ -35,7 +35,7 @@ focus_tree = {
 
 		mutually_exclusive = {
 			focus = SWE_abandon_neutrality
-			focus = SWE_return_of_the_king
+			focus = SWE_support_the_monarchists
 		}
 
 		#available = {
@@ -78,7 +78,7 @@ focus_tree = {
 		#	<trigger>
 		#}
 
-		x = 20
+		x = 25
 		y = 0
 
 		#prerequisite = {
@@ -87,7 +87,7 @@ focus_tree = {
 
 		mutually_exclusive = {
 			focus = SWE_enforce_neutrality
-			focus = SWE_return_of_the_king
+			focus = SWE_support_the_monarchists
 		}
 
 		#available = {
@@ -127,7 +127,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = SWE_return_of_the_king
+		id = SWE_support_the_monarchists
 		icon = GFX_goal_generic_improve_relations
 
 		cost = 10
@@ -136,7 +136,7 @@ focus_tree = {
 		#	<trigger>
 		#}
 
-		x = 3
+		x = 5
 		y = 0
 
 		#prerequisite = {
@@ -165,28 +165,20 @@ focus_tree = {
 		completion_reward = {
 			remove_ideas = {
 				neutrality_idea
+				en_svensk_tiger
 			}
-			set_political_party = {
-				ideology = neutrality
-				popularity = 75
-			}
-			set_politics = {
-				ruling_party = neutrality
-				elections_allowed = no
+			add_ideas = {
+				monarchism_movements_swe
 			}
 		}
 		
 		complete_tooltip = {
 			remove_ideas = {
 				neutrality_idea
+				en_svensk_tiger
 			}
-			set_political_party = {
-				ideology = neutrality
-				popularity = 75
-			}
-			set_politics = {
-				ruling_party = neutrality
-				elections_allowed = no
+			add_ideas = {
+				monarchism_movements
 			}
 		}
 
@@ -210,8 +202,12 @@ focus_tree = {
 		#	<trigger>
 		#}
 
-		x = 15
+		x = 20
 		y = 1
+
+		mutually_exclusive = {
+			focus = SWE_gustaf_v
+		}
 
 		prerequisite = {
 			focus = SWE_enforce_neutrality
@@ -1541,6 +1537,1107 @@ focus_tree = {
 			}
 			add_ideas = {
 				war_economy
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	# Monarchism
+	focus = {
+		id = SWE_gustaf_v
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 10
+
+		#allow_branch = {
+		#	<trigger>
+		#}
+
+		x = 10
+		y = 1
+
+		mutually_exclusive = {
+			focus = SWE_hansson
+		}
+
+		prerequisite = {
+			focus = SWE_support_the_monarchists
+			focus = SWE_enforce_neutrality
+		}
+
+		mutually_exclusive = {
+			
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		search_filters = {  }
+
+		#select_effect = {
+		#	<command>
+		#}
+		
+		completion_reward = {
+			hidden_effect = {
+				set_major = yes
+			}
+			set_politics = {
+				ruling_party = neutrality
+				elections_allowed = no
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.25
+			}
+		}
+		
+		complete_tooltip = {
+			hidden_effect = {
+				set_major = yes
+			}
+			set_politics = {
+				ruling_party = neutrality
+				elections_allowed = no
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.25
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = SWE_support_monarchists_in_scandinavia
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 10
+
+		#allow_branch = {
+		#	<trigger>
+		#}
+
+		x = 1
+		y = 1
+		relative_position_id = SWE_gustaf_v
+
+		prerequisite = {
+			focus = SWE_gustaf_v
+		}
+
+		mutually_exclusive = {
+			
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		search_filters = {  }
+
+		#select_effect = {
+		#	<command>
+		#}
+		
+		completion_reward = {
+			DEN = {
+				add_ideas = {monarchism_movements}
+			}
+			NOR = {
+				add_ideas = {monarchism_movements}
+			}
+			FIN = {
+				add_ideas = {monarchism_movements}
+			}
+			create_faction = "Scandinavian Union"
+			add_war_support = 0.15
+		}
+		
+		complete_tooltip = {
+			DEN = {
+				add_ideas = {monarchism_movements}
+			}
+			NOR = {
+				add_ideas = {monarchism_movements}
+			}
+			FIN = {
+				add_ideas = {monarchism_movements}
+			}
+			create_faction = "Scandinavian Union"
+			add_war_support = 0.15
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = SWE_partition_finland
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 10
+
+		#allow_branch = {
+		#	<trigger>
+		#}
+
+		x = 0
+		y = 1
+		relative_position_id = SWE_support_monarchists_in_scandinavia
+
+		prerequisite = {
+			focus = SWE_support_monarchists_in_scandinavia
+		}
+
+		mutually_exclusive = {
+			
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		search_filters = {  }
+
+		#select_effect = {
+		#	<command>
+		#}
+		
+		completion_reward = {
+			SWE = {
+				every_state = { limit = { is_controlled_by = FIN } ROOT = { add_state_core = PREV } }
+			}
+			SOV = {
+				country_event = {
+					id = nordic_events.13
+					days = 1
+				}
+			}
+		}
+		
+		complete_tooltip = {
+			SWE = {
+				every_state = { limit = { is_controlled_by = FIN } ROOT = { add_state_core = PREV } }
+			}
+			SOV = {
+				country_event = {
+					id = nordic_events.13
+					days = 1
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = SWE_invite_denmark
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 10
+
+		#allow_branch = {
+		#	<trigger>
+		#}
+
+		x = 2
+		y = 1
+		relative_position_id = SWE_support_monarchists_in_scandinavia
+
+		prerequisite = {
+			focus = SWE_support_monarchists_in_scandinavia
+		}
+
+		mutually_exclusive = {
+			
+		}
+
+		available = {
+			DEN = {
+				neutrality > 0.5
+				has_opinion = {
+				    target = SWE
+				    value > 50
+				}
+			}
+		}
+
+		bypass = {
+			
+		}
+
+		search_filters = {  }
+
+		#select_effect = {
+		#	<command>
+		#}
+		
+		completion_reward = {
+			add_to_faction = DEN
+			DEN = {
+				set_politics = {
+					ruling_party = neutrality
+					elections_allowed = no
+				}
+			}
+		}
+		
+		complete_tooltip = {
+			add_to_faction = DEN
+			DEN = {
+				set_politics = {
+					ruling_party = neutrality
+					elections_allowed = no
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = SWE_invite_norway
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 10
+
+		#allow_branch = {
+		#	<trigger>
+		#}
+
+		x = 4
+		y = 1
+		relative_position_id = SWE_support_monarchists_in_scandinavia
+
+		prerequisite = {
+			focus = SWE_support_monarchists_in_scandinavia
+		}
+
+		mutually_exclusive = {
+			
+		}
+
+		available = {
+			NOR = {
+				neutrality > 0.5
+				has_opinion = {
+				    target = SWE
+				    value > 50
+				}
+			}
+		}
+
+		bypass = {
+			
+		}
+
+		search_filters = {  }
+
+		#select_effect = {
+		#	<command>
+		#}
+		
+		completion_reward = {
+			add_to_faction = NOR
+			NOR = {
+				set_politics = {
+					ruling_party = neutrality
+					elections_allowed = no
+				}
+			}
+		}
+		
+		complete_tooltip = {
+			add_to_faction = NOR
+			NOR = {
+				set_politics = {
+					ruling_party = neutrality
+					elections_allowed = no
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = SWE_scandinavian_unity
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 10
+
+		#allow_branch = {
+		#	<trigger>
+		#}
+
+		x = 0
+		y = 1
+		relative_position_id = SWE_invite_denmark
+
+		prerequisite = {
+			focus = SWE_partition_finland
+		}
+
+		prerequisite = {
+			focus = SWE_invite_norway
+		}
+
+		prerequisite = {
+			focus = SWE_invite_denmark
+		}
+
+		mutually_exclusive = {
+			
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		search_filters = {  }
+
+		#select_effect = {
+		#	<command>
+		#}
+		
+		completion_reward = {
+			every_state = { limit = { is_controlled_by = FIN } ROOT = { add_state_core = PREV } }
+			annex_country = {
+				target = FIN
+				transfer_troops = yes
+			}
+			every_state = { limit = { is_controlled_by = DEN } ROOT = { add_state_core = PREV } }
+			annex_country = {
+				target = DEN
+				transfer_troops = yes
+			}
+			every_state = { limit = { is_controlled_by = NOR } ROOT = { add_state_core = PREV } }
+			annex_country = {
+				target = NOR
+				transfer_troops = yes
+			}
+			news_event = {
+				id = nordic_events.2
+				days = 4
+			}
+		}
+		
+		complete_tooltip = {
+			annex_country = {
+				target = FIN
+				transfer_troops = yes
+			}
+			every_state = { limit = { is_controlled_by = FIN } ROOT = { add_state_core = PREV } }
+			annex_country = {
+				target = DEN
+				transfer_troops = yes
+			}
+			every_state = { limit = { is_controlled_by = FIN } ROOT = { add_state_core = PREV } }
+			annex_country = {
+				target = NOR
+				transfer_troops = yes
+			}
+			every_state = { limit = { is_controlled_by = FIN } ROOT = { add_state_core = PREV } }
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = SWE_etat_est_moi
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 10
+
+		#allow_branch = {
+		#	<trigger>
+		#}
+
+		x = -1
+		y = 1
+		relative_position_id = SWE_gustaf_v
+
+		prerequisite = {
+			focus = SWE_gustaf_v
+		}
+
+
+		mutually_exclusive = {
+			
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		search_filters = {  }
+
+		#select_effect = {
+		#	<command>
+		#}
+		
+		completion_reward = {
+			remove_ideas = {
+				riksdag_non_supportive_army
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.1
+			}
+			add_ideas = {
+				SWE_etat_est_moi
+			}
+
+		}
+		
+		complete_tooltip = {
+			remove_ideas = {
+				riksdag_non_supportive_army
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.1
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = SWE_consolidate_power
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 10
+
+		#allow_branch = {
+		#	<trigger>
+		#}
+
+		x = 0
+		y = 1
+		relative_position_id = SWE_etat_est_moi
+
+		prerequisite = {
+			focus = SWE_etat_est_moi
+		}
+
+
+		mutually_exclusive = {
+			
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		search_filters = {  }
+
+		#select_effect = {
+		#	<command>
+		#}
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = SWE_etat_est_moi
+				add_idea = SWE_etat_est_moi_2
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.25
+			}
+			add_political_power = 200
+			add_stability = 0.1
+			add_war_support = 0.2
+		}
+		
+		complete_tooltip = {
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.25
+			}
+			add_political_power = 200
+			add_stability = 0.1
+			add_war_support = 0.2
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = SWE_lessons_of_war
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 10
+
+		#allow_branch = {
+		#	<trigger>
+		#}
+
+		x = 0
+		y = 1
+		relative_position_id = SWE_consolidate_power
+
+		prerequisite = {
+			focus = SWE_consolidate_power
+		}
+
+
+		mutually_exclusive = {
+			
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		search_filters = {  }
+
+		#select_effect = {
+		#	<command>
+		#}
+		
+		completion_reward = {
+			add_ideas = {
+				SWE_lessons_of_war_idea
+			}
+			add_war_support = 0.2
+		}
+		
+		complete_tooltip = {
+			add_ideas = {
+				SWE_lessons_of_war_idea
+			}
+			add_war_support = 0.2
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = SWE_the_swedish_empire
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 10
+
+		#allow_branch = {
+		#	<trigger>
+		#}
+
+		x = 0
+		y = 2
+		relative_position_id = SWE_partition_finland
+
+		prerequisite = {
+			focus = SWE_lessons_of_war
+		}
+
+		prerequisite = {
+			focus = SWE_scandinavian_unity
+		}
+
+
+		mutually_exclusive = {
+			
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		search_filters = {  }
+
+		#select_effect = {
+		#	<command>
+		#}
+		
+		completion_reward = {
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.25
+			}
+			add_ideas = {
+				the_swedish_empire
+			}
+		}
+		
+		complete_tooltip = {
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.25
+			}
+			add_ideas = {
+				the_swedish_empire
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = SWE_claim_baltikum
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 10
+
+		#allow_branch = {
+		#	<trigger>
+		#}
+
+		x = 0
+		y = 1
+		relative_position_id = SWE_the_swedish_empire
+
+		prerequisite = {
+			focus = SWE_the_swedish_empire
+		}
+
+		mutually_exclusive = {
+			
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		search_filters = {  }
+
+		#select_effect = {
+		#	<command>
+		#}
+		
+		completion_reward = {
+			every_state = { limit = { is_controlled_by = EST } ROOT = { add_claim_by = PREV } }
+			every_state = { limit = { is_controlled_by = LAT } ROOT = { add_claim_by = PREV } }
+			every_state = { limit = { is_controlled_by = LIT } ROOT = { add_claim_by = PREV } }
+			SWE = {
+				create_wargoal = {
+					type = annex_everything 
+					target = EST
+				}
+			}
+			SWE = {
+				create_wargoal = {
+					type = annex_everything 
+					target = LAT
+				}
+			}
+			SWE = {
+				create_wargoal = {
+					type = annex_everything 
+					target = LIT
+				}
+			}
+		}
+		
+		complete_tooltip = {
+			
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = SWE_claim_pommern
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 10
+
+		#allow_branch = {
+		#	<trigger>
+		#}
+
+		x = -2
+		y = 1
+		relative_position_id = SWE_the_swedish_empire
+
+		prerequisite = {
+			focus = SWE_the_swedish_empire
+		}
+
+		mutually_exclusive = {
+			
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		search_filters = {  }
+
+		#select_effect = {
+		#	<command>
+		#}
+		
+		completion_reward = {
+			62 = {
+				add_claim_by = SWE
+			}
+			63 = {
+				add_claim_by = SWE
+			}
+		}
+		
+		complete_tooltip = {
+			
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = SWE_the_lion_from_the_north
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 10
+
+		#allow_branch = {
+		#	<trigger>
+		#}
+
+		x = 2
+		y = 1
+		relative_position_id = SWE_the_swedish_empire
+
+		prerequisite = {
+			focus = SWE_the_swedish_empire
+		}
+
+		mutually_exclusive = {
+			
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		search_filters = {  }
+
+		#select_effect = {
+		#	<command>
+		#}
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = SWE_lessons_of_war_idea
+				add_idea = SWE_lion_from_the_north_idea
+			}
+			add_named_threat = { 
+			    threat = 10
+			    name = SWE_lion_from_the_north_threat
+			}
+		}
+		
+		complete_tooltip = {
+			
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = SWE_take_on_the_bear
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 10
+
+		#allow_branch = {
+		#	<trigger>
+		#}
+
+		x = 0
+		y = 1
+		relative_position_id = SWE_the_lion_from_the_north
+
+
+		prerequisite = {
+			focus = SWE_the_lion_from_the_north
+		}
+
+		mutually_exclusive = {
+			
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		search_filters = {  }
+
+		#select_effect = {
+		#	<command>
+		#}
+		
+		completion_reward = {
+			SWE = {
+				create_wargoal = {
+					type = annex_everything 
+					target = SOV
+				}
+			}
+		}
+		
+		complete_tooltip = {
+			SWE = {
+				create_wargoal = {
+					type = annex_everything 
+					target = SOV
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = SWE_topple_the_germans
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 10
+
+		#allow_branch = {
+		#	<trigger>
+		#}
+
+		x = 0
+		y = 1
+		relative_position_id = SWE_claim_pommern
+
+		prerequisite = {
+			focus = SWE_claim_pommern
+		}
+
+		mutually_exclusive = {
+			
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		search_filters = {  }
+
+		#select_effect = {
+		#	<command>
+		#}
+		
+		completion_reward = {
+			SWE = {
+				create_wargoal = {
+					type = annex_everything 
+					target = GER
+				}
+			}
+		}
+		
+		complete_tooltip = {
+			SWE = {
+				create_wargoal = {
+					type = annex_everything 
+					target = GER
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = SWE_reclaim_the_polish_lithuanian_commonwealth
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 10
+
+		#allow_branch = {
+		#	<trigger>
+		#}
+
+		x = 0
+		y = 1
+		relative_position_id = SWE_topple_the_germans
+
+		prerequisite = {
+			focus = SWE_topple_the_germans
+		}
+
+		mutually_exclusive = {
+			
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		search_filters = {  }
+
+		#select_effect = {
+		#	<command>
+		#}
+		
+		completion_reward = {
+			SWE = {
+				create_wargoal = {
+					type = annex_everything 
+					target = POL
+				}
+			}
+		}
+		
+		complete_tooltip = {
+			SWE = {
+				create_wargoal = {
+					type = annex_everything 
+					target = POL
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = SWE_control_the_north_sea
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 10
+
+		#allow_branch = {
+		#	<trigger>
+		#}
+
+		x = 0
+		y = 1
+		relative_position_id = SWE_claim_baltikum
+
+		prerequisite = {
+			focus = SWE_claim_baltikum
+		}
+
+		mutually_exclusive = {
+			
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		search_filters = {  }
+
+		#select_effect = {
+		#	<command>
+		#}
+		
+		completion_reward = {
+			SWE = {
+				create_wargoal = {
+					type = annex_everything 
+					target = ENG
+				}
+			}
+		}
+		
+		complete_tooltip = {
+			SWE = {
+				create_wargoal = {
+					type = annex_everything 
+					target = ENG
+				}
 			}
 		}
 

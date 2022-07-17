@@ -1,8 +1,52 @@
 ﻿l_english:
+  # Events
   election.100.t:0 "The swedish election of 1936"
   election.100.d:0 "The governemnt lead by Per Albin Hansson was not the greatest but it was for it's time. Now with the new election and with a coalition with the socialist party and the liberal party the government has full controll over the rikstag and can now enact any reform."
   election.100.a:0 "HURRA!"
+  nordic_events.1.t:0 "The partitioning of Finland"
+  nordic_events.1.d:0 "The rising power of monarchists in Sweden has led to the government having to abdicate, now the king is looking to regain lost land and now demands our annexation! What do we do?"
+  nordic_events.1.a:0 "This is to big for us, we have to surrender our land"
+  nordic_events.1.b:0 "We will never give away our land!"
+
+  nordic_events.12.t:0 "The partitioning of Finland"
+  nordic_events.12.d:0 "With our capitulation we have to agree to the terms of the Swedes and Soviets"
+  nordic_events.12.a:0 "Finland will exist forever in our hearts!"
+
+  nordic_events.13.t:0 "Sweden proposes a partitioning of Finland"
+  nordic_events.13.d:0 "The leading monarchist power in Sweden has turned their eyes outwars and towards Finland. They now seek a temporary alliance with us. They propose a partitioning where we gain Karelia while Sweden annexes the rest. Is it worth it to secure Leningrad?"
+  nordic_events.13.a:0 "Agree to the partitioning"
+  nordic_events.13.b:0 "Refuse the deal"
+
+  nordic_events.14.t:0 "The Soviet Union agrees to the partitioning of Finland"
+  nordic_events.14.d:0 "The Soviet Union agrees to our deal to give them Karelia while we annex Finland"
+  nordic_events.14.a:0 "Well that's finished"
+
+  nordic_events.15.t:0 "Finland refuses our demands!"
+  nordic_events.15.d:0 ""
+  nordic_events.15.a:0 "TO WAR IT IS!"
+
+  nordic_events.16.t:0 "Soviet Union refuses our deal of partitioning!"
+  nordic_events.16.d:0 ""
+  nordic_events.16.a:0 "Well then we have to do it ourselves"
+
+  nordic_events.17.t.a:0 "Finland agrees to the partitioning!"
+  nordic_events.17.d:0 ""
+  nordic_events.17.a:0 "EZ Claps bois"
+
+  nordic_events.18.t:0 "The partitioning of Finland!"
+  nordic_events.18.d:0 ""
+  nordic_events.18.a:0 "This is a disaster!"
+  nordic_events.18.b:0 "A job well done!"
+
+  nordic_events.2.t:0 "The unification of Scandinavia!"
+  nordic_events.2.d:0 "Following the fall of Sweden during it's greatest era it became democratic and neutral. But this changed during the recent years following the Great War and the tension rising once again. The king reclaimed his throne and then began spreading propaganda to it's neighbors. The first country to feel this was Finland which got partitioned. The rest had a peaceful revolution. Now Sweden has laid claim on the entire Scandinavia. They quote their old king 'Över norden jag härskar!'"
+  nordic_events.2.a:0 "What will become of the nordics?"
+  nordic_events.2.b:0 "ÖVER NORDEN JAG HÄRKSAR!"
+
+  #
   # National focuses
+  #
+  # Democratic Path
   SWE_enforce_neutrality:0 "Enforce Neutrality"
   SWE_abandon_neutrality:0 "Abandon Neutrality"
   SWE_hansson:0 "Hansson government"
@@ -16,14 +60,33 @@
   SWE_intel_agency:0 "C-Byrån"
   SWE_kalix_linjen:0 "The Kalix Line"
   SWE_samlings_regeringen:0 "Samlings Regeringen"
-  SWE_pro_allied_censoring:0 "Anti-Allied Censorship"
-  SWE_pro_axis_censoring:0 "Anti-Axis Censorship"
+  SWE_pro_allied_censoring:0 "Pro-Allied Censorship"
+  SWE_pro_axis_censoring:0 "Pro-Axis Censorship"
   SWE_neutrality_allies_axis:0 "Balance the powers"
   SWE_permittent_trafik:0 "Permittent Trafik"
   SWE_support_scandinavian_brothers:0 "Support our scandinavian brothers!"
   SWE_join_the_war_On_allies_side:0 "Join the allies"
   SWE_Guarentees_both:0 "World Guarantees"
   SWE_cave_to_germans:0 "Cave to the germans"
+  # Neutrality
+  SWE_support_the_monarchists:0 "Give support to the monarcists"
+  SWE_gustaf_v:0 "King in the government"
+  SWE_support_monarchists_in_scandinavia:0 "Spread the monarchist idea"
+  SWE_etat_est_moi:0 "L'etat c'est moi"
+  SWE_consolidate_power:0 "Expand the kings rights"
+  SWE_lessons_of_war:0 "Lessons of war"
+  SWE_partition_finland:0 "Propose the partitioning of Finland"
+  SWE_invite_denmark:0 "Invite Denmark to the faction"
+  SWE_invite_norway:0 "Invite Norway to the faction"
+  SWE_scandinavian_unity:0 "Realise Scandinavian Unity"
+  SWE_the_swedish_empire:0 "The Swedish Empire"
+  SWE_claim_pommern:0 "Reclaim Pommerania"
+  SWE_topple_the_germans:0 "To war with the germans!"
+  SWE_reclaim_the_polish_lithuanian_commonwealth:0 "Reclaim Polish-Lithuanian Throne"
+  SWE_claim_baltikum:0 "Reclaim the Baltics"
+  SWE_the_lion_from_the_north:0 "Lejonet från norden"
+  SWE_take_on_the_bear:0 "Revenge for our downfall"
+  SWE_control_the_north_sea:0 "Take control over the north sea"
 
   # Ideas
   en_svensk_tiger:0 "En Svensk Tiger"
@@ -32,4 +95,10 @@
   samlings_regeringen:0 "Samlings Regeringen"
   riksdag_non_supportive_army:0 "Riksdag non supportive of military reforms"
   neutrality_idea_2_sweden:0 "Neutrality Idea"
+  monarchism_movements:0 "Monarchist Movements"
+  monarchism_movements_swe:0 "Monarchist Movements"
+  SWE_lion_from_the_north_idea:0 "Lejonet från norden"
+  SWE_lessons_of_war_idea:0 "Lessons of war"
+  SWE_etat_est_moi_2:0 "L'etat c'est moi"
+
 
