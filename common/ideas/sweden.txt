@@ -144,16 +144,84 @@ ideas = {
 			picture = generic_army_war_college
 
 			modifier = {
-				acclimatization_cold_climate_gain_factor = 0.5
+				acclimatization_cold_climate_gain_factor = 0.1
+				dig_in_speed_factor = 0.1
+				max_dig_in_factor = 0.1
+				planning_speed = 0.5
+				supply_node_range = 0.25
+			}
+		}
+
+		SWE_offensive_focus_idea = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = ast_volunteer_defence_corps
+
+			modifier = {
 				army_core_attack_factor = 0.2
 				army_defence_factor = 0.1
 				army_morale_factor = 0.1
 				army_org_factor = 0.1
-				dig_in_speed_factor = 0.1
-				max_dig_in_factor = 0.1
-				planning_speed = 0.5
-<<<<<<< HEAD
-				supply_node_range = 0.25
+			}
+		}
+
+		SWE_offensive_focus_idea_2 = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = ast_volunteer_defence_corps
+
+			modifier = {
+				army_core_attack_factor = 0.2
+				army_defence_factor = 0.1
+				army_morale_factor = 0.1
+				army_org_factor = 0.1
+				army_armor_attack_factor = 0.2
+				army_armor_defence_factor = 0.2
+			}
+		}
+
+		SWE_defensive_focus_idea = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = YUG_federal_defense_council
+
+			modifier = {
+				army_core_defence_factor = 0.2
+				army_morale_factor = 0.2
+				army_org_factor = 0.2
+				production_speed_bunker_factor = 0.25
+			}
+		}
+
+		SWE_defensive_focus_idea_2 = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = YUG_federal_defense_council
+
+			modifier = {
+				army_core_defence_factor = 0.2
+				army_morale_factor = 0.2
+				army_org_factor = 0.2
+				production_speed_bunker_factor = 0.25
+				army_artillery_attack_factor = 0.2
+				army_artillery_defence_factor = 0.2
+				unit_artillery_brigade_design_cost_factor = -0.3
 			}
 		}
 
@@ -250,8 +318,6 @@ ideas = {
 				production_factory_efficiency_gain_factor = 0.2
 				production_factory_max_efficiency_factor = 0.1
 				production_lack_of_resource_penalty_factor = -0.1
-=======
->>>>>>> 8e96122fafef0807b4ca5408470e5c127be3df3b
 			}
 		}
 
@@ -322,10 +388,7 @@ ideas = {
 				surrender_limit = 0.25
 			}
 		}
-<<<<<<< HEAD
 	}
-=======
->>>>>>> 8e96122fafef0807b4ca5408470e5c127be3df3b
 
 	tank_manufacturer = { 
 		
@@ -344,18 +407,13 @@ ideas = {
 				armor = 0.15
 			}
 			
-<<<<<<< HEAD
 			traits = { medium_tank_manufacturer  }
-=======
-			traits = { tank_manufacturer }
->>>>>>> 8e96122fafef0807b4ca5408470e5c127be3df3b
 			
 			modifier = {
 				# notable tanks L-120 and L-60, lighter tanks as well as the medium tank Stridsvagn m/42, that was mobile and well protected.
 			}
 		}
 
-<<<<<<< HEAD
 		volvo = {
 			
 			picture = generic_tank_manufacturer
@@ -401,8 +459,6 @@ ideas = {
 
 			}
 		}
-=======
->>>>>>> 8e96122fafef0807b4ca5408470e5c127be3df3b
 	}
 	
 	naval_manufacturer = { 
@@ -549,9 +605,5 @@ ideas = {
 				# more info
 			}
 		}
-<<<<<<< HEAD
-=======
-		
->>>>>>> 8e96122fafef0807b4ca5408470e5c127be3df3b
 	}
 }

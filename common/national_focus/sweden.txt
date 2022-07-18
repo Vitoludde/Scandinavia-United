@@ -2213,10 +2213,7 @@ focus_tree = {
 			add_ideas = {
 				the_swedish_empire
 			}
-<<<<<<< HEAD
 			set_cosmetic_tag = swedishempire
-=======
->>>>>>> 8e96122fafef0807b4ca5408470e5c127be3df3b
 		}
 		
 		complete_tooltip = {
@@ -2227,10 +2224,7 @@ focus_tree = {
 			add_ideas = {
 				the_swedish_empire
 			}
-<<<<<<< HEAD
 			set_cosmetic_tag = swedishempire
-=======
->>>>>>> 8e96122fafef0807b4ca5408470e5c127be3df3b
 		}
 
 		ai_will_do = {
@@ -2653,8 +2647,6 @@ focus_tree = {
 			factor = 1
 		}
 	}
-<<<<<<< HEAD
-
 
 	#
 	# End of politics
@@ -3484,7 +3476,7 @@ focus_tree = {
 		#	<trigger>
 		#}
 
-		x = 54
+		x = 56
 		y = 0
 
 		#prerequisite = {
@@ -3574,11 +3566,11 @@ focus_tree = {
 		#}
 		
 		completion_reward = {
-			
+			army_experience = 150
 		}
 		
 		complete_tooltip = {
-			
+			army_experience = 150
 		}
 
 		ai_will_do = {
@@ -3599,7 +3591,7 @@ focus_tree = {
 		#	<trigger>
 		#}
 
-		x = 0
+		x = -2
 		y = 1
 		relative_position_id = SWE_focus_on_the_army
 
@@ -3672,7 +3664,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = SWE_focus_on_the_navy
+		id = SWE_offensive_focus
 		icon = GFX_goal_generic_improve_relations
 
 		cost = 10
@@ -3683,14 +3675,14 @@ focus_tree = {
 
 		x = 0
 		y = 1
-		relative_position_id = SWE_rearment
+		relative_position_id = SWE_focus_on_the_army
 
 		prerequisite = {
-			focus = SWE_rearment
+			focus = SWE_focus_on_the_army
 		}
 
 		mutually_exclusive = {
-			
+			focus = SWE_defensive_focus
 		}
 
 		#available = {
@@ -3708,11 +3700,17 @@ focus_tree = {
 		#}
 		
 		completion_reward = {
-			
+			add_ideas = {
+				SWE_offensive_focus_idea
+			}
+			army_experience = 50
 		}
 		
 		complete_tooltip = {
-			
+			add_ideas = {
+				SWE_offensive_focus_idea
+			}
+			army_experience = 50
 		}
 
 		ai_will_do = {
@@ -3724,7 +3722,173 @@ focus_tree = {
 	}
 
 	focus = {
-		id = SWE_focus_on_the_air
+		id = SWE_panzer_corps
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 10
+
+		#allow_branch = {
+		#	<trigger>
+		#}
+
+		x = 0
+		y = 1
+		relative_position_id = SWE_offensive_focus
+
+		prerequisite = {
+			focus = SWE_offensive_focus
+		}
+
+		#available = {
+		#	<trigger>
+		#}
+
+		#bypass = {
+		#	<trigger>
+		#}
+
+		search_filters = {  }
+
+		#select_effect = {
+		#	<command>
+		#}
+		
+		completion_reward = {
+			swap_ideas = {
+				add_idea = SWE_offensive_focus_idea_2
+				remove_idea = SWE_offensive_focus_idea
+			}
+		}
+		
+		complete_tooltip = {
+			swap_ideas = {
+				add_idea = SWE_defensive_focus_idea_2
+				remove_idea = SWE_defensive_focus_idea
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+			#modifier = {
+			#	<modifier>
+			#}
+		}
+	}
+
+	focus = {
+		id = SWE_defensive_focus
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 10
+
+		#allow_branch = {
+		#	<trigger>
+		#}
+
+		x = 2
+		y = 1
+		relative_position_id = SWE_focus_on_the_army
+
+		prerequisite = {
+			focus = SWE_focus_on_the_army
+		}
+
+		mutually_exclusive = {
+			focus = SWE_offensive_focus
+		}
+
+		#available = {
+		#	<trigger>
+		#}
+
+		#bypass = {
+		#	<trigger>
+		#}
+
+		search_filters = {  }
+
+		#select_effect = {
+		#	<command>
+		#}
+		
+		completion_reward = {
+			add_ideas = {
+				SWE_defensive_focus_idea
+			}
+			army_experience = 50
+		}
+		
+		complete_tooltip = {
+			add_ideas = {
+				SWE_defensive_focus_idea
+			}
+			army_experience = 50
+		}
+
+		ai_will_do = {
+			factor = 1
+			#modifier = {
+			#	<modifier>
+			#}
+		}
+	}
+
+	focus = {
+		id = SWE_artillery_corps
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 10
+
+		#allow_branch = {
+		#	<trigger>
+		#}
+
+		x = 0
+		y = 1
+		relative_position_id = SWE_defensive_focus
+
+		prerequisite = {
+			focus = SWE_defensive_focus
+		}
+
+		#available = {
+		#	<trigger>
+		#}
+
+		#bypass = {
+		#	<trigger>
+		#}
+
+		search_filters = {  }
+
+		#select_effect = {
+		#	<command>
+		#}
+		
+		completion_reward = {
+			swap_ideas = {
+				add_idea = SWE_defensive_focus_idea_2
+				remove_idea = SWE_defensive_focus_idea
+			}
+		}
+		
+		complete_tooltip = {
+			swap_ideas = {
+				add_idea = SWE_defensive_focus_idea_2
+				remove_idea = SWE_defensive_focus_idea
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+			#modifier = {
+			#	<modifier>
+			#}
+		}
+	}
+
+	focus = {
+		id = SWE_focus_on_the_navy
 		icon = GFX_goal_generic_improve_relations
 
 		cost = 10
@@ -3760,11 +3924,11 @@ focus_tree = {
 		#}
 		
 		completion_reward = {
-			
+			navy_experience = 150
 		}
 		
 		complete_tooltip = {
-			
+			navy_experience = 150
 		}
 
 		ai_will_do = {
@@ -3774,7 +3938,57 @@ focus_tree = {
 			#}
 		}
 	}
-=======
->>>>>>> 8e96122fafef0807b4ca5408470e5c127be3df3b
+
+	focus = {
+		id = SWE_focus_on_the_air
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 10
+
+		#allow_branch = {
+		#	<trigger>
+		#}
+
+		x = 4
+		y = 1
+		relative_position_id = SWE_rearment
+
+		prerequisite = {
+			focus = SWE_rearment
+		}
+
+		mutually_exclusive = {
+			
+		}
+
+		#available = {
+		#	<trigger>
+		#}
+
+		#bypass = {
+		#	<trigger>
+		#}
+
+		search_filters = {  }
+
+		#select_effect = {
+		#	<command>
+		#}
+		
+		completion_reward = {
+			air_experience = 150
+		}
+		
+		complete_tooltip = {
+			air_experience = 150
+		}
+
+		ai_will_do = {
+			factor = 1
+			#modifier = {
+			#	<modifier>
+			#}
+		}
+	}
 }
 }
