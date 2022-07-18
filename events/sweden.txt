@@ -1,0 +1,385 @@
+add_namespace = nordic_events
+
+# Finlands pov of the partitioning of finland
+country_event = {
+	id = nordic_events.1
+	title = nordic_events.1.t
+	desc = nordic_events.1.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = nordic_events.1.a
+		ai_chance =  { factor = 400 }
+		FIN = {
+			every_core_state = {
+				transfer_state_to  = SWE
+			}
+
+			146 = {
+				transfer_state_to  = SOV
+			}
+
+			147 = {
+				transfer_state_to  = SOV
+			}
+		}
+
+		SWE = {
+			news_event = {
+				id = nordic_events.17
+				days = 1
+			}
+		}
+
+		news_event = {
+			id = nordic_events.18
+			days = 1
+		}
+	}
+
+	option = {
+		name = nordic_events.1.b
+		ai_chance =  { factor = 1 }
+		SOV = {
+			add_state_claim = 146
+			add_state_claim = 147
+		}
+
+		SWE = {
+			add_state_claim = SWE
+		}
+
+		SWE = {
+			create_wargoal = {
+				type = annex_everything 
+				target = FIN
+			}
+		}
+
+		SOV = {
+			create_wargoal = {
+				type = take_claimed_state  
+				target = FIN
+			}
+		}
+
+		SWE = {
+			news_event = {
+				id = nordic_events.15
+				days = 1
+			}
+		}
+
+		SOV = {
+			news_event = {
+				id = nordic_events.15
+				days = 1
+			}
+		}
+	}
+
+	option = {
+		name = nordic_events.1.c
+		ai_chance =  { factor = 100 }
+		FIN = {
+			
+
+			146 = {
+				transfer_state_to  = SOV
+			}
+
+			147 = {
+				transfer_state_to  = SOV
+			}
+		}
+
+		SWE = {
+			news_event = {
+				id = nordic_events.17
+				days = 1
+			}
+
+			puppet = FIN
+		}
+
+		news_event = {
+			id = nordic_events.18
+			days = 1
+		}
+	}
+}
+
+# Post war partitioning of finland
+country_event = {
+	id = nordic_events.12
+	title = nordic_events.12.t
+	desc = nordic_events.12.d
+
+	trigger = {
+		FIN = {
+			has_capitulated = yes
+			OR = {
+				has_war_with = SWE
+				has_war_with = SOV
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	fire_only_once = yes
+
+	option = {
+		name = nordic_events.12.a
+		ai_chance =  { factor = 10 }
+		FIN = {
+			white_peace = SWE
+			white_peace = SOV
+
+			every_core_state = {
+				transfer_state_to  = SWE
+			}
+
+			146 = {
+				transfer_state_to  = SOV
+			}
+
+			147 = {
+				transfer_state_to  = SOV
+			}
+		}
+
+		news_event = {
+			id = nordic_events.18
+			days = 1
+		}
+	}
+}
+
+# Soviet pov of the partitioning of Finland
+country_event = {
+	id = nordic_events.13
+	title = nordic_events.13.t
+	desc = nordic_events.13.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = nordic_events.13.a
+		ai_chance =  { factor = 100 }
+		FIN = {
+			country_event = {
+				id = nordic_events.1
+				days = 1
+			}
+		}
+		SWE = {
+			news_event = {
+				id = nordic_events.14
+				days = 1
+			}
+		}
+	}
+
+	option = {
+		name = nordic_events.13.b
+		ai_chance =  { factor = 10 }
+		SWE = {
+			create_wargoal = {
+				type = annex_everything 
+				target = FIN
+			}
+		}
+		SWE = {
+			news_event = {
+				id = nordic_events.16
+				days = 1
+			}
+		}
+	}
+}
+
+#
+#	NEWS
+#
+
+# Soviet accept partitioning
+news_event = {
+	id = nordic_events.14
+	title = {
+		text = nordic_events.14.t.a
+		trigger = {
+			tag = SWE
+		}
+	}
+
+	desc = {
+		text = nordic_events.14.d
+		trigger = {
+			tag = SWE
+		}
+	}
+
+	#picture = 
+
+	is_triggered_only = yes
+
+	option = {
+		name = nordic_events.14.a
+	}
+}
+
+# Finland refuses!
+news_event = {
+	id = nordic_events.15
+	title = {
+		text = nordic_events.15.t.a
+		trigger = {
+			OR = {
+				tag = SWE
+				tag = SOV
+			}
+		}
+	}
+
+	desc = {
+		text = nordic_events.15.d
+		trigger = {
+			OR = {
+				tag = SWE
+				tag = SOV
+			}
+		}
+	}
+
+	#picture = 
+
+	is_triggered_only = yes
+
+	option = {
+		name = nordic_events.15.a
+	}
+}
+
+# Soviet refuse partitioning
+news_event = {
+	id = nordic_events.16
+	title = {
+		text = nordic_events.16.t.a
+		trigger = {
+			tag = SWE
+		}
+	}
+
+	desc = {
+		text = nordic_events.16.d
+		trigger = {
+			tag = SWE
+		}
+	}
+
+	#picture = 
+
+	is_triggered_only = yes
+
+	option = {
+		name = nordic_events.16.a
+	}
+}
+
+# Finland accepts partitioning!
+news_event = {
+	id = nordic_events.17
+	title = {
+		text = nordic_events.17.t.a
+		trigger = {
+			tag = SWE
+		}
+	}
+
+	desc = {
+		text = nordic_events.17.d
+		trigger = {
+			tag = SWE
+		}
+	}
+
+	#picture = 
+
+	is_triggered_only = yes
+
+	option = {
+		name = nordic_events.17.a
+	}
+}
+
+# Global - The partition of Finland!
+news_event = {
+	id = nordic_events.18
+	title = {
+		text = nordic_events.18.t.a
+	}
+
+	desc = {
+		text = nordic_events.18.d
+	}
+
+	#picture = 
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = nordic_events.18.a
+		trigger = {
+			NOT = { tag = SWE }
+			NOT = { tag = SOV }
+		}
+	}
+
+	option = {
+		name = nordic_events.18.b
+		trigger = {
+			OR = {
+				tag = SWE
+				tag = SOV
+			}
+		}
+	}
+}
+
+# Global - The unification of scandinavia!
+news_event = {
+	id = nordic_events.2
+	title = {
+		text = nordic_events.2.t
+	}
+
+	desc = {
+		text = nordic_events.2.d
+	}
+
+	#picture = 
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = nordic_events.2.a
+		trigger = {
+			NOT = { tag = SWE }
+		}
+	}
+
+	option = {
+		name = nordic_events.2.b
+		trigger = {
+			tag = SWE
+		}
+	}
+}

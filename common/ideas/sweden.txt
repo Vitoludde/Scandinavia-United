@@ -1,0 +1,540 @@
+ideas = {
+	country = {
+	
+		en_svensk_tiger = {
+			
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_spy_intel
+			
+			modifier = {
+				drift_defence_factor = 0.1
+				enemy_justify_war_goal_time = 0.1
+			}
+		}
+
+		en_svensk_tiger_2 = {
+			
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_spy_intel
+			
+			modifier = {
+				drift_defence_factor = 0.1
+				enemy_justify_war_goal_time = 0.1
+				operative_slot = 1
+				civilian_intel_to_others = -25
+				airforce_intel_to_others = -25
+				navy_intel_to_others = -25
+				army_intel_to_others = -25
+			}
+		}
+
+		c_bureau = {
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_spy_intel
+
+			modifier = {
+				operative_slot = 1
+				subversive_activites_upkeep = -0.5
+				drift_defence_factor = 0.2
+			}
+		}
+
+		samlings_regeringen = {
+			allowed =  {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_constitutional_guarantees
+
+			modifier = {
+				drift_defence_factor = 0.5
+				enemy_justify_war_goal_time = 0.2
+				
+			}
+		}
+
+		riksdag_non_supportive_army  = {
+			
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_army_problems
+			
+			modifier = {
+				stability_factor = -0.1
+			}
+		}
+
+		SWE_etat_est_moi = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = FRA_la_deluge
+
+			modifier = {
+				drift_defence_factor = 0.25
+				neutrality_drift = 0.1
+			}
+		}
+
+		SWE_etat_est_moi_2 = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = FRA_la_deluge
+
+			modifier = {
+				drift_defence_factor = 0.25
+				neutrality_drift = 0.1
+				stability_factor = 0.25
+			}
+		}
+
+		SWE_lessons_of_war_idea = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_army_war_college
+
+			modifier = {
+				acclimatization_cold_climate_gain_factor = 0.5
+				dig_in_speed_factor = 0.1
+				max_dig_in_factor = 0.1
+				planning_speed = 0.5
+			}
+		}
+
+		SWE_lion_from_the_north_idea = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_army_war_college
+
+			modifier = {
+				acclimatization_cold_climate_gain_factor = 0.5
+				army_core_attack_factor = 0.2
+				army_defence_factor = 0.1
+				army_morale_factor = 0.1
+				army_org_factor = 0.1
+				dig_in_speed_factor = 0.1
+				max_dig_in_factor = 0.1
+				planning_speed = 0.5
+				supply_node_range = 0.25
+			}
+		}
+
+		SWE_expand_the_railway = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_build_infrastructure
+
+			modifier = {
+				production_speed_rail_way_factor = 0.25
+				production_speed_supply_node_factor = 0.25
+			}
+		}
+
+		SWE_research_focus = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_research_bonus
+
+			modifier = {
+				research_speed_factor = 0.1
+			}
+		}
+
+		SWE_rearment_idea = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_research_bonus
+
+			modifier = {
+				production_speed_arms_factory_factor = 0.25
+			}
+		}
+
+		SWE_economy_focus_1 = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_research_bonus
+
+			modifier = {
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_arms_factory_factor = 0.1
+			}
+		}
+
+		SWE_economy_focus_2 = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_research_bonus
+
+			modifier = {
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_arms_factory_factor = 0.1
+				production_speed_dockyard_factor = 0.1
+				industry_repair_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+			}
+		}
+
+		SWE_economy_focus_3 = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_research_bonus
+
+			modifier = {
+				production_speed_industrial_complex_factor = 0.2
+				production_speed_arms_factory_factor = 0.2
+				production_speed_dockyard_factor = 0.1
+				industry_repair_factor = 0.2
+				production_factory_efficiency_gain_factor = 0.2
+				production_factory_max_efficiency_factor = 0.1
+				production_lack_of_resource_penalty_factor = -0.1
+			}
+		}
+
+		neutrality_idea_2_sweden = {
+			picture = neutrality_idea
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+
+			cancel = {
+				has_war = yes
+			}
+			
+			removal_cost = -1
+	
+			modifier = {
+				#generate_wargoal_tension = 1.00
+				join_faction_tension = 1.00
+				#lend_lease_tension = 0.50
+				send_volunteers_tension = -1
+				guarantee_tension = 1.0
+				ai_badass_factor = 0.01    # Will receive 1% of the threat from others
+				ai_get_ally_desire_factor = -100
+			}
+		}
+
+		monarchism_movements = {
+			allowed = {
+				always = no # Triggered via event
+			}
+
+			picture = generic_neutrality_drift_bonus
+			
+			modifier = {
+				neutrality_drift = 0.1
+				stability_factor = -0.1
+			}
+		}
+
+		monarchism_movements_swe = {
+			allowed = {
+				always = no # Triggered via event
+			}
+
+			picture = generic_neutrality_drift_bonus
+			
+			modifier = {
+				neutrality_drift = 0.1
+			}
+		}
+
+		the_swedish_empire = {
+			allowed = {
+				always = no
+			}
+
+			#picture = scaunite_sweden_flag_gfx
+
+			modifier = {
+				compliance_growth_on_our_occupied_states = 0.2
+				resistance_growth_on_our_occupied_states = -0.2
+				subjects_autonomy_gain = -0.25
+				surrender_limit = 0.25
+			}
+		}
+	}
+
+	tank_manufacturer = { 
+		
+		designer = yes
+		
+		landsverk = {
+			
+			picture = generic_tank_manufacturer_2
+
+			
+			allowed = {
+				original_tag = SWE
+			}
+			
+			research_bonus = {
+				armor = 0.15
+			}
+			
+			traits = { medium_tank_manufacturer  }
+			
+			modifier = {
+				# notable tanks L-120 and L-60, lighter tanks as well as the medium tank Stridsvagn m/42, that was mobile and well protected.
+			}
+		}
+
+		volvo = {
+			
+			picture = generic_tank_manufacturer
+
+			
+			allowed = {
+				original_tag = SWE
+			}
+
+			visible = {
+				hidden_trigger = {
+					NOT = { has_country_flag = SWE_volvo_supremacy}
+				}
+			}
+			
+			research_bonus = {
+				armor = 0.15
+			}
+			
+			traits = { fast_tank_manufacturer  }
+			
+			modifier = {
+
+			}
+		}
+
+		saab = {
+			
+			picture = generic_tank_manufacturer
+
+			
+			allowed = {
+				original_tag = SWE
+			}
+			
+			research_bonus = {
+				armor = 0.15
+			}
+			
+			traits = { heavy_tank_manufacturer }
+			
+			modifier = {
+
+			}
+		}
+	}
+	
+	naval_manufacturer = { 
+			
+		designer = yes
+		
+		marinvarkstaderna = { #Karlskrona
+			
+			picture = generic_naval_manufacturer_1
+
+			
+			allowed = {
+				original_tag = SWE
+			}
+			
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			equipment_bonus = {
+				# mer research
+			}
+			
+			traits = { coastal_defence_naval_manufacturer }
+			
+			modifier = {
+			}
+		}
+
+		gotaverken = {
+			
+			picture = generic_naval_manufacturer_2
+
+			
+			allowed = {
+				original_tag = SWE
+			}
+			
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			equipment_bonus = {
+				# worlds biggest shipyard by launched gross tonnes
+			}
+			
+			traits = { atlantic_fleet_naval_manufacturer }
+			
+			modifier = {
+			}
+		}
+
+		kockums = {
+			
+			picture = generic_naval_manufacturer_3
+
+			
+			allowed = {
+				original_tag = SWE
+			}
+			
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			 
+			equipment_bonus = {
+				# submarines and battleships
+			}
+			
+			traits = { raiding_fleet_naval_manufacturer }
+			
+			modifier = {
+			}
+		}
+	}
+
+
+	materiel_manufacturer = {
+		
+		designer = yes
+	
+		bofors = {
+			
+			picture = generic_artillery_manufacturer_1
+
+			
+			allowed = {
+				original_tag = SWE
+			}
+			
+			research_bonus = {
+				artillery = 0.15
+			}
+			
+			equipment_bonus = {
+				artillery = {
+					reliability = 0.20
+				}
+			}
+			
+			traits = { artillery_manufacturer }
+			
+			modifier = {
+			}
+		}
+	
+		husqvarna = {
+			
+			picture = generic_infantry_equipment_manufacturer_2
+
+			
+			allowed = {
+				original_tag = SWE
+			}
+			
+			research_bonus = {
+				infantry_weapons = 0.15
+			}
+			
+			equipment_bonus = {
+				# rifles and pistols
+			}
+			
+			traits = { infantry_equipment_manufacturer }
+			
+			modifier = {
+			}
+		}
+		scania = {
+			
+
+			
+			allowed = {
+				original_tag = SWE
+			}
+			
+			research_bonus = {
+				motorized_equipment = 0.15
+			}
+			
+			traits = { motorized_equipment_manufacturer }
+			
+			modifier = {
+				# more info
+			}
+		}
+	}
+}
