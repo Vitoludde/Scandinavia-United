@@ -77,7 +77,9 @@
   SWE_lessons_of_war:0 "Lessons of war"
   SWE_partition_finland:0 "Propose the partitioning of Finland"
   SWE_invite_denmark:0 "Invite Denmark to the faction"
+  SWE_invade_denmark:0 "Invade danskjävlarna!"
   SWE_invite_norway:0 "Invite Norway to the faction"
+  SWE_invade_norway:0 "Liberate our brothers in the west!"
   SWE_scandinavian_unity:0 "Realise Scandinavian Unity"
   SWE_the_swedish_empire:0 "The Swedish Empire"
   SWE_claim_pommern:0 "Reclaim Pommerania"
@@ -98,6 +100,7 @@
   SWE_expand_the_forestry:0 "Expand the forestry industry"
   SWE_expand_the_agricultural_market:0 "Expand the agricultural industry"
   SWE_expand_the_railways:0 "Expand the railways"
+  SWE_expand_the_mining_industry:0 "Expand the mining industry"
 
   # Army
   SWE_rearment:0 "Rearment"
@@ -129,6 +132,7 @@
   SWE_research_focus:0 "Research Focus"
   SWE_rearment_idea:0 "National Rearment"
   SWE_economy_focus:0 "Economy Focus"
+  SWE_economy_focus_1:0 "Economy Focus"
   SWE_economy_focus_2:0 "Economy Focus"
   SWE_economy_focus_3:0 "Economy Focus"
   neutrality_idea_2_sweden:0 "Neutrality Idea"
