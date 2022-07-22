@@ -280,9 +280,12 @@ focus_tree = {
 			date > 1938.12.1
 		}
 
-		#bypass = {
-		#	<trigger>
-		#}
+		bypass = {
+			FIN = {
+				tag = FIN
+				has_war_with = SOV
+			}
+		}
 
 		search_filters = {  }
 
@@ -392,9 +395,12 @@ focus_tree = {
 		#	date > 1938.12.1
 		#}
 
-		#bypass = {
-		#	<trigger>
-		#}
+		bypass = {
+			FIN = {
+				tag = FIN
+				has_war_with = SOV
+			}
+		}
 
 		search_filters = {  }
 
@@ -502,7 +508,7 @@ focus_tree = {
 		#	<trigger>
 		#}
 
-		x = -1
+		x = 0
 		y = 1
 		relative_position_id = SWE_ransonering
 
@@ -550,6 +556,67 @@ focus_tree = {
 	}
 
 	focus = {
+		id = SWE_samlings_regeringen
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 10
+
+		#allow_branch = {
+		#	<trigger>
+		#}
+
+		x = -2
+		y = 1
+		relative_position_id = SWE_ransonering
+
+		prerequisite = {
+			focus = SWE_ransonering
+		}
+
+		prerequisite = {
+			focus = SWE_folkhemmet
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		search_filters = {  }
+
+		#select_effect = {
+		#	<command>
+		#}
+		
+		completion_reward = {
+			give_resource_rights = {
+				receiver = GER
+				state = 666
+			}
+			add_political_power = 200
+			add_stability = 0.25
+			add_war_support = 0.5
+		}
+		
+		complete_tooltip = {
+			give_resource_rights = {
+				receiver = GER
+				state = 666
+			}
+			add_political_power = 200
+			add_stability = 0.25
+			add_war_support = 0.5
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
 		id = SWE_en_svensk_tiger
 		icon = GFX_goal_generic_improve_relations
 
@@ -559,12 +626,12 @@ focus_tree = {
 		#	<trigger>
 		#}
 
-		x = -1
+		x = 0
 		y = 1
-		relative_position_id = SWE_Finska_vinter_kriget
+		relative_position_id = SWE_samlings_regeringen
 
 		prerequisite = {
-			focus = SWE_Finska_vinter_kriget
+			focus = SWE_samlings_regeringen
 		}
 
 		available = {
@@ -607,7 +674,7 @@ focus_tree = {
 		#	<trigger>
 		#}
 
-		x = 1
+		x = 0
 		y = 1
 		relative_position_id = SWE_Finska_vinter_kriget
 
@@ -835,7 +902,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = SWE_samlings_regeringen
+		id = SWE_choose_our_path
 		icon = GFX_goal_generic_improve_relations
 
 		cost = 10
@@ -844,16 +911,15 @@ focus_tree = {
 		#	<trigger>
 		#}
 
-		x = -1
+		x = 1
 		y = 1
-		relative_position_id = SWE_kalix_linjen
-
-		prerequisite = {
-			focus = SWE_kalix_linjen
-		}
+		relative_position_id = SWE_intel_agency
 
 		prerequisite = {
 			focus = SWE_intel_agency
+		}
+		prerequisite = {
+			focus = SWE_kalix_linjen
 		}
 
 		available = {
@@ -871,23 +937,13 @@ focus_tree = {
 		#}
 		
 		completion_reward = {
-			give_resource_rights = {
-				receiver = GER
-				state = 666
-			}
-			add_political_power = 200
-			add_stability = 0.25
-			add_war_support = 0.5
+			add_stability = -0.1
+			add_war_support = 0.1
 		}
 		
 		complete_tooltip = {
-			give_resource_rights = {
-				receiver = GER
-				state = 666
-			}
-			add_political_power = 200
-			add_stability = 0.25
-			add_war_support = 0.5
+			add_stability = -0.1
+			add_war_support = 0.1
 		}
 
 		ai_will_do = {
@@ -907,14 +963,14 @@ focus_tree = {
 
 		x = 1
 		y = 1
-		relative_position_id = SWE_samlings_regeringen
+		relative_position_id = SWE_choose_our_path
 
 		mutually_exclusive = {
 			focus = SWE_pro_axis_censoring
 		}
 
 		prerequisite = {
-			focus = SWE_samlings_regeringen
+			focus = SWE_choose_our_path
 		}
 
 		available = {
@@ -990,14 +1046,14 @@ focus_tree = {
 
 		x = -1
 		y = 1
-		relative_position_id = SWE_samlings_regeringen
+		relative_position_id = SWE_choose_our_path
 
 		mutually_exclusive = {
 			focus = SWE_pro_allied_censoring
 		}
 
 		prerequisite = {
-			focus = SWE_samlings_regeringen
+			focus = SWE_choose_our_path
 		}
 
 		available = {
@@ -1556,7 +1612,7 @@ focus_tree = {
 		#	<trigger>
 		#}
 
-		x = 10
+		x = 5
 		y = 1
 
 		mutually_exclusive = {
@@ -1565,7 +1621,6 @@ focus_tree = {
 
 		prerequisite = {
 			focus = SWE_support_the_monarchists
-			focus = SWE_enforce_neutrality
 		}
 
 		mutually_exclusive = {
@@ -1573,7 +1628,7 @@ focus_tree = {
 		}
 
 		available = {
-			
+			neutrality > 0.5
 		}
 
 		bypass = {
@@ -1594,10 +1649,6 @@ focus_tree = {
 				ruling_party = neutrality
 				elections_allowed = no
 			}
-			add_popularity = {
-				ideology = neutrality
-				popularity = 0.25
-			}
 		}
 		
 		complete_tooltip = {
@@ -1607,10 +1658,6 @@ focus_tree = {
 			set_politics = {
 				ruling_party = neutrality
 				elections_allowed = no
-			}
-			add_popularity = {
-				ideology = neutrality
-				popularity = 0.25
 			}
 		}
 
@@ -1772,7 +1819,7 @@ focus_tree = {
 		}
 
 		mutually_exclusive = {
-			
+			focus = SWE_invade_denmark
 		}
 
 		available = {
@@ -1821,7 +1868,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = SWE_invite_norway
+		id = SWE_invade_denmark
 		icon = GFX_goal_generic_improve_relations
 
 		cost = 10
@@ -1839,7 +1886,68 @@ focus_tree = {
 		}
 
 		mutually_exclusive = {
+			focus = SWE_invite_denmark
+		}
+
+		available = {
 			
+		}
+
+		bypass = {
+			
+		}
+
+		search_filters = {  }
+
+		#select_effect = {
+		#	<command>
+		#}
+		
+		completion_reward = {
+			every_state = { limit = { is_controlled_by = DEN } ROOT = { add_state_core = PREV } }
+			SWE = {
+				create_wargoal = {
+					type = annex_everything 
+					target = DEN
+				}
+			}
+		}
+		
+		complete_tooltip = {
+			every_state = { limit = { is_controlled_by = DEN } ROOT = { add_state_core = PREV } }
+			SWE = {
+				create_wargoal = {
+					type = annex_everything 
+					target = DEN
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = SWE_invite_norway
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 10
+
+		#allow_branch = {
+		#	<trigger>
+		#}
+
+		x = 6
+		y = 1
+		relative_position_id = SWE_support_monarchists_in_scandinavia
+
+		prerequisite = {
+			focus = SWE_support_monarchists_in_scandinavia
+		}
+
+		mutually_exclusive = {
+			focus = SWE_invade_norway
 		}
 
 		available = {
@@ -1878,6 +1986,67 @@ focus_tree = {
 				set_politics = {
 					ruling_party = neutrality
 					elections_allowed = no
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = SWE_invade_norway
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 10
+
+		#allow_branch = {
+		#	<trigger>
+		#}
+
+		x = 8
+		y = 1
+		relative_position_id = SWE_support_monarchists_in_scandinavia
+
+		prerequisite = {
+			focus = SWE_support_monarchists_in_scandinavia
+		}
+
+		mutually_exclusive = {
+			focus = SWE_invite_norway
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		search_filters = {  }
+
+		#select_effect = {
+		#	<command>
+		#}
+		
+		completion_reward = {
+			every_state = { limit = { is_controlled_by = NOR } ROOT = { add_state_core = PREV } }
+			SWE = {
+				create_wargoal = {
+					type = annex_everything 
+					target = NOR
+				}
+			}
+		}
+		
+		complete_tooltip = {
+			every_state = { limit = { is_controlled_by = NOR } ROOT = { add_state_core = PREV } }
+			SWE = {
+				create_wargoal = {
+					type = annex_everything 
+					target = NOR
 				}
 			}
 		}
@@ -1899,7 +2068,7 @@ focus_tree = {
 
 		x = 0
 		y = 1
-		relative_position_id = SWE_invite_denmark
+		relative_position_id = SWE_invade_denmark
 
 		prerequisite = {
 			focus = SWE_partition_finland
@@ -1907,10 +2076,12 @@ focus_tree = {
 
 		prerequisite = {
 			focus = SWE_invite_norway
+			focus = SWE_invade_norway
 		}
 
 		prerequisite = {
 			focus = SWE_invite_denmark
+			focus = SWE_invade_denmark
 		}
 
 		mutually_exclusive = {
@@ -2017,10 +2188,6 @@ focus_tree = {
 			remove_ideas = {
 				riksdag_non_supportive_army
 			}
-			add_popularity = {
-				ideology = neutrality
-				popularity = 0.1
-			}
 			add_ideas = {
 				SWE_etat_est_moi
 			}
@@ -2031,9 +2198,8 @@ focus_tree = {
 			remove_ideas = {
 				riksdag_non_supportive_army
 			}
-			add_popularity = {
-				ideology = neutrality
-				popularity = 0.1
+			add_ideas = {
+				SWE_etat_est_moi
 			}
 		}
 
@@ -2084,19 +2250,15 @@ focus_tree = {
 				remove_idea = SWE_etat_est_moi
 				add_idea = SWE_etat_est_moi_2
 			}
-			add_popularity = {
-				ideology = neutrality
-				popularity = 0.25
-			}
 			add_political_power = 200
 			add_stability = 0.1
 			add_war_support = 0.2
 		}
 		
 		complete_tooltip = {
-			add_popularity = {
-				ideology = neutrality
-				popularity = 0.25
+			swap_ideas = {
+				remove_idea = SWE_etat_est_moi
+				add_idea = SWE_etat_est_moi_2
 			}
 			add_political_power = 200
 			add_stability = 0.1
@@ -2174,7 +2336,7 @@ focus_tree = {
 		#	<trigger>
 		#}
 
-		x = 0
+		x = 1
 		y = 2
 		relative_position_id = SWE_partition_finland
 
