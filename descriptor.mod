@@ -1,5 +1,5 @@
-name = "Mufflizer"
-path = "mod/Mufflizer"
+name = "Scandinavia United!"
+path = "mod/Scandinavia-United"
 version = "0.6.0-Alpha"
 tags = {
 	"Gameplay"
