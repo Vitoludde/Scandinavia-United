@@ -33,6 +33,7 @@ set_technology = {
 	cv_naval_bomber1 = 1
 	early_bomber = 1
 	basic_train = 1
+	motorized_equipment = 1
 }
 
 if = {
@@ -90,15 +91,7 @@ if = {
 	add_command_power = 100
 	
 	#generic focuses
-	complete_national_focus = army_effort
-	complete_national_focus = equipment_effort
-	complete_national_focus = motorization_effort
-	complete_national_focus = aviation_effort
-	complete_national_focus = naval_effort
-	complete_national_focus = large_navy
-	complete_national_focus = industrial_effort
-	complete_national_focus = construction_effort
-	complete_national_focus = production_effort
+	
 	
 	oob = "SWE_1939"
 	if = {
@@ -242,7 +235,7 @@ recruit_character = SWE_archibald_douglas
 recruit_character = SWE_ernst_wigforss
 recruit_character = SWE_thorwald_bergquist
 recruit_character = SWE_osten_unden
-
+recruit_character = SWE_Filip_Svärd
 
 ### VARIANTS ###
 # 1936 Start #

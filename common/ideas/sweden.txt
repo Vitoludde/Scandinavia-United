@@ -374,6 +374,48 @@ ideas = {
 			}
 		}
 
+		communists_organizing = {
+			allowed = {
+				always = no # Triggered via event
+			}
+
+			picture = generic_communism_drift_bonus
+			
+			modifier = {
+				communism_drift = 0.1
+				stability_factor = -0.1
+			}
+		}
+
+		communists_organizing_swe = {
+			allowed = {
+				always = no # Triggered via event
+			}
+
+			picture = generic_communism_drift_bonus
+			
+			modifier = {
+				communism_drift = 0.1
+			}
+		}
+
+		folkhemmet = {
+			allowed = {
+				always = no
+			}
+
+			picture = generic_communist_army
+
+			modifier = {
+				communism_drift = 0.05
+				political_power_factor = 0.1
+				stability_factor = -0.05
+				consumer_goods_factor = -0.05
+				production_speed_industrial_complex_factor  = 0.05
+				compliance_growth_on_our_occupied_states = 0.1
+			}
+		}
+
 		the_swedish_empire = {
 			allowed = {
 				always = no
@@ -386,6 +428,76 @@ ideas = {
 				resistance_growth_on_our_occupied_states = -0.2
 				subjects_autonomy_gain = -0.25
 				surrender_limit = 0.25
+			}
+		}
+
+		government_vulnerable_to_fascism = {
+			allowed = {
+				always = no
+			}
+
+			#picture = scaunite_sweden_flag_gfx
+
+			modifier = {
+				fascism_drift = 0.1
+				drift_defence_factor = -0.25
+			}
+		}
+
+		government_vulnerable_to_fascism_2 = {
+			allowed = {
+				always = no
+			}
+
+			#picture = scaunite_sweden_flag_gfx
+
+			modifier = {
+				fascism_drift = 0.1
+				drift_defence_factor = -0.25
+				political_power_gain = 0.1
+			}
+		}
+
+		fascism_in_the_land = {
+			allowed = {
+				always = no
+			}
+
+			#picture = scaunite_sweden_flag_gfx
+
+			modifier = {
+				fascism_drift = 0.1
+				drift_defence_factor = -0.25
+				political_power_gain = 0.1
+				subjects_autonomy_gain = -0.5
+				mobilization_laws_cost_factor = -0.25
+			}
+		}
+
+		fascism_sa = {
+			allowed = {
+				always = no
+			}
+
+			#picture = scaunite_sweden_flag_gfx
+
+			modifier = {
+				fascism_drift = 0.1
+				conscription_factor = 0.1
+			}
+		}
+
+		fnf_sveaborg = {
+			allowed = {
+				always = no
+			}
+
+			#picture = scaunite_sweden_flag_gfx
+
+			modifier = {
+				send_volunteer_divisions_required = -0.3
+				send_volunteer_factor = 0.3
+				conscription_factor = 0.05
 			}
 		}
 	}

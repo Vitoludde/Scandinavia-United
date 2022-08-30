@@ -60,6 +60,7 @@
   SWE_intel_agency:0 "C-Byrån"
   SWE_kalix_linjen:0 "The Kalix Line"
   SWE_samlings_regeringen:0 "Samlings Regeringen"
+  SWE_choose_our_path:0 "Choose our path"
   SWE_pro_allied_censoring:0 "Pro-Allied Censorship"
   SWE_pro_axis_censoring:0 "Pro-Axis Censorship"
   SWE_neutrality_allies_axis:0 "Balance the powers"
@@ -68,6 +69,7 @@
   SWE_join_the_war_On_allies_side:0 "Join the allies"
   SWE_Guarentees_both:0 "World Guarantees"
   SWE_cave_to_germans:0 "Cave to the germans"
+
   # Neutrality
   SWE_support_the_monarchists:0 "Give support to the monarcists"
   SWE_gustaf_v:0 "King in the government"
@@ -89,6 +91,21 @@
   SWE_the_lion_from_the_north:0 "Lejonet från norden"
   SWE_take_on_the_bear:0 "Revenge for our downfall"
   SWE_control_the_north_sea:0 "Take control over the north sea"
+
+  # Fascism
+  SWE_lindholmarna:0 "Government with Lindholmarna"
+  SWE_make_government_vulnerable:0 "Make the government vulnerable to fascism"
+  SWE_spread_the_ideology_in_the_country:0 "Spread the fascist ideas in the country"
+  SWE_sa:0 "Stromavdelningen"
+  SWE_seize_the_power:0 "Take the power in our hands"
+  SWE_enforce_power:0 "Enforce our power"
+  SWE_fnf_sveaborg:0 "Frontmannaföreningen Sveaborg"
+  SWE_deal_with_the_devil:0 "Deal with the devil"
+  SWE_join_finland_against_soviet:0 "Join our finnish brothers"
+  SWE_den_svenske:0 "Den svenske"
+  SWE_f_choose_our_path:0 "Choose our path"
+  SWE_f_axis_focus:0 "Join the axis"
+  SWE_scandinavia_focus:0 "Focus on scandinavia"
 
   # Economy
   SWE_civilian_economy_focus:0 "Civilian Economy"

@@ -207,6 +207,8 @@ focus_tree = {
 
 		mutually_exclusive = {
 			focus = SWE_gustaf_v
+			focus = SWE_lindholmarna
+			focus = SWE_skp
 		}
 
 		prerequisite = {
@@ -1617,6 +1619,8 @@ focus_tree = {
 
 		mutually_exclusive = {
 			focus = SWE_hansson
+			focus = SWE_lindholmarna
+			focus = SWE_skp
 		}
 
 		prerequisite = {
@@ -2813,6 +2817,1559 @@ focus_tree = {
 		}
 	}
 
+	# Fascist path
+	focus = {
+		id = SWE_lindholmarna
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 10
+
+		#allow_branch = {
+		#	<trigger>
+		#}
+
+		x = 40
+		y = 1
+
+		mutually_exclusive = {
+			focus = SWE_gustaf_v
+			focus = SWE_hansson
+			focus = SWE_skp
+		}
+
+		prerequisite = {
+			focus = SWE_abandon_neutrality
+		}
+
+		#available = {
+		#	<trigger>
+		#}
+
+		#bypass = {
+		#	<trigger>
+		#}
+
+		search_filters = {  }
+
+		#select_effect = {
+		#	<command>
+		#}
+		
+		completion_reward = {
+			add_political_power = -50
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.1
+			}
+			add_war_support = -0.1
+			add_stability = -0.25
+		}
+		
+		complete_tooltip = {
+			add_political_power = -50
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.25
+			}
+			add_war_support = -0.1
+			add_stability = -0.25
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = SWE_make_government_vulnerable
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 10
+
+		#allow_branch = {
+		#	<trigger>
+		#}
+
+		x = -1
+		y = 1
+
+		relative_position_id = SWE_lindholmarna
+
+		mutually_exclusive = {
+			
+		}
+
+		prerequisite = {
+			focus = SWE_lindholmarna
+		}
+
+		#available = {
+		#	<trigger>
+		#}
+
+		#bypass = {
+		#	<trigger>
+		#}
+
+		search_filters = {  }
+
+		#select_effect = {
+		#	<command>
+		#}
+		
+		completion_reward = {
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.1
+			}
+			add_war_support = -0.1
+			add_stability = -0.1
+			add_ideas = {
+				government_vulnerable_to_fascism
+			}
+		}
+		
+		complete_tooltip = {
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.1
+			}
+			add_war_support = -0.1
+			add_stability = -0.1
+			add_ideas = {
+				government_vulnerable_to_fascism
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = SWE_propaganda
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 10
+
+		#allow_branch = {
+		#	<trigger>
+		#}
+
+		x = 0
+		y = 1
+
+		relative_position_id = SWE_make_government_vulnerable
+
+		mutually_exclusive = {
+			
+		}
+
+		prerequisite = {
+			focus = SWE_make_government_vulnerable
+		}
+
+		#available = {
+		#	<trigger>
+		#}
+
+		#bypass = {
+		#	<trigger>
+		#}
+
+		search_filters = {  }
+
+		#select_effect = {
+		#	<command>
+		#}
+		
+		completion_reward = {
+			swap_ideas = {
+				add_idea = government_vulnerable_to_fascism_2
+				remove_idea = government_vulnerable_to_fascism
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.1
+			}
+			add_war_support = -0.1
+			add_stability = 0.1
+		}
+		
+		complete_tooltip = {
+			swap_ideas = {
+				add_idea = government_vulnerable_to_fascism_2
+				remove_idea = government_vulnerable_to_fascism
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.1
+			}
+			add_war_support = -0.1
+			add_stability = 0.1
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = SWE_spread_the_ideology_in_the_country
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 10
+
+		#allow_branch = {
+		#	<trigger>
+		#}
+
+		x = 1
+		y = 1
+
+		relative_position_id = SWE_lindholmarna
+
+		mutually_exclusive = {
+			
+		}
+
+		prerequisite = {
+			focus = SWE_lindholmarna
+		}
+
+		#available = {
+		#	<trigger>
+		#}
+
+		#bypass = {
+		#	<trigger>
+		#}
+
+		search_filters = {  }
+
+		#select_effect = {
+		#	<command>
+		#}
+		
+		completion_reward = {
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.1
+			}
+			add_war_support = -0.1
+			add_stability = -0.1
+		}
+		
+		complete_tooltip = {
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.1
+			}
+			add_war_support = -0.1
+			add_stability = -0.1
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = SWE_sa
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 10
+
+		#allow_branch = {
+		#	<trigger>
+		#}
+
+		x = 0
+		y = 1
+
+		relative_position_id = SWE_spread_the_ideology_in_the_country
+
+		mutually_exclusive = {
+			
+		}
+
+		prerequisite = {
+			focus = SWE_spread_the_ideology_in_the_country
+		}
+
+		#available = {
+		#	<trigger>
+		#}
+
+		#bypass = {
+		#	<trigger>
+		#}
+
+		search_filters = {  }
+
+		#select_effect = {
+		#	<command>
+		#}
+		
+		completion_reward = {
+			add_ideas = {
+				fascism_sa
+			}
+			add_stability = 0.1
+		}
+		
+		complete_tooltip = {
+			add_ideas = {
+				fascism_sa
+			}
+			add_stability = 0.1
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = SWE_seize_the_power
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 10
+
+		#allow_branch = {
+		#	<trigger>
+		#}
+
+		x = -1
+		y = 1
+
+		relative_position_id = SWE_sa
+
+		mutually_exclusive = {
+			
+		}
+
+		prerequisite = {
+			focus = SWE_sa
+		}
+
+		prerequisite = {
+			focus = SWE_propaganda
+		}
+
+		available = {
+			has_government = fascism
+		}
+
+		#bypass = {
+		#	<trigger>
+		#}
+
+		search_filters = {  }
+
+		#select_effect = {
+		#	<command>
+		#}
+		
+		completion_reward = {
+			add_political_power = 100
+			add_war_support = 0.1
+			remove_ideas = {
+				riksdag_non_supportive_army
+			}
+		}
+		
+		complete_tooltip = {
+			add_political_power = 100
+			add_war_support = 0.1
+			remove_ideas = {
+				riksdag_non_supportive_army
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = SWE_enforce_power
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 10
+
+		#allow_branch = {
+		#	<trigger>
+		#}
+
+		x = 0
+		y = 1
+
+		relative_position_id = SWE_seize_the_power
+
+		mutually_exclusive = {
+			
+		}
+
+		prerequisite = {
+			focus = SWE_seize_the_power
+		}
+
+		#available = {
+		#	<trigger>
+		#}
+
+		#bypass = {
+		#	<trigger>
+		#}
+
+		search_filters = {  }
+
+		#select_effect = {
+		#	<command>
+		#}
+		
+		completion_reward = {
+			add_political_power = 100
+			add_war_support = 0.1
+			add_stability = 0.25
+		}
+		
+		complete_tooltip = {
+			add_political_power = 100
+			add_war_support = 0.1
+			add_stability = 0.25
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = SWE_fnf_sveaborg
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 10
+
+		#allow_branch = {
+		#	<trigger>
+		#}
+
+		x = -2
+		y = 1
+
+		relative_position_id = SWE_enforce_power
+
+		mutually_exclusive = {
+			
+		}
+
+		prerequisite = {
+			focus = SWE_enforce_power
+		}
+
+		#available = {
+		#	<trigger>
+		#}
+
+		#bypass = {
+		#	<trigger>
+		#}
+
+		search_filters = {  }
+
+		#select_effect = {
+		#	<command>
+		#}
+		
+		completion_reward = {
+			add_political_power = 100
+			add_war_support = 0.1
+			add_ideas = {
+				fnf_sveaborg
+			}
+		}
+		
+		complete_tooltip = {
+			add_political_power = 100
+			add_war_support = 0.1
+			add_ideas = {
+				fnf_sveaborg
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = SWE_deal_with_the_devil
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 10
+
+		#allow_branch = {
+		#	<trigger>
+		#}
+
+		x = -1
+		y = 1
+
+		relative_position_id = SWE_fnf_sveaborg
+
+		mutually_exclusive = {
+			focus = SWE_join_finland_against_soviet
+		}
+
+		prerequisite = {
+			focus = SWE_fnf_sveaborg
+		}
+
+		#available = {
+		#	<trigger>
+		#}
+
+		#bypass = {
+		#	<trigger>
+		#}
+
+		search_filters = {  }
+
+		#select_effect = {
+		#	<command>
+		#}
+		
+		completion_reward = {
+			SWE = {
+				every_state = { limit = { is_controlled_by = FIN } ROOT = { add_state_core = PREV } }
+			}
+			SOV = {
+				country_event = {
+					id = nordic_events.13
+					days = 1
+				}
+			}
+		}
+		
+		complete_tooltip = {
+			SWE = {
+				every_state = { limit = { is_controlled_by = FIN } ROOT = { add_state_core = PREV } }
+			}
+			SOV = {
+				country_event = {
+					id = nordic_events.13
+					days = 1
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = SWE_join_finland_against_soviet
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 10
+
+		#allow_branch = {
+		#	<trigger>
+		#}
+
+		x = 1
+		y = 1
+
+		relative_position_id = SWE_fnf_sveaborg
+
+		mutually_exclusive = {
+			focus = SWE_deal_with_the_devil
+		}
+
+		prerequisite = {
+			focus = SWE_fnf_sveaborg
+		}
+
+		available = {
+			FIN = {
+				has_war_with = SOV
+			}
+		}
+
+		#bypass = {
+		#	<trigger>
+		#}
+
+		search_filters = {  }
+
+		#select_effect = {
+		#	<command>
+		#}
+		
+		completion_reward = {
+			if = {
+				limit = { GER = { has_government = fascism}}
+				GER = {
+					add_to_faction = SWE
+				}	
+			}
+			add_to_war = { 
+			    targeted_alliance = FIN 
+			    enemy = SOV 
+			    hostility_reason = asked_to_join
+			}
+		}
+		
+		complete_tooltip = {
+			if = {
+				limit = { GER = { has_government = fascism}}
+				GER = {
+					add_to_faction = SWE
+				}	
+			}
+			add_to_war = { 
+			    targeted_alliance = FIN 
+			    enemy = SOV 
+			    hostility_reason = asked_to_join
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = SWE_den_svenske
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 10
+
+		#allow_branch = {
+		#	<trigger>
+		#}
+
+		x = 1
+		y = 1
+
+		relative_position_id = SWE_enforce_power
+
+		mutually_exclusive = {
+			
+		}
+
+		prerequisite = {
+			focus = SWE_enforce_power
+		}
+
+		#available = {
+		#	<trigger>
+		#}
+
+		#bypass = {
+		#	<trigger>
+		#}
+
+		search_filters = {  }
+
+		#select_effect = {
+		#	<command>
+		#}
+		
+		completion_reward = {
+			swap_ideas = {
+				add_idea = fascism_in_the_land
+				remove_idea = government_vulnerable_to_fascism_2
+			}
+		}
+		
+		complete_tooltip = {
+			swap_ideas = {
+				add_idea = fascism_in_the_land
+				remove_idea = government_vulnerable_to_fascism_2
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = SWE_f_choose_our_path
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 10
+
+		#allow_branch = {
+		#	<trigger>
+		#}
+
+		x = 0
+		y = 1
+
+		relative_position_id = SWE_den_svenske
+
+		mutually_exclusive = {
+			
+		}
+
+		prerequisite = {
+			focus = SWE_den_svenske
+		}
+
+		#available = {
+		#	<trigger>
+		#}
+
+		#bypass = {
+		#	<trigger>
+		#}
+
+		search_filters = {  }
+
+		#select_effect = {
+		#	<command>
+		#}
+		
+		completion_reward = {
+			add_war_support = 0.25
+		}
+		
+		complete_tooltip = {
+			add_war_support = 0.25
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = SWE_f_axis_focus
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 10
+
+		#allow_branch = {
+		#	<trigger>
+		#}
+
+		x = -1
+		y = 1
+
+		relative_position_id = SWE_f_choose_our_path
+
+		mutually_exclusive = {
+			focus = SWE_scandinavia_focus
+		}
+
+		prerequisite = {
+			focus = SWE_f_choose_our_path
+		}
+
+		available = {
+			GER = {
+				has_government = fascism
+			}
+		}
+
+		#bypass = {
+		#	<trigger>
+		#}
+
+		search_filters = {  }
+
+		#select_effect = {
+		#	<command>
+		#}
+		
+		completion_reward = {
+			GER = {
+				add_to_faction = SWE
+			}
+		}
+		
+		complete_tooltip = {
+			GER = {
+				add_to_faction = SWE
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = SWE_scandinavia_focus
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 10
+
+		#allow_branch = {
+		#	<trigger>
+		#}
+
+		x = 1
+		y = 1
+
+		relative_position_id = SWE_f_choose_our_path
+
+		mutually_exclusive = {
+			focus = SWE_f_axis_focus
+		}
+
+		prerequisite = {
+			focus = SWE_f_choose_our_path
+		}
+
+		available = {
+			
+		}
+
+		#bypass = {
+		#	<trigger>
+		#}
+
+		search_filters = {  }
+
+		#select_effect = {
+		#	<command>
+		#}
+		
+		completion_reward = {
+			create_faction = The_nordic_lights
+			every_state = { limit = { is_controlled_by = DEN } ROOT = { add_state_core = PREV } }
+			every_state = { limit = { is_controlled_by = NOR } ROOT = { add_state_core = PREV } }
+			every_state = { limit = { is_controlled_by = FIN } ROOT = { add_state_core = PREV } }
+			SWE = {
+				create_wargoal = {
+					type = annex_everything 
+					target = DEN
+				}
+			}
+			SWE = {
+				create_wargoal = {
+					type = annex_everything 
+					target = NOR
+				}
+			}
+			SWE = {
+				create_wargoal = {
+					type = annex_everything 
+					target = FIN
+				}
+			}
+		}
+		
+		complete_tooltip = {
+			create_faction = The_nordic_lights
+			every_state = { limit = { is_controlled_by = DEN } ROOT = { add_state_core = PREV } }
+			every_state = { limit = { is_controlled_by = NOR } ROOT = { add_state_core = PREV } }
+			every_state = { limit = { is_controlled_by = FIN } ROOT = { add_state_core = PREV } }
+			SWE = {
+				create_wargoal = {
+					type = annex_everything 
+					target = DEN
+				}
+			}
+			SWE = {
+				create_wargoal = {
+					type = annex_everything 
+					target = NOR
+				}
+			}
+			SWE = {
+				create_wargoal = {
+					type = annex_everything 
+					target = FIN
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	# communist path
+	focus = {
+		id = SWE_skp
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 10
+
+		#allow_branch = {
+		#	<trigger>
+		#}
+
+		x = 30
+		y = 1
+
+		mutually_exclusive = {
+			focus = SWE_gustaf_v
+			focus = SWE_hansson
+			focus = SWE_lindholmarna
+		}
+
+		prerequisite = {
+			focus = SWE_abandon_neutrality
+		}
+
+		#available = {
+		#	<trigger>
+		#}
+
+		#bypass = {
+		#	<trigger>
+		#}
+
+		search_filters = {  }
+
+		#select_effect = {
+		#	<command>
+		#}
+		
+		completion_reward = {
+			add_political_power = -50
+			add_war_support = -0.1
+			add_stability = -0.25
+			add_ideas = {
+				communists_organizing_swe
+			}
+		}
+		
+		complete_tooltip = {
+			add_political_power = -50
+			add_war_support = -0.1
+			add_stability = -0.25
+			add_ideas = {
+				communists_organizing_swe
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = SWE_send_volunteers_to_spain
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 10
+
+		#allow_branch = {
+		#	<trigger>
+		#}
+
+		x = -1
+		y = 1
+
+		relative_position_id = SWE_skp
+
+		mutually_exclusive = {
+			
+		}
+
+		prerequisite = {
+			focus = SWE_skp
+		}
+
+		available = {
+			SPD = {
+				has_global_flag = spanish_civil_war
+			}
+		}
+
+		#bypass = {
+		#	<trigger>
+		#}
+
+		search_filters = {  }
+
+		#select_effect = {
+		#	<command>
+		#}
+		
+		completion_reward = {
+			
+		}
+		
+		complete_tooltip = {
+			
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = SWE_influence_scandinavian_communists
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 10
+
+		#allow_branch = {
+		#	<trigger>
+		#}
+
+		x = -2
+		y = 1
+
+		relative_position_id = SWE_send_volunteers_to_spain
+
+		mutually_exclusive = {
+			
+		}
+
+		prerequisite = {
+			focus = SWE_send_volunteers_to_spain
+		}
+
+		available = {
+			
+		}
+
+		#bypass = {
+		#	<trigger>
+		#}
+
+		search_filters = {  }
+
+		#select_effect = {
+		#	<command>
+		#}
+		
+		completion_reward = {
+			NOR = {
+				add_timed_idea = {
+					idea = communists_organizing
+					days = 1095
+				}
+			}
+			DEN = {
+				add_timed_idea = {
+					idea = communists_organizing
+					days = 1095
+				}
+			}
+			FIN = {
+				add_timed_idea = {
+					idea = communists_organizing
+					days = 1095
+				}
+			}
+		}
+		
+		complete_tooltip = {
+			NOR = {
+				add_timed_idea = {
+					idea = communists_organizing
+					days = 1095
+				}
+			}
+			DEN = {
+				add_timed_idea = {
+					idea = communists_organizing
+					days = 1095
+				}
+			}
+			FIN = {
+				add_timed_idea = {
+					idea = communists_organizing
+					days = 1095
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = SWE_c_focus_on_the_scandinavian_revolution
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 10
+
+		#allow_branch = {
+		#	<trigger>
+		#}
+
+		x = -2
+		y = 1
+
+		relative_position_id = SWE_influence_scandinavian_communists
+
+		mutually_exclusive = {
+			focus = SWE_c_join_comintern
+		}
+
+		prerequisite = {
+			focus = SWE_influence_scandinavian_communists
+		}
+
+		available = {
+			communism > 0.5
+		}
+
+		#bypass = {
+		#	<trigger>
+		#}
+
+		search_filters = {  }
+
+		#select_effect = {
+		#	<command>
+		#}
+		
+		completion_reward = {
+			create_faction = "The Scandinavian Comintern"
+			set_politics = {
+				ruling_party = communism
+				elections_allowed = no
+			}
+		}
+		
+		complete_tooltip = {
+			create_faction = "The Scandinavian Comintern"
+			set_politics = {
+				ruling_party = communism
+				elections_allowed = no
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = SWE_c_revolution_in_norway
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 10
+
+		#allow_branch = {
+		#	<trigger>
+		#}
+
+		x = -2
+		y = 1
+
+		relative_position_id = SWE_c_focus_on_the_scandinavian_revolution
+
+		mutually_exclusive = {
+			
+		}
+
+		prerequisite = {
+			focus = SWE_c_focus_on_the_scandinavian_revolution
+		}
+
+		available = {
+			
+		}
+
+		#bypass = {
+		#	<trigger>
+		#}
+
+		search_filters = {  }
+
+		#select_effect = {
+		#	<command>
+		#}
+		
+		completion_reward = {
+			puppet = NOR
+			add_to_faction = NOR
+			
+			NOR = {
+				start_civil_war = {
+					ruling_party = democratic
+					ideology = democratic
+					size = 0.2
+					capital = 144
+					states = {
+						143 144
+					}
+				}
+
+				set_politics = {
+					ruling_party = communism
+					elections_allowed = no
+				}
+			}
+		}
+
+		complete_tooltip = {
+			puppet = NOR
+			add_to_faction = NOR
+
+			NOR = {
+				start_civil_war = {
+					ruling_party = democratic
+					ideology = democratic
+					size = 0.2
+					capital = 144
+					states = {
+						143 144
+					}
+				}
+
+				set_politics = {
+					ruling_party = communism
+					elections_allowed = no
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = SWE_c_revolution_in_denmark
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 10
+
+		#allow_branch = {
+		#	<trigger>
+		#}
+
+		x = 0
+		y = 1
+
+		relative_position_id = SWE_c_focus_on_the_scandinavian_revolution
+
+		mutually_exclusive = {
+			
+		}
+
+		prerequisite = {
+			focus = SWE_c_focus_on_the_scandinavian_revolution
+		}
+
+		available = {
+			
+		}
+
+		#bypass = {
+		#	<trigger>
+		#}
+
+		search_filters = {  }
+
+		#select_effect = {
+		#	<command>
+		#}
+		
+		completion_reward = {
+			puppet = DEN
+			add_to_faction = DEN
+			
+			DEN = {
+				start_civil_war = {
+					ruling_party = democratic
+					ideology = democratic
+					size = 0.2
+					capital = 144
+					states = {
+						143 144
+					}
+				}
+
+				set_politics = {
+					ruling_party = communism
+					elections_allowed = no
+				}
+			}
+		}
+
+		complete_tooltip = {
+			puppet = DEN
+			add_to_faction = DEN
+			
+			DEN = {
+				start_civil_war = {
+					ruling_party = democratic
+					ideology = democratic
+					size = 0.2
+					capital = 144
+					states = {
+						143 144
+					}
+				}
+
+				set_politics = {
+					ruling_party = communism
+					elections_allowed = no
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = SWE_c_partition_finland
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 10
+
+		#allow_branch = {
+		#	<trigger>
+		#}
+
+		x = 2
+		y = 1
+		relative_position_id = SWE_c_focus_on_the_scandinavian_revolution
+
+		prerequisite = {
+			focus = SWE_c_focus_on_the_scandinavian_revolution
+		}
+
+		mutually_exclusive = {
+			
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		search_filters = {  }
+
+		#select_effect = {
+		#	<command>
+		#}
+		
+		completion_reward = {
+			SWE = {
+				every_state = { limit = { is_controlled_by = FIN } ROOT = { add_state_core = PREV } }
+			}
+			SOV = {
+				country_event = {
+					id = nordic_events.13
+					days = 1
+				}
+			}
+		}
+		
+		complete_tooltip = {
+			SWE = {
+				every_state = { limit = { is_controlled_by = FIN } ROOT = { add_state_core = PREV } }
+			}
+			SOV = {
+				country_event = {
+					id = nordic_events.13
+					days = 1
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = SWE_c_join_comintern
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 10
+
+		#allow_branch = {
+		#	<trigger>
+		#}
+
+		x = 0
+		y = 1
+
+		relative_position_id = SWE_influence_scandinavian_communists
+
+		mutually_exclusive = {
+			focus = SWE_c_focus_on_the_scandinavian_revolution
+		}
+
+		prerequisite = {
+			focus = SWE_influence_scandinavian_communists
+		}
+
+		available = {
+			communism > 0.5
+		}
+
+		#bypass = {
+		#	<trigger>
+		#}
+
+		search_filters = {  }
+
+		#select_effect = {
+		#	<command>
+		#}
+		
+		completion_reward = {
+			set_politics = {
+				ruling_party = communism
+				elections_allowed = no
+			}
+
+			SOV = {
+				add_to_faction = SWE
+			}
+		}
+		
+		complete_tooltip = {
+			set_politics = {
+				ruling_party = communism
+				elections_allowed = no
+			}
+
+			SOV = {
+				add_to_faction = SWE
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = SWE_c_give_the_proletarians_work_in_kiruna
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 10
+
+		#allow_branch = {
+		#	<trigger>
+		#}
+
+		x = 1
+		y = 1
+
+		relative_position_id = SWE_skp
+
+		mutually_exclusive = {
+
+		}
+
+		prerequisite = {
+			focus = SWE_skp
+		}
+
+		available = {
+			
+		}
+
+		#bypass = {
+		#	<trigger>
+		#}
+
+		search_filters = {  }
+
+		#select_effect = {
+		#	<command>
+		#}
+		
+		completion_reward = {
+			666 = {
+				add_building_construction = {
+				    type = industrial_complex
+				    level = 2
+				    instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+			}
+		}
+		
+		complete_tooltip = {
+			666 = {
+				add_building_construction = {
+				    type = industrial_complex
+				    level = 2
+				    instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = SWE_c_folkhemmet
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 10
+
+		#allow_branch = {
+		#	<trigger>
+		#}
+
+		x = 3
+		y = 1
+
+		relative_position_id = SWE_skp
+
+		mutually_exclusive = {
+
+		}
+
+		prerequisite = {
+			focus = SWE_skp
+		}
+
+		available = {
+			
+		}
+
+		#bypass = {
+		#	<trigger>
+		#}
+
+		search_filters = {  }
+
+		#select_effect = {
+		#	<command>
+		#}
+		
+		completion_reward = {
+			add_ideas = {
+				folkhemmet
+			}
+		}
+		
+		complete_tooltip = {
+			add_ideas = {
+				folkhemmet
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
 	#
 	# End of politics
 	#
@@ -3641,7 +5198,7 @@ focus_tree = {
 		#	<trigger>
 		#}
 
-		x = 56
+		x = 60
 		y = 0
 
 		#prerequisite = {
@@ -3756,7 +5313,7 @@ focus_tree = {
 		#	<trigger>
 		#}
 
-		x = -2
+		x = -4
 		y = 1
 		relative_position_id = SWE_focus_on_the_army
 
@@ -3817,6 +5374,100 @@ focus_tree = {
 				    instant_build = yes
 				}
 				add_extra_state_shared_building_slots = 1
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+			#modifier = {
+			#	<modifier>
+			#}
+		}
+	}
+
+	focus = {
+		id = SWE_develop_panzer_industry
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 10
+
+		#allow_branch = {
+		#	<trigger>
+		#}
+
+		x = -2
+		y = 1
+		relative_position_id = SWE_focus_on_the_army
+
+		prerequisite = {
+			focus = SWE_focus_on_the_army
+		}
+
+		mutually_exclusive = {
+			
+		}
+
+		#available = {
+		#	<trigger>
+		#}
+
+		#bypass = {
+		#	<trigger>
+		#}
+
+		search_filters = {  }
+
+		#select_effect = {
+		#	<command>
+		#}
+		
+		completion_reward = {
+			139 = {
+				add_building_construction = {
+				    type = arms_factory
+				    level = 1
+				    instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			138 = {
+				add_building_construction = {
+				    type = arms_factory
+				    level = 1
+				    instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+
+			add_tech_bonus = {
+				bonus = 0.2
+				uses = 2
+				category = armor
+			}
+		}
+		
+		complete_tooltip = {
+			139 = {
+				add_building_construction = {
+				    type = arms_factory
+				    level = 1
+				    instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			138 = {
+				add_building_construction = {
+				    type = arms_factory
+				    level = 1
+				    instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+
+			add_tech_bonus = {
+				bonus = 0.2
+				uses = 2
+				category = armor
 			}
 		}
 
@@ -3904,6 +5555,10 @@ focus_tree = {
 			focus = SWE_offensive_focus
 		}
 
+		prerequisite = {
+			focus = SWE_develop_panzer_industry
+		}
+
 		#available = {
 		#	<trigger>
 		#}
@@ -3929,6 +5584,292 @@ focus_tree = {
 			swap_ideas = {
 				add_idea = SWE_defensive_focus_idea_2
 				remove_idea = SWE_defensive_focus_idea
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+			#modifier = {
+			#	<modifier>
+			#}
+		}
+	}
+
+	focus = {
+		id = SWE_give_landsverk_funding
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 10
+
+		#allow_branch = {
+		#	<trigger>
+		#}
+
+		x = 0
+		y = 2
+		relative_position_id = SWE_develop_panzer_industry
+
+		prerequisite = {
+			focus = SWE_develop_panzer_industry
+		}
+
+		prerequisite = {
+			focus = SWE_panzer_corps
+		}
+
+		mutually_exclusive = {
+			focus = SWE_give_volvo_funding
+		}
+
+		#available = {
+		#	<trigger>
+		#}
+
+		#bypass = {
+		#	<trigger>
+		#}
+
+		search_filters = {  }
+
+		#select_effect = {
+		#	<command>
+		#}
+		
+		completion_reward = {
+			141 = {
+				add_building_construction = {
+				    type = arms_factory
+				    level = 1
+				    instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			140 = {
+				add_building_construction = {
+				    type = arms_factory
+				    level = 1
+				    instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+
+			add_tech_bonus = {
+				bonus = 0.25
+				uses = 1
+				category = cat_light_armor
+			}
+
+			add_tech_bonus = {
+				bonus = 0.25
+				uses = 1
+				category = cat_medium_armor
+			}
+		}
+		
+		complete_tooltip = {
+			139 = {
+				add_building_construction = {
+				    type = arms_factory
+				    level = 1
+				    instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			138 = {
+				add_building_construction = {
+				    type = arms_factory
+				    level = 1
+				    instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+
+			add_tech_bonus = {
+				bonus = 0.25
+				uses = 1
+				category = cat_light_armor
+			}
+
+			add_tech_bonus = {
+				bonus = 0.25
+				uses = 1
+				category = cat_medium_armor
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+			#modifier = {
+			#	<modifier>
+			#}
+		}
+	}
+
+	focus = {
+		id = SWE_give_volvo_funding
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 10
+
+		#allow_branch = {
+		#	<trigger>
+		#}
+
+		x = 2
+		y = 2
+		relative_position_id = SWE_develop_panzer_industry
+
+		prerequisite = {
+			focus = SWE_develop_panzer_industry
+		}
+
+		prerequisite = {
+			focus = SWE_panzer_corps
+		}
+
+		mutually_exclusive = {
+			focus = SWE_give_landsverk_funding
+		}
+
+		#available = {
+		#	<trigger>
+		#}
+
+		#bypass = {
+		#	<trigger>
+		#}
+
+		search_filters = {  }
+
+		#select_effect = {
+		#	<command>
+		#}
+		
+		completion_reward = {
+			141 = {
+				add_building_construction = {
+				    type = arms_factory
+				    level = 1
+				    instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			140 = {
+				add_building_construction = {
+				    type = arms_factory
+				    level = 1
+				    instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+
+			add_tech_bonus = {
+				bonus = 0.25
+				uses = 2
+				category = cat_medium_armor
+			}
+		}
+		
+		complete_tooltip = {
+			141 = {
+				add_building_construction = {
+				    type = arms_factory
+				    level = 1
+				    instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			140 = {
+				add_building_construction = {
+				    type = arms_factory
+				    level = 1
+				    instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+
+			add_tech_bonus = {
+				bonus = 0.25
+				uses = 2
+				category = cat_medium_armor
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+			#modifier = {
+			#	<modifier>
+			#}
+		}
+	}
+
+	focus = {
+		id = SWE_expand_gevarsfaktoriet
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 10
+
+		#allow_branch = {
+		#	<trigger>
+		#}
+
+		x = 4
+		y = 1
+		relative_position_id = SWE_focus_on_the_army
+
+		prerequisite = {
+			focus = SWE_focus_on_the_army
+		}
+
+		mutually_exclusive = {
+			
+		}
+
+		#available = {
+		#	<trigger>
+		#}
+
+		#bypass = {
+		#	<trigger>
+		#}
+
+		search_filters = {  }
+
+		#select_effect = {
+		#	<command>
+		#}
+		
+		completion_reward = {
+			141 = {
+				add_building_construction = {
+				    type = arms_factory
+				    level = 2
+				    instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+			}
+
+			add_tech_bonus = {
+				bonus = 0.2
+				uses = 2
+				category = infantry_weapons
+			}
+		}
+		
+		complete_tooltip = {
+			141 = {
+				add_building_construction = {
+				    type = arms_factory
+				    level = 2
+				    instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+			}
+
+			add_tech_bonus = {
+				bonus = 0.2
+				uses = 2
+				category = infantry_weapons
 			}
 		}
 
@@ -4016,6 +5957,10 @@ focus_tree = {
 			focus = SWE_defensive_focus
 		}
 
+		prerequisite = {
+			focus = SWE_expand_gevarsfaktoriet
+		}
+
 		#available = {
 		#	<trigger>
 		#}
@@ -4053,6 +5998,481 @@ focus_tree = {
 	}
 
 	focus = {
+		id = SWE_give_bofors_funding
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 10
+
+		#allow_branch = {
+		#	<trigger>
+		#}
+
+		x = 0
+		y = 2
+		relative_position_id = SWE_expand_gevarsfaktoriet
+
+		prerequisite = {
+			focus = SWE_expand_gevarsfaktoriet
+		}
+
+		prerequisite = {
+			focus = SWE_artillery_corps
+		}
+
+		mutually_exclusive = {
+			focus = SWE_give_scania_vabis_funding
+		}
+
+		#available = {
+		#	<trigger>
+		#}
+
+		#bypass = {
+		#	<trigger>
+		#}
+
+		search_filters = {  }
+
+		#select_effect = {
+		#	<command>
+		#}
+		
+		completion_reward = {
+			141 = {
+				add_building_construction = {
+				    type = arms_factory
+				    level = 1
+				    instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			140 = {
+				add_building_construction = {
+				    type = arms_factory
+				    level = 1
+				    instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+
+			add_tech_bonus = {
+				bonus = 0.25
+				uses = 1
+				category = infantry_weapons
+			}
+
+			add_tech_bonus = {
+				bonus = 0.25
+				uses = 1
+				category = artillery
+			}
+		}
+		
+		complete_tooltip = {
+			141 = {
+				add_building_construction = {
+				    type = arms_factory
+				    level = 1
+				    instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			140 = {
+				add_building_construction = {
+				    type = arms_factory
+				    level = 1
+				    instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+
+			add_tech_bonus = {
+				bonus = 0.25
+				uses = 1
+				category = infantry_weapons
+			}
+
+			add_tech_bonus = {
+				bonus = 0.25
+				uses = 1
+				category = artillery
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+			#modifier = {
+			#	<modifier>
+			#}
+		}
+	}
+
+	focus = {
+		id = SWE_give_scania_vabis_funding
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 10
+
+		#allow_branch = {
+		#	<trigger>
+		#}
+
+		x = -2
+		y = 2
+		relative_position_id = SWE_expand_gevarsfaktoriet
+
+		prerequisite = {
+			focus = SWE_expand_gevarsfaktoriet
+		}
+
+		prerequisite = {
+			focus = SWE_artillery_corps
+		}
+
+		mutually_exclusive = {
+			focus = SWE_give_bofors_funding
+		}
+
+		#available = {
+		#	<trigger>
+		#}
+
+		#bypass = {
+		#	<trigger>
+		#}
+
+		search_filters = {  }
+
+		#select_effect = {
+		#	<command>
+		#}
+		
+		completion_reward = {
+			141 = {
+				add_building_construction = {
+				    type = arms_factory
+				    level = 1
+				    instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			140 = {
+				add_building_construction = {
+				    type = arms_factory
+				    level = 1
+				    instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+
+			add_tech_bonus = {
+				bonus = 0.25
+				uses = 1
+				category = infantry_weapons
+			}
+
+			add_tech_bonus = {
+				bonus = 0.25
+				uses = 1
+				category = motorized_equipment
+			}
+		}
+		
+		complete_tooltip = {
+			141 = {
+				add_building_construction = {
+				    type = arms_factory
+				    level = 1
+				    instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			140 = {
+				add_building_construction = {
+				    type = arms_factory
+				    level = 1
+				    instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+
+			add_tech_bonus = {
+				bonus = 0.25
+				uses = 1
+				category = infantry_weapons
+			}
+
+			add_tech_bonus = {
+				bonus = 0.25
+				uses = 1
+				category = motorized_equipment
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+			#modifier = {
+			#	<modifier>
+			#}
+		}
+	}
+
+	focus = {
+		id = SWE_fund_factories_in_smaland_and_scania
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 10
+
+		#allow_branch = {
+		#	<trigger>
+		#}
+
+		x = -1
+		y = 2
+		relative_position_id = SWE_panzer_corps
+
+		prerequisite = {
+			focus = SWE_give_bofors_funding
+			focus = SWE_give_landsverk_funding
+			focus = SWE_give_scania_vabis_funding
+			focus = SWE_give_volvo_funding
+		}
+
+		mutually_exclusive = {
+			
+		}
+
+		#available = {
+		#	<trigger>
+		#}
+
+		#bypass = {
+		#	<trigger>
+		#}
+
+		search_filters = {  }
+
+		#select_effect = {
+		#	<command>
+		#}
+		
+		completion_reward = {
+			138 = {
+				add_building_construction = {
+				    type = arms_factory
+				    level = 1
+				    instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			139 = {
+				add_building_construction = {
+				    type = arms_factory
+				    level = 1
+				    instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+		
+		complete_tooltip = {
+			138 = {
+				add_building_construction = {
+				    type = arms_factory
+				    level = 1
+				    instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			139 = {
+				add_building_construction = {
+				    type = arms_factory
+				    level = 1
+				    instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+			#modifier = {
+			#	<modifier>
+			#}
+		}
+	}
+
+	focus = {
+		id = SWE_fund_factories_in_gotaland_and_svealand
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 10
+
+		#allow_branch = {
+		#	<trigger>
+		#}
+
+		x = 1
+		y = 2
+		relative_position_id = SWE_panzer_corps
+
+		prerequisite = {
+			focus = SWE_give_bofors_funding
+			focus = SWE_give_landsverk_funding
+			focus = SWE_give_scania_vabis_funding
+			focus = SWE_give_volvo_funding
+		}
+
+		mutually_exclusive = {
+			
+		}
+
+		#available = {
+		#	<trigger>
+		#}
+
+		#bypass = {
+		#	<trigger>
+		#}
+
+		search_filters = {  }
+
+		#select_effect = {
+		#	<command>
+		#}
+		
+		completion_reward = {
+			140 = {
+				add_building_construction = {
+				    type = arms_factory
+				    level = 1
+				    instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			141 = {
+				add_building_construction = {
+				    type = arms_factory
+				    level = 1
+				    instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+		
+		complete_tooltip = {
+			140 = {
+				add_building_construction = {
+				    type = arms_factory
+				    level = 1
+				    instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			141 = {
+				add_building_construction = {
+				    type = arms_factory
+				    level = 1
+				    instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+			#modifier = {
+			#	<modifier>
+			#}
+		}
+	}
+
+	focus = {
+		id = SWE_fund_factories_in_norrland_and_lappland
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 10
+
+		#allow_branch = {
+		#	<trigger>
+		#}
+
+		x = 3
+		y = 2
+		relative_position_id = SWE_panzer_corps
+
+		prerequisite = {
+			focus = SWE_give_bofors_funding
+			focus = SWE_give_landsverk_funding
+			focus = SWE_give_scania_vabis_funding
+			focus = SWE_give_volvo_funding
+		}
+
+		mutually_exclusive = {
+			
+		}
+
+		#available = {
+		#	<trigger>
+		#}
+
+		#bypass = {
+		#	<trigger>
+		#}
+
+		search_filters = {  }
+
+		#select_effect = {
+		#	<command>
+		#}
+		
+		completion_reward = {
+			38 = {
+				add_building_construction = {
+				    type = arms_factory
+				    level = 1
+				    instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			666 = {
+				add_building_construction = {
+				    type = arms_factory
+				    level = 1
+				    instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+		
+		complete_tooltip = {
+			38 = {
+				add_building_construction = {
+				    type = arms_factory
+				    level = 1
+				    instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			666 = {
+				add_building_construction = {
+				    type = arms_factory
+				    level = 1
+				    instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+			#modifier = {
+			#	<modifier>
+			#}
+		}
+	}
+
+	focus = {
 		id = SWE_focus_on_the_navy
 		icon = GFX_goal_generic_improve_relations
 
@@ -4062,7 +6482,7 @@ focus_tree = {
 		#	<trigger>
 		#}
 
-		x = 2
+		x = 6
 		y = 1
 		relative_position_id = SWE_rearment
 
@@ -4114,7 +6534,7 @@ focus_tree = {
 		#	<trigger>
 		#}
 
-		x = 4
+		x = 10
 		y = 1
 		relative_position_id = SWE_rearment
 

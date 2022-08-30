@@ -487,4 +487,22 @@ characters={
 			}
 		}
 	}
+	SWE_Filip_Svärd={
+		advisor={
+			slot = political_advisor
+			idea_token = SWE_Filip_Svärd
+			allowed  = {
+					original_tag  = SWE
+				}
+				traits  = {
+					monarchist_media_mogul 
+				}
+		}
+		name=SWE_Filip_Svärd
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_europe_2"
+			}
+		}
+	}
 }

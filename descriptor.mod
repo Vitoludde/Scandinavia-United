@@ -1,6 +1,6 @@
 name = "Mufflizer"
 path = "mod/Mufflizer"
-version = "v1"
+version = "0.6.0-Alpha"
 tags = {
 	"Gameplay"
 	"Historical"
