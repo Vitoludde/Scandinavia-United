@@ -33,7 +33,7 @@ set_technology = {
 	cv_naval_bomber1 = 1
 	early_bomber = 1
 	basic_train = 1
-	motorized_equipment = 1
+	motorised_infantry  = 1
 }
 
 if = {
