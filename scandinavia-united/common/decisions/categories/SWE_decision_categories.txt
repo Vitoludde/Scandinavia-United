@@ -1,0 +1,6 @@
+sweden_decision_category = {
+    allowed = {
+        tag = SWE
+    }
+    visible_when_empty = yes
+}

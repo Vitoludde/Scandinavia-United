@@ -107,6 +107,21 @@
   SWE_f_axis_focus:0 "Join the axis"
   SWE_scandinavia_focus:0 "Focus on scandinavia"
 
+  # Communism
+  SWE_skp:0 "SKP"
+  SWE_send_volunteers_to_spain:0 "Send volunteers to Spain"
+  SWE_c_give_the_proletarians_work_in_kiruna:0 "Sponsor work for the proletarians in Kiruna"
+  SWE_c_folkhemmet:0 "Folkhemmet"
+  SWE_c_workers_revolution:0 "Workers revolution"
+  SWE_c_abolish_the_monarchy:0 "Abolish the monarchy"
+  SWE_c_swedish_communist_revolution:0 "Revolution in Sweden"
+  SWE_influence_scandinavian_communists:0 "Influence communists in Scandinavia"
+  SWE_c_focus_on_the_scandinavian_revolution:0 "Focus on the Scandinavian Revolution"
+  SWE_c_join_comintern:0 "Join the comintern"
+  SWE_c_revolution_in_norway:0 "Sponsor the Norweigan Revolution"
+  SWE_c_revolution_in_denmark:0 "Sponsor the Danish Revolution"
+  SWE_c_partition_finland:0 "Partition Finland"
+
   # Economy
   SWE_civilian_economy_focus:0 "Civilian Economy"
   SWE_expand_mining_in_the_north:0 "Expand the Mining Industry in the North"
@@ -127,8 +142,40 @@
   SWE_panzer_corps:0 "Panzer Corps"
   SWE_defensive_focus:0 "Defensive Ideas"
   SWE_artillery_corps:0 "Artillery Corps"
+  SWE_develop_panzer_industry:0 "Develop the Panzer industry"
+  SWE_expand_gevarsfaktoriet:0 "Expand the Gevärsfaktoriet"
+  SWE_give_landsverk_funding:0 "Give Landsverk extra funding"
+  SWE_give_volvo_funding:0 "Give Volvo extra funding"
+  SWE_give_scania_vabis_funding:0 "Give Scania-Vabis extra funding"
+  SWE_give_bofors_funding:0 "Give Bofors extra funding"
+  SWE_fund_factories_in_smaland_and_scania:0 "Fund factories in Småland and Scania"
+  SWE_fund_factories_in_gotaland_and_svealand:0 "Fund factories in Götaland and Svealand"
+  SWE_fund_factories_in_norrland_and_lappland:0 "Fund factories in Norrland and Lappland"
+
+
+  # Navy
   SWE_focus_on_the_navy:0 "Focus on the navy"
+  SWE_coastal_defences:0 "Coastal defences"
+  SWE_fund_kustjagarkompaniet:0 "Fund the Kustjägarkompaniet"
+  SWE_stockholms_orlogsvarv:0 "Stockholms Örlogsvarv"
+  SWE_new_dockyard_in_erstavik:0 "New dockyard in Erstavik"
+  SWE_new_dockyard_in_musko:0 "New dockyard in Muskö"
+  SWE_new_dockyard_in_skarsatra:0 "New dockyard in Skärsätra"
+  SWE_expand_naval_industry:0 "Expand the Naval Industry"
+  SWE_battleship_supremacy:0 "Battleship supremacy"
+  SWE_submarine_focus:0 "Submarine Focus"
+
+  # Airforce
   SWE_focus_on_the_air:0 "Focus on the airforce"
+
+
+  #
+  # Opinion modifiers
+  #
+  permittent_trafik_allies:0 "Permittent Trafik"
+  permittent_trafik_axis:0 "Permittent Trafik"
+  support_scandinavian_brothers_allies:0 "Support scandinavian brothers"
+  support_scandinavian_brothers_axis:0 "Support scandinavian brothers"
 
   #
   # Ideas
@@ -156,3 +203,13 @@
   monarchism_movements:0 "Monarchist Movements"
   monarchism_movements_swe:0 "Monarchist Movements"
   the_swedish_empire:0 "The Swedish Empire"
+  reserves_mobilized:0 "Reserves Mobilized"
+
+
+  #
+  # Decisions
+  #
+  sweden_decision_category:0 "Sweden Decisions"
+  sweden_decision_category_desc:0 "The main decisions for sweden"
+  send_in_the_reserves:0 "Send in the reserves"
+  send_in_the_reserves_desc:0 "In face of our attackers we may need to send in the reserves!"

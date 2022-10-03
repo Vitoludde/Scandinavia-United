@@ -3819,8 +3819,8 @@ focus_tree = {
 		#	<trigger>
 		#}
 
-		x = -2
-		y = 1
+		x = 0
+		y = 3
 
 		relative_position_id = SWE_send_volunteers_to_spain
 
@@ -3830,6 +3830,10 @@ focus_tree = {
 
 		prerequisite = {
 			focus = SWE_send_volunteers_to_spain
+		}
+
+		prerequisite = {
+			focus = SWE_c_swedish_communist_revolution
 		}
 
 		available = {
@@ -4198,7 +4202,7 @@ focus_tree = {
 		#	<trigger>
 		#}
 
-		x = 0
+		x = 2
 		y = 1
 
 		relative_position_id = SWE_influence_scandinavian_communists
@@ -4317,6 +4321,72 @@ focus_tree = {
 	}
 
 	focus = {
+		id = SWE_c_workers_revolution
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 10
+
+		#allow_branch = {
+		#	<trigger>
+		#}
+
+		x = 0
+		y = 1
+
+		relative_position_id = SWE_c_give_the_proletarians_work_in_kiruna
+
+		mutually_exclusive = {
+
+		}
+
+		prerequisite = {
+			focus = SWE_c_give_the_proletarians_work_in_kiruna
+		}
+
+		available = {
+			
+		}
+
+		#bypass = {
+		#	<trigger>
+		#}
+
+		search_filters = {  }
+
+		#select_effect = {
+		#	<command>
+		#}
+		
+		completion_reward = {
+			add_stability = -0.15
+			666 = {
+				add_building_construction = {
+				    type = industrial_complex
+				    level = 1
+				    instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+		
+		complete_tooltip = {
+			add_stability = -0.15
+			666 = {
+				add_building_construction = {
+				    type = industrial_complex
+				    level = 1
+				    instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
 		id = SWE_c_folkhemmet
 		icon = GFX_goal_generic_improve_relations
 
@@ -4337,6 +4407,117 @@ focus_tree = {
 
 		prerequisite = {
 			focus = SWE_skp
+		}
+
+		available = {
+			
+		}
+
+		#bypass = {
+		#	<trigger>
+		#}
+
+		search_filters = {  }
+
+		#select_effect = {
+		#	<command>
+		#}
+		
+		completion_reward = {
+			add_ideas = {
+				folkhemmet
+			}
+		}
+		
+		complete_tooltip = {
+			add_ideas = {
+				folkhemmet
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = SWE_c_abolish_the_monarchy
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 10
+
+		#allow_branch = {
+		#	<trigger>
+		#}
+
+		x = 0
+		y = 1
+
+		relative_position_id = SWE_c_folkhemmet
+
+		mutually_exclusive = {
+
+		}
+
+		prerequisite = {
+			focus = SWE_c_folkhemmet
+		}
+
+		available = {
+			
+		}
+
+		#bypass = {
+		#	<trigger>
+		#}
+
+		search_filters = {  }
+
+		#select_effect = {
+		#	<command>
+		#}
+		
+		completion_reward = {
+			add_ideas = {
+				folkhemmet
+			}
+		}
+		
+		complete_tooltip = {
+			add_ideas = {
+				folkhemmet
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = SWE_c_swedish_communist_revolution
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 10
+
+		#allow_branch = {
+		#	<trigger>
+		#}
+
+		x = -1
+		y = 1
+
+		relative_position_id = SWE_c_workers_revolution
+
+		mutually_exclusive = {
+
+		}
+
+		prerequisite = {
+			focus = SWE_c_workers_revolution
+		}
+		prerequisite = {
+			focus = SWE_c_abolish_the_monarchy
 		}
 
 		available = {
@@ -6472,6 +6653,10 @@ focus_tree = {
 		}
 	}
 
+	#
+	# Navy
+	#
+
 	focus = {
 		id = SWE_focus_on_the_navy
 		icon = GFX_goal_generic_improve_relations
@@ -6525,6 +6710,620 @@ focus_tree = {
 	}
 
 	focus = {
+		id = SWE_coastal_defences
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 10
+
+		#allow_branch = {
+		#	<trigger>
+		#}
+
+		x = -2
+		y = 1
+		relative_position_id = SWE_focus_on_the_navy
+
+		prerequisite = {
+			focus = SWE_focus_on_the_navy
+		}
+
+		mutually_exclusive = {
+			
+		}
+
+		search_filters = {  }
+		
+		completion_reward = {
+			141 = {
+				add_building_construction = {
+					type = bunker
+					province = 6050
+					level = 5
+				}
+			} 
+			141 = {
+				add_building_construction = {
+					type = coastal_bunker
+					province = 6050
+					level = 5
+				}
+			} 
+			138 = {
+				add_building_construction = {
+					type = coastal_bunker
+					province = 9279
+					level = 5
+				}
+			} 
+			140 = {
+				add_building_construction = {
+					type = coastal_bunker
+					province = 383
+					level = 5
+				}
+			} 
+			666 = {
+				add_building_construction = {
+					type = coastal_bunker
+					province = 9108
+					level = 5
+				}
+			} 
+		}
+		
+		complete_tooltip = {
+			141 = {
+				add_building_construction = {
+					type = bunker
+					province = 6050
+					level = 5
+				}
+			} 
+			141 = {
+				add_building_construction = {
+					type = coastal_bunker
+					province = 6050
+					level = 5
+				}
+			} 
+			138 = {
+				add_building_construction = {
+					type = coastal_bunker
+					province = 9279
+					level = 5
+				}
+			} 
+			140 = {
+				add_building_construction = {
+					type = coastal_bunker
+					province = 383
+					level = 5
+				}
+			} 
+			666 = {
+				add_building_construction = {
+					type = coastal_bunker
+					province = 9108
+					level = 5
+				}
+			} 
+		}
+
+		ai_will_do = {
+			factor = 1
+			#modifier = {
+			#	<modifier>
+			#}
+		}
+	}
+
+	focus = {
+		id = SWE_fund_kustjagarkompaniet
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 10
+
+		#allow_branch = {
+		#	<trigger>
+		#}
+
+		x = 0
+		y = 1
+		relative_position_id = SWE_coastal_defences
+
+		prerequisite = {
+			focus = SWE_coastal_defences
+		}
+
+		mutually_exclusive = {
+			
+		}
+
+		search_filters = {  }
+		
+		completion_reward = {
+			141 = {
+				add_building_construction = {
+				    type = dockyard
+				    level = 1
+				    instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+
+			add_tech_bonus = {
+				bonus = 0.25
+				uses = 1
+				category = marine_tech
+			}
+		}
+		
+		complete_tooltip = {
+			141 = {
+				add_building_construction = {
+				    type = dockyard
+				    level = 1
+				    instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+
+			add_tech_bonus = {
+				bonus = 0.25
+				uses = 1
+				category = marine_tech
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+			#modifier = {
+			#	<modifier>
+			#}
+		}
+	}
+
+	focus = {
+		id = SWE_stockholms_orlogsvarv
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 10
+
+		#allow_branch = {
+		#	<trigger>
+		#}
+
+		x = 2
+		y = 1
+		relative_position_id = SWE_focus_on_the_navy
+
+		prerequisite = {
+			focus = SWE_focus_on_the_navy
+		}
+
+		mutually_exclusive = {
+			
+		}
+
+		search_filters = {  }
+		
+		completion_reward = {
+			
+		}
+		
+		complete_tooltip = {
+			
+		}
+
+		ai_will_do = {
+			factor = 1
+			#modifier = {
+			#	<modifier>
+			#}
+		}
+	}
+
+	focus = {
+		id = SWE_new_dockyard_in_musko
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 10
+
+		#allow_branch = {
+		#	<trigger>
+		#}
+
+		x = 0
+		y = 1
+		relative_position_id = SWE_stockholms_orlogsvarv
+
+		prerequisite = {
+			focus = SWE_stockholms_orlogsvarv
+		}
+
+		mutually_exclusive = {
+			focus = SWE_new_dockyard_in_skarsatra
+			focus = SWE_new_dockyard_in_erstavik
+		}
+
+		search_filters = {  }
+		
+		completion_reward = {
+			141 = {
+				add_building_construction = {
+				    type = dockyard
+				    level = 2
+				    instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+			}
+		}
+		
+		complete_tooltip = {
+			141 = {
+				add_building_construction = {
+				    type = dockyard
+				    level = 2
+				    instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+			#modifier = {
+			#	<modifier>
+			#}
+		}
+	}
+
+	focus = {
+		id = SWE_battleship_supremacy
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 10
+
+		#allow_branch = {
+		#	<trigger>
+		#}
+
+		x = 0
+		y = 1
+		relative_position_id = SWE_new_dockyard_in_musko
+
+		prerequisite = {
+			focus = SWE_new_dockyard_in_musko
+		}
+
+		search_filters = {  }
+		
+		completion_reward = {
+			navy_experience = 150
+			141 = {
+				add_building_construction = {
+				    type = dockyard
+				    level = 2
+				    instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+			}
+
+			add_tech_bonus = {
+				bonus = 0.25
+				uses = 4
+				category = fleet_in_being_tree
+			}
+			add_tech_bonus = {
+				bonus = 0.25
+				uses = 2
+				category = bb_tech
+			}
+		}
+		
+		complete_tooltip = {
+			navy_experience = 150
+			141 = {
+				add_building_construction = {
+				    type = dockyard
+				    level = 2
+				    instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+			}
+
+			add_tech_bonus = {
+				bonus = 0.25
+				uses = 4
+				category = fleet_in_being_tree
+			}
+			add_tech_bonus = {
+				bonus = 0.25
+				uses = 2
+				category = bb_tech
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+			#modifier = {
+			#	<modifier>
+			#}
+		}
+	}
+
+	focus = {
+		id = SWE_new_dockyard_in_skarsatra
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 10
+
+		#allow_branch = {
+		#	<trigger>
+		#}
+
+		x = 2
+		y = 1
+		relative_position_id = SWE_stockholms_orlogsvarv
+
+		prerequisite = {
+			focus = SWE_stockholms_orlogsvarv
+		}
+
+		mutually_exclusive = {
+			focus = SWE_new_dockyard_in_musko
+			focus = SWE_new_dockyard_in_erstavik
+		}
+
+		search_filters = {  }
+		
+		completion_reward = {
+			141 = {
+				add_building_construction = {
+				    type = dockyard
+				    level = 2
+				    instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+			}
+		}
+		
+		complete_tooltip = {
+			141 = {
+				add_building_construction = {
+				    type = dockyard
+				    level = 2
+				    instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+			#modifier = {
+			#	<modifier>
+			#}
+		}
+	}
+
+	focus = {
+		id = SWE_submarine_focus
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 10
+
+		#allow_branch = {
+		#	<trigger>
+		#}
+
+		x = 0
+		y = 1
+		relative_position_id = SWE_new_dockyard_in_skarsatra
+
+		prerequisite = {
+			focus = SWE_new_dockyard_in_skarsatra
+		}
+
+		search_filters = {  }
+		
+		completion_reward = {
+			navy_experience = 150
+			141 = {
+				add_building_construction = {
+				    type = dockyard
+				    level = 2
+				    instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+			}
+
+			add_tech_bonus = {
+				bonus = 0.25
+				uses = 4
+				category = trade_interdiction_tree
+			}
+			add_tech_bonus = {
+				bonus = 0.25
+				uses = 2
+				category = ss_tech
+			}
+		}
+		
+		complete_tooltip = {
+			navy_experience = 150
+			141 = {
+				add_building_construction = {
+				    type = dockyard
+				    level = 2
+				    instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+			}
+
+			add_tech_bonus = {
+				bonus = 0.25
+				uses = 4
+				category = trade_interdiction_tree
+			}
+			add_tech_bonus = {
+				bonus = 0.25
+				uses = 2
+				category = ss_tech
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+			#modifier = {
+			#	<modifier>
+			#}
+		}
+	}
+
+
+	focus = {
+		id = SWE_new_dockyard_in_erstavik
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 10
+
+		#allow_branch = {
+		#	<trigger>
+		#}
+
+		x = -2
+		y = 1
+		relative_position_id = SWE_stockholms_orlogsvarv
+
+		prerequisite = {
+			focus = SWE_stockholms_orlogsvarv
+		}
+
+		mutually_exclusive = {
+			focus = SWE_new_dockyard_in_musko
+			focus = SWE_new_dockyard_in_skarsatra
+		}
+
+		search_filters = {  }
+		
+		completion_reward = {
+			141 = {
+				add_building_construction = {
+				    type = dockyard
+				    level = 2
+				    instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+			}
+		}
+		
+		complete_tooltip = {
+			141 = {
+				add_building_construction = {
+				    type = dockyard
+				    level = 2
+				    instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+			#modifier = {
+			#	<modifier>
+			#}
+		}
+	}
+
+	focus = {
+		id = SWE_expand_naval_industry
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 10
+
+		#allow_branch = {
+		#	<trigger>
+		#}
+
+		x = 0
+		y = 1
+		relative_position_id = SWE_new_dockyard_in_erstavik
+
+		prerequisite = {
+			focus = SWE_new_dockyard_in_erstavik
+		}
+
+		search_filters = {  }
+		
+		completion_reward = {
+			141 = {
+				add_building_construction = {
+				    type = dockyard
+				    level = 2
+				    instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+			}
+			140 = {
+				add_building_construction = {
+				    type = dockyard
+				    level = 2
+				    instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+			}
+			139 = {
+				add_building_construction = {
+				    type = dockyard
+				    level = 2
+				    instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+			}
+		}
+		
+		complete_tooltip = {
+			141 = {
+				add_building_construction = {
+				    type = dockyard
+				    level = 2
+				    instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+			}
+			140 = {
+				add_building_construction = {
+				    type = dockyard
+				    level = 2
+				    instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+			}
+			139 = {
+				add_building_construction = {
+				    type = dockyard
+				    level = 2
+				    instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+			#modifier = {
+			#	<modifier>
+			#}
+		}
+	}
+
+	#
+	# Air
+	#
+
+	focus = {
 		id = SWE_focus_on_the_air
 		icon = GFX_goal_generic_improve_relations
 
@@ -6534,7 +7333,7 @@ focus_tree = {
 		#	<trigger>
 		#}
 
-		x = 10
+		x = 15
 		y = 1
 		relative_position_id = SWE_rearment
 
@@ -6575,5 +7374,4 @@ focus_tree = {
 			#}
 		}
 	}
-}
 }

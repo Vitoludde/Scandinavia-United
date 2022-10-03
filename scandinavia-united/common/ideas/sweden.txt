@@ -250,7 +250,7 @@ ideas = {
 			picture = generic_research_bonus
 
 			modifier = {
-				research_speed_factor = 0.1
+				research_speed_factor = 0.05
 			}
 		}
 
@@ -497,6 +497,19 @@ ideas = {
 				send_volunteer_divisions_required = -0.3
 				send_volunteer_factor = 0.3
 				conscription_factor = 0.05
+			}
+		}
+
+		reserves_mobilized = {
+			allowed = {
+				always = no
+			}
+
+			picture = chi_army_corruption3
+
+			modifier = {
+				conscription_factor = 0.1
+				production_speed_buildings_factor = -0.25
 			}
 		}
 	}
