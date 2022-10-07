@@ -1,4 +1,4 @@
-# 0.6.0  Swedish extremism
+# 0.6.1  Swedish extremism
 
 Swedish Fascism Tree
 > Frontmanna förening Sveaborg <br>
@@ -7,18 +7,22 @@ Swedish Fascism Tree
 > > Join Axis <br>
 > > Annex Scandinavia
 >
+
 Swedish Communism Tree
 > Volunteers to Spain
 > > Revolution in Sweden<br>
 > > Revolution in Scandinavia<br>
 > > Join Comintern
 >
+
 Army Focus
 > Offensive Ideas
 > > Landsverk/Volvo Funding<br>
-> > Defensive Ideas<br>
+>
+> Defensive Ideas<br>
 > > Scania-Vabis/Bofors Funding
 >
+
 Naval focus
 > Coastal Defences
 > > Kustjägarkompaniet<br>
@@ -28,6 +32,7 @@ Naval focus
 > > Expand naval industry<br>
 > > Submarine Focus
 >
+
 Political advisors
 > Filip Svärd (Monarchist)
 >
@@ -36,3 +41,5 @@ Added Sweden to the start menu as a minor nation (since it didn't partake as muc
 Added a decision to send in the reserves as sweden when in war with a major. This increases conscription factor but reduces construction speed.
 
 Fixed a missing localisation
+
+Updated mod to support new version 1.12.*
