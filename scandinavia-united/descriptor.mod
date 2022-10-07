@@ -1,5 +1,5 @@
 name = "Scandinavia United!"
-path = "mod/Scandinavia-United"
+path = "mod/scandinavia-united"
 version = "0.6.0"
 tags = {
 	"Gameplay"
