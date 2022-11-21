@@ -1,7 +1,7 @@
 
 # Scandinavia United!
 
-Version: 0.6.1 Swedish Extremism
+Version: 0.6.2 Swedish Extremism
 
 Supported Game Version: 1.12.*
 
