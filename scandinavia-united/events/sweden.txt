@@ -383,3 +383,74 @@ news_event = {
 		}
 	}
 }
+
+
+#
+# Russian invasion of sweden
+#
+country_event = {
+	id = nordic_events.russain_invasion_of_sweden
+	title = nordic_events.russain_invasion_of_sweden.t
+	desc = nordic_events.russain_invasion_of_sweden.d
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = SWE
+		has_war_with = SOV
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = nordic_events.russain_invasion_of_sweden.a
+		ai_chance =  { factor = 400 }
+		SWE = {
+			add_ideas = {
+				SWE_Swedish_strenght_against_soviet
+				SWE_Swedish_stubbornes_against_soviet
+				SWE_Swedish_endurance_against_soviet
+			}
+		}
+
+		set_country_flag = su_WarWithUssr
+	}
+}
+
+# Russian Invasion has stopped
+
+country_event = {
+	id = nordic_events.russain_war_over
+	title = nordic_events.russain_war_over.t
+	desc = nordic_events.russain_war_over.d
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = SWE
+		has_country_flag = su_WarWithUssr
+		NOT = {
+			has_war_with = SOV
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = nordic_events.russain_war_over.a
+		ai_chance =  { factor = 400 }
+		SWE = {
+			remove_ideas = {
+				SWE_Swedish_strenght_against_soviet
+				SWE_Swedish_stubbornes_against_soviet
+				SWE_Swedish_endurance_against_soviet
+			}
+		}
+
+		clr_country_flag = su_WarWithUssr
+	}
+}

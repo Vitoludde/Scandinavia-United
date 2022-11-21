@@ -43,6 +43,10 @@
   nordic_events.2.a:0 "What will become of the nordics?"
   nordic_events.2.b:0 "ÖVER NORDEN JAG HÄRKSAR!"
 
+  nordic_events.russain_invasion_of_sweden.t:0 "Soviet invasion of Sweden!"
+  nordic_events.russain_invasion_of_sweden.d:0 "Following the declaration of war from our giant neighbour in the west we must ready the people for war and hold out until the end!"
+  nordic_events.russain_invasion_of_sweden.a:0 "Styrka, envishet och uthållighet"
+
   #
   # National focuses
   #
@@ -72,7 +76,7 @@
 
   # Neutrality
   SWE_support_the_monarchists:0 "Give support to the monarcists"
-  SWE_gustaf_v:0 "King in the government"
+  SWE_gustaf_v:0 "Gustaf V"
   SWE_support_monarchists_in_scandinavia:0 "Spread the monarchist idea"
   SWE_etat_est_moi:0 "L'etat c'est moi"
   SWE_consolidate_power:0 "Expand the kings rights"
@@ -199,11 +203,19 @@
   SWE_economy_focus_1:0 "Economy Focus"
   SWE_economy_focus_2:0 "Economy Focus"
   SWE_economy_focus_3:0 "Economy Focus"
-  neutrality_idea_2_sweden:0 "Neutrality Idea"
+  neutrality_idea_2_sweden:0 "Neutral Foreign Policy"
   monarchism_movements:0 "Monarchist Movements"
   monarchism_movements_swe:0 "Monarchist Movements"
-  the_swedish_empire:0 "The Swedish Empire"
+  communists_organizing:0 "Communists Organizing"
+  communists_organizing_swe:0 "Communists Organizing"
+  the_swedish_empire:0 "The Swedish Empire
   reserves_mobilized:0 "Reserves Mobilized"
+  abolished_monarchy:0 "Abolished Monarchy"
+  government_vulnerable_to_fascism:0 "Government vulnerable to fascism"
+  government_vulnerable_to_fascism_2:0 "Government vulnerable to fascism"
+  fascism_in_the_land:0 "Fascism in the land"
+  fascism_sa:0 "SA"
+  SWE_Swedish_SSE_against_soviet:0 "Styrka, envishet och uthållighet"
 
 
   #

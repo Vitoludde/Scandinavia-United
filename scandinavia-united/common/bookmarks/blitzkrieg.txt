@@ -520,7 +520,7 @@ bookmarks = {
 
 		"SWE"={
 			minor = yes
-			history = "SWE_GATHERING_STORM_DESC"
+			history = "SWE_BLITZKRIEG_DESC"
 			ideology = democratic
 			ideas = {
 				en_svensk_tiger

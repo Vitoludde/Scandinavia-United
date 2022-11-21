@@ -18,7 +18,7 @@ focus_tree = {
 
 	focus = {
 		id = SWE_enforce_neutrality
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_goal_generic_neutrality_focus
 
 		cost = 10
 
@@ -70,7 +70,7 @@ focus_tree = {
 
 	focus = {
 		id = SWE_abandon_neutrality
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_goal_generic_major_war
 
 		cost = 10
 
@@ -108,6 +108,7 @@ focus_tree = {
 			add_stability = -0.25
 			remove_ideas = {
 				neutrality_idea
+				riksdag_non_supportive_army
 			}
 		}
 		
@@ -115,6 +116,7 @@ focus_tree = {
 			add_stability = -0.25
 			remove_ideas = {
 				neutrality_idea
+				riksdag_non_supportive_army
 			}
 		}
 
@@ -128,7 +130,7 @@ focus_tree = {
 
 	focus = {
 		id = SWE_support_the_monarchists
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_focus_generic_monarchy_1
 
 		cost = 10
 
@@ -165,11 +167,14 @@ focus_tree = {
 		completion_reward = {
 			remove_ideas = {
 				neutrality_idea
+			}
+			remove_ideas = {
 				en_svensk_tiger
 			}
 			add_ideas = {
 				monarchism_movements_swe
 			}
+			add_political_power = 150
 		}
 		
 		complete_tooltip = {
@@ -543,12 +548,10 @@ focus_tree = {
 		#}
 		
 		completion_reward = {
-			add_stability = -0.25
 			add_war_support = 0.1
 		}
 		
 		complete_tooltip = {
-			add_stability = -0.25
 			add_war_support = 0.1
 		}
 
@@ -600,7 +603,7 @@ focus_tree = {
 			}
 			add_political_power = 200
 			add_stability = 0.25
-			add_war_support = 0.5
+			add_war_support = 0.2
 		}
 		
 		complete_tooltip = {
@@ -610,7 +613,7 @@ focus_tree = {
 			}
 			add_political_power = 200
 			add_stability = 0.25
-			add_war_support = 0.5
+			add_war_support = 0.2
 		}
 
 		ai_will_do = {
@@ -658,7 +661,10 @@ focus_tree = {
 		}
 		
 		complete_tooltip = {
-			add_stability = -0.25
+			swap_ideas = {
+				remove_idea = en_svensk_tiger
+				add_idea = en_svensk_tiger_2
+			}
 		}
 
 		ai_will_do = {
@@ -733,7 +739,7 @@ focus_tree = {
 
 	focus = {
 		id = SWE_intel_agency
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_goal_generic_intelligence_exchange
 
 		cost = 10
 
@@ -767,14 +773,12 @@ focus_tree = {
 			add_ideas = {
 				c_bureau
 			}
-			add_war_support = 0.1
 		}
 		
 		complete_tooltip = {
 			add_ideas = {
 				c_bureau
 			}
-			add_war_support = 0.1
 		}
 
 		ai_will_do = {
@@ -1741,7 +1745,7 @@ focus_tree = {
 
 	focus = {
 		id = SWE_partition_finland
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_focus_invite_finland
 
 		cost = 10
 
@@ -1873,7 +1877,7 @@ focus_tree = {
 
 	focus = {
 		id = SWE_invade_denmark
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_focus_generic_attack_denmark
 
 		cost = 10
 
@@ -2004,7 +2008,7 @@ focus_tree = {
 
 	focus = {
 		id = SWE_invade_norway
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_focus_generic_attack_norway
 
 		cost = 10
 
@@ -2065,7 +2069,7 @@ focus_tree = {
 
 	focus = {
 		id = SWE_scandinavian_unity
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_focus_generic_scandinavian_alliance
 
 		cost = 10
 
@@ -2279,7 +2283,7 @@ focus_tree = {
 
 	focus = {
 		id = SWE_lessons_of_war
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_goal_generic_occupy_states_ongoing_war
 
 		cost = 10
 
@@ -2820,7 +2824,7 @@ focus_tree = {
 	# Fascist path
 	focus = {
 		id = SWE_lindholmarna
-		icon = GFX_goal_generic_improve_relations
+		icon = SWE_government_with_lindholmarna
 
 		cost = 10
 
@@ -3781,9 +3785,7 @@ focus_tree = {
 		}
 
 		available = {
-			SPD = {
-				has_global_flag = spanish_civil_war
-			}
+			has_global_flag = spanish_civil_war
 		}
 
 		#bypass = {
@@ -3811,7 +3813,7 @@ focus_tree = {
 
 	focus = {
 		id = SWE_influence_scandinavian_communists
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_goal_continuous_suppression
 
 		cost = 10
 
@@ -3899,7 +3901,7 @@ focus_tree = {
 
 	focus = {
 		id = SWE_c_focus_on_the_scandinavian_revolution
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_focus_generic_scandinavian_alliance
 
 		cost = 10
 
@@ -3957,7 +3959,7 @@ focus_tree = {
 
 	focus = {
 		id = SWE_c_revolution_in_norway
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_focus_generic_attack_norway
 
 		cost = 10
 
@@ -4043,7 +4045,7 @@ focus_tree = {
 
 	focus = {
 		id = SWE_c_revolution_in_denmark
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_focus_generic_attack_denmark
 
 		cost = 10
 
@@ -4129,7 +4131,7 @@ focus_tree = {
 
 	focus = {
 		id = SWE_c_partition_finland
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_focus_invite_finland
 
 		cost = 10
 
@@ -4194,7 +4196,7 @@ focus_tree = {
 
 	focus = {
 		id = SWE_c_join_comintern
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_focus_generic_join_comintern
 
 		cost = 10
 
@@ -4479,13 +4481,13 @@ focus_tree = {
 		
 		completion_reward = {
 			add_ideas = {
-				folkhemmet
+				abolished_monarchy
 			}
 		}
 		
 		complete_tooltip = {
 			add_ideas = {
-				folkhemmet
+				abolished_monarchy
 			}
 		}
 
@@ -4521,7 +4523,7 @@ focus_tree = {
 		}
 
 		available = {
-			
+			communism > 0.4
 		}
 
 		#bypass = {
@@ -4535,14 +4537,26 @@ focus_tree = {
 		#}
 		
 		completion_reward = {
-			add_ideas = {
-				folkhemmet
+			add_popularity = {
+				ideology = communism
+				popularity = 0.2
+			}
+
+			set_politics = {
+				ruling_party = communism
+				elections_allowed = no
 			}
 		}
 		
 		complete_tooltip = {
-			add_ideas = {
-				folkhemmet
+			add_popularity = {
+				ideology = communism
+				popularity = 0.2
+			}
+
+			set_politics = {
+				ruling_party = communism
+				elections_allowed = no
 			}
 		}
 
@@ -4562,7 +4576,7 @@ focus_tree = {
 	# Civilian Economy
 	focus = {
 		id = SWE_civilian_economy_focus
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_goal_generic_construct_civilian
 
 		cost = 10
 
@@ -4612,8 +4626,8 @@ focus_tree = {
 	}
 
 	focus = {
-		id = SWE_expand_mining_in_the_north
-		icon = GFX_goal_generic_improve_relations
+		id = SWE_focus_on_the_economy
+		icon = GFX_goal_generic_construct_civ_factory
 
 		cost = 10
 
@@ -4627,6 +4641,58 @@ focus_tree = {
 
 		prerequisite = {
 			focus = SWE_civilian_economy_focus
+		}
+
+		mutually_exclusive = {
+			
+		}
+
+		available = {
+			num_of_factories > 10
+		}
+
+		#bypass = {
+		#	<trigger>
+		#}
+
+		search_filters = {  }
+
+		#select_effect = {
+		#	<command>
+		#}
+		
+		completion_reward = {
+			add_ideas = { SWE_economy_focus_1 }
+		}
+		
+		complete_tooltip = {
+			add_ideas = { SWE_economy_focus_1 }
+		}
+
+		ai_will_do = {
+			factor = 1
+			#modifier = {
+			#	<modifier>
+			#}
+		}
+	}
+
+	focus = {
+		id = SWE_expand_mining_in_the_north
+		icon = GFX_focus_generic_aluminum
+
+		cost = 10
+
+		#allow_branch = {
+		#	<trigger>
+		#}
+
+		x = 0
+		y = 1
+		relative_position_id = SWE_focus_on_the_economy
+
+		prerequisite = {
+			focus = SWE_focus_on_the_economy
 		}
 
 		mutually_exclusive = {
@@ -4721,7 +4787,7 @@ focus_tree = {
 
 	focus = {
 		id = SWE_expand_the_railways
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_goal_generic_construct_infrastructure
 
 		cost = 10
 
@@ -4779,7 +4845,7 @@ focus_tree = {
 
 	focus = {
 		id = SWE_expand_the_mining_industry
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_focus_generic_steel
 
 		cost = 10
 
@@ -4860,8 +4926,8 @@ focus_tree = {
 	}
 
 	focus = {
-		id = SWE_expand_the_agricultural_market
-		icon = GFX_goal_generic_improve_relations
+		id = SWE_expand_the_forestry
+		icon = GFX_goal_continuous_non_factory_construct
 
 		cost = 10
 
@@ -4896,7 +4962,7 @@ focus_tree = {
 		#}
 		
 		completion_reward = {
-			139 = {
+			141 = {
 				add_building_construction = {
 				    type = industrial_complex
 				    level = 1
@@ -4904,7 +4970,7 @@ focus_tree = {
 				}
 				add_extra_state_shared_building_slots = 1
 			}
-			138 = {
+			140 = {
 				add_building_construction = {
 				    type = industrial_complex
 				    level = 1
@@ -4915,7 +4981,7 @@ focus_tree = {
 		}
 		
 		complete_tooltip = {
-			139 = {
+			141 = {
 				add_building_construction = {
 				    type = industrial_complex
 				    level = 1
@@ -4923,7 +4989,7 @@ focus_tree = {
 				}
 				add_extra_state_shared_building_slots = 1
 			}
-			138 = {
+			140 = {
 				add_building_construction = {
 				    type = industrial_complex
 				    level = 1
@@ -4942,7 +5008,77 @@ focus_tree = {
 	}
 
 	focus = {
-		id = SWE_expand_the_forestry
+		id = SWE_focus_on_the_economy_2
+		icon = GFX_goal_generic_construct_civ_factory
+
+		cost = 10
+
+		#allow_branch = {
+		#	<trigger>
+		#}
+
+		x = 0
+		y = 1
+		relative_position_id = SWE_expand_mining_in_the_north
+
+		prerequisite = {
+			focus = SWE_expand_the_mining_industry
+		}
+
+		prerequisite = {
+			focus = SWE_expand_the_forestry
+		}
+
+		prerequisite = {
+			focus = SWE_expand_mining_in_the_north
+		}
+
+		prerequisite = {
+			focus = SWE_construct_new_factories
+		}
+
+		mutually_exclusive = {
+			
+		}
+
+		available = {
+			num_of_factories > 20
+		}
+
+		#bypass = {
+		#	<trigger>
+		#}
+
+		search_filters = {  }
+
+		#select_effect = {
+		#	<command>
+		#}
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = SWE_economy_focus_1
+				add_idea = SWE_economy_focus_2
+			}
+		}
+		
+		complete_tooltip = {
+			swap_ideas = {
+				remove_idea = SWE_economy_focus_1
+				add_idea = SWE_economy_focus_2
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+			#modifier = {
+			#	<modifier>
+			#}
+		}
+	}
+
+	focus = {
+		id = SWE_expand_the_agricultural_market
 		icon = GFX_goal_generic_improve_relations
 
 		cost = 10
@@ -4951,12 +5087,12 @@ focus_tree = {
 		#	<trigger>
 		#}
 
-		x = -4
+		x = -2
 		y = 1
-		relative_position_id = SWE_expand_the_railways
+		relative_position_id = SWE_focus_on_the_economy_2
 
 		prerequisite = {
-			focus = SWE_expand_the_railways
+			focus = SWE_focus_on_the_economy_2
 		}
 
 		mutually_exclusive = {
@@ -4978,7 +5114,7 @@ focus_tree = {
 		#}
 		
 		completion_reward = {
-			141 = {
+			139 = {
 				add_building_construction = {
 				    type = industrial_complex
 				    level = 1
@@ -4986,7 +5122,7 @@ focus_tree = {
 				}
 				add_extra_state_shared_building_slots = 1
 			}
-			140 = {
+			138 = {
 				add_building_construction = {
 				    type = industrial_complex
 				    level = 1
@@ -4997,7 +5133,7 @@ focus_tree = {
 		}
 		
 		complete_tooltip = {
-			141 = {
+			139 = {
 				add_building_construction = {
 				    type = industrial_complex
 				    level = 1
@@ -5005,7 +5141,7 @@ focus_tree = {
 				}
 				add_extra_state_shared_building_slots = 1
 			}
-			140 = {
+			138 = {
 				add_building_construction = {
 				    type = industrial_complex
 				    level = 1
@@ -5025,7 +5161,7 @@ focus_tree = {
 
 	focus = {
 		id = SWE_infrastructure_for_the_people
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_goal_generic_construct_infrastructure
 
 		cost = 10
 
@@ -5033,12 +5169,12 @@ focus_tree = {
 		#	<trigger>
 		#}
 
-		x = 0
+		x = 2
 		y = 1
-		relative_position_id = SWE_expand_mining_in_the_north
+		relative_position_id = SWE_focus_on_the_economy_2
 
 		prerequisite = {
-			focus = SWE_expand_mining_in_the_north
+			focus = SWE_focus_on_the_economy_2
 		}
 
 		mutually_exclusive = {
@@ -5118,7 +5254,7 @@ focus_tree = {
 
 	focus = {
 		id = SWE_research_focus
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_focus_research2
 
 		cost = 10
 
@@ -5128,18 +5264,10 @@ focus_tree = {
 
 		x = 0
 		y = 1
-		relative_position_id = SWE_expand_the_agricultural_market
+		relative_position_id = SWE_focus_on_the_economy_2
 
 		prerequisite = {
-			focus = SWE_expand_the_agricultural_market
-		}
-
-		prerequisite = {
-			focus = SWE_expand_the_forestry
-		}
-
-		prerequisite = {
-			focus = SWE_expand_the_mining_industry
+			focus = SWE_focus_on_the_economy_2
 		}
 
 		mutually_exclusive = {
@@ -5185,8 +5313,8 @@ focus_tree = {
 	}
 
 	focus = {
-		id = SWE_focus_on_the_economy
-		icon = GFX_goal_generic_improve_relations
+		id = SWE_focus_on_the_economy_3
+		icon = GFX_goal_generic_construct_civ_factory
 
 		cost = 10
 
@@ -5195,137 +5323,15 @@ focus_tree = {
 		#}
 
 		x = 0
-		y = 1
-		relative_position_id = SWE_infrastructure_for_the_people
-
-		prerequisite = {
-			focus = SWE_expand_the_forestry
-		}
+		y = 2
+		relative_position_id = SWE_focus_on_the_economy_2
 
 		prerequisite = {
 			focus = SWE_expand_the_agricultural_market
 		}
 
 		prerequisite = {
-			focus = SWE_expand_the_mining_industry
-		}
-
-		prerequisite = {
 			focus = SWE_infrastructure_for_the_people
-		}
-
-		prerequisite = {
-			focus = SWE_construct_new_factories
-		}
-
-		mutually_exclusive = {
-			
-		}
-
-		available = {
-			num_of_factories > 10
-		}
-
-		#bypass = {
-		#	<trigger>
-		#}
-
-		search_filters = {  }
-
-		#select_effect = {
-		#	<command>
-		#}
-		
-		completion_reward = {
-			add_ideas = { SWE_economy_focus_1 }
-		}
-		
-		complete_tooltip = {
-			add_ideas = { SWE_economy_focus_1 }
-		}
-
-		ai_will_do = {
-			factor = 1
-			#modifier = {
-			#	<modifier>
-			#}
-		}
-	}
-
-	focus = {
-		id = SWE_focus_on_the_economy_2
-		icon = GFX_goal_generic_improve_relations
-
-		cost = 10
-
-		#allow_branch = {
-		#	<trigger>
-		#}
-
-		x = 0
-		y = 1
-		relative_position_id = SWE_focus_on_the_economy
-
-		prerequisite = {
-			focus = SWE_focus_on_the_economy
-		}
-
-		mutually_exclusive = {
-			
-		}
-
-		available = {
-			num_of_factories > 20
-		}
-
-		#bypass = {
-		#	<trigger>
-		#}
-
-		search_filters = {  }
-
-		#select_effect = {
-		#	<command>
-		#}
-		
-		completion_reward = {
-			swap_ideas = {
-				remove_idea = SWE_economy_focus_1
-				add_idea = SWE_economy_focus_2
-			}
-		}
-		
-		complete_tooltip = {
-			swap_ideas = {
-				remove_idea = SWE_economy_focus_1
-				add_idea = SWE_economy_focus_2
-			}
-		}
-
-		ai_will_do = {
-			factor = 1
-			#modifier = {
-			#	<modifier>
-			#}
-		}
-	}
-
-	focus = {
-		id = SWE_focus_on_the_economy_3
-		icon = GFX_goal_generic_improve_relations
-
-		cost = 10
-
-		#allow_branch = {
-		#	<trigger>
-		#}
-
-		x = 0
-		y = 1
-		relative_position_id = SWE_focus_on_the_economy_2
-
-		prerequisite = {
-			focus = SWE_focus_on_the_economy_2
 		}
 
 		mutually_exclusive = {
@@ -5371,7 +5377,7 @@ focus_tree = {
 	# Rearment
 	focus = {
 		id = SWE_rearment
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_focus_secret_rearmament
 
 		cost = 10
 
@@ -5434,7 +5440,7 @@ focus_tree = {
 
 	focus = {
 		id = SWE_focus_on_the_army
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_goal_generic_army_doctrines
 
 		cost = 10
 
@@ -5486,7 +5492,7 @@ focus_tree = {
 
 	focus = {
 		id = SWE_construct_new_factories
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_goal_generic_construct_mil_factory
 
 		cost = 10
 
@@ -5568,7 +5574,7 @@ focus_tree = {
 
 	focus = {
 		id = SWE_develop_panzer_industry
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_goal_continuous_armor_production
 
 		cost = 10
 
@@ -5662,7 +5668,7 @@ focus_tree = {
 
 	focus = {
 		id = SWE_offensive_focus
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_goal_generic_army_motorized
 
 		cost = 10
 
@@ -5720,7 +5726,7 @@ focus_tree = {
 
 	focus = {
 		id = SWE_panzer_corps
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_focus_generic_army_tanks2
 
 		cost = 10
 
@@ -5986,7 +5992,7 @@ focus_tree = {
 
 	focus = {
 		id = SWE_expand_gevarsfaktoriet
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_focus_chi_army_reform
 
 		cost = 10
 
@@ -6064,7 +6070,7 @@ focus_tree = {
 
 	focus = {
 		id = SWE_defensive_focus
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_goal_generic_army_artillery2
 
 		cost = 10
 
@@ -6122,7 +6128,7 @@ focus_tree = {
 
 	focus = {
 		id = SWE_artillery_corps
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_goal_generic_army_artillery
 
 		cost = 10
 
@@ -6400,7 +6406,7 @@ focus_tree = {
 
 	focus = {
 		id = SWE_fund_factories_in_smaland_and_scania
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_goal_generic_construct_mil_factory
 
 		cost = 10
 
@@ -6485,7 +6491,7 @@ focus_tree = {
 
 	focus = {
 		id = SWE_fund_factories_in_gotaland_and_svealand
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_goal_generic_construct_mil_factory
 
 		cost = 10
 
@@ -6570,7 +6576,7 @@ focus_tree = {
 
 	focus = {
 		id = SWE_fund_factories_in_norrland_and_lappland
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_goal_generic_construct_mil_factory
 
 		cost = 10
 
@@ -6659,7 +6665,7 @@ focus_tree = {
 
 	focus = {
 		id = SWE_focus_on_the_navy
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_goal_generic_build_navy
 
 		cost = 10
 
@@ -6711,7 +6717,7 @@ focus_tree = {
 
 	focus = {
 		id = SWE_coastal_defences
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_focus_generic_coastal_fort
 
 		cost = 10
 
@@ -6819,7 +6825,7 @@ focus_tree = {
 
 	focus = {
 		id = SWE_fund_kustjagarkompaniet
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_goal_generic_special_forces
 
 		cost = 10
 
@@ -6885,7 +6891,7 @@ focus_tree = {
 
 	focus = {
 		id = SWE_stockholms_orlogsvarv
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_goal_generic_navy_cruiser
 
 		cost = 10
 
@@ -6908,7 +6914,14 @@ focus_tree = {
 		search_filters = {  }
 		
 		completion_reward = {
-			
+			141 = {
+				add_building_construction = {
+				    type = dockyard
+				    level = 2
+				    instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+			}
 		}
 		
 		complete_tooltip = {
@@ -6925,7 +6938,7 @@ focus_tree = {
 
 	focus = {
 		id = SWE_new_dockyard_in_musko
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_goal_generic_construct_naval_dockyard
 
 		cost = 10
 
@@ -6980,7 +6993,7 @@ focus_tree = {
 
 	focus = {
 		id = SWE_battleship_supremacy
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_goal_generic_navy_battleship
 
 		cost = 10
 
@@ -7054,7 +7067,7 @@ focus_tree = {
 
 	focus = {
 		id = SWE_new_dockyard_in_skarsatra
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_goal_generic_construct_naval_dockyard
 
 		cost = 10
 
@@ -7109,7 +7122,7 @@ focus_tree = {
 
 	focus = {
 		id = SWE_submarine_focus
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_goal_generic_navy_submarine
 
 		cost = 10
 
@@ -7184,7 +7197,7 @@ focus_tree = {
 
 	focus = {
 		id = SWE_new_dockyard_in_erstavik
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_goal_generic_construct_naval_dockyard
 
 		cost = 10
 
@@ -7239,7 +7252,7 @@ focus_tree = {
 
 	focus = {
 		id = SWE_expand_naval_industry
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_goal_continuous_naval_production
 
 		cost = 10
 
@@ -7325,7 +7338,7 @@ focus_tree = {
 
 	focus = {
 		id = SWE_focus_on_the_air
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_goal_generic_air_doctrine
 
 		cost = 10
 

@@ -1,7 +1,8 @@
-name = "Scandinavia United!"
-version = "0.6.1"
-tags = {
-	"Gameplay"
+version="0.6.1"
+tags={
 	"Historical"
+	"Gameplay"
 }
-supported_version = "1.12.*"
+name="Scandinavia United"
+supported_version="1.12.*"
+remote_file_id="2890625362"
