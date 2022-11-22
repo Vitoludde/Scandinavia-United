@@ -1,11 +1,16 @@
-# 0.6.2 Swedish extremism
+# 0.7.0
 
-Fully support Hoi versions 1.12.*
+Pre testing with USA Congress scripted gui
 
-Fixed missing localisations
+Added a party system for sweden which includes the parties:
 
-Slight balances to the swedish focus tree
+* Social demokraterna
+* Högern
+* Bondeförbundet
+* Folkpartiet
 
-Fixed steam workshop issues
+Planned party to add:
 
-Pre-work for 0.7
+* Kommunisterna
+
+You can interact with these parties as you wish with the ability to boost and crack down on certain parties. It is planned so the popularity of the parties determine which focuses you can do.

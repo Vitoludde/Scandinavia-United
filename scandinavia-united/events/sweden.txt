@@ -413,9 +413,9 @@ country_event = {
 				SWE_Swedish_stubbornes_against_soviet
 				SWE_Swedish_endurance_against_soviet
 			}
-		}
 
-		set_country_flag = su_WarWithUssr
+			set_country_flag = su_WarWithUssr
+		}
 	}
 }
 
@@ -449,8 +449,7 @@ country_event = {
 				SWE_Swedish_stubbornes_against_soviet
 				SWE_Swedish_endurance_against_soviet
 			}
+			clr_country_flag = su_WarWithUssr
 		}
-
-		clr_country_flag = su_WarWithUssr
 	}
 }

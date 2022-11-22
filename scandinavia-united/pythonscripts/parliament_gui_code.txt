@@ -1,0 +1,462 @@
+
+### Insert as a top-level container in your .gui file
+
+containerWindowType = {
+	name = ""
+	position = { x = 0 y = 0 }
+
+	iconType = { 
+		name = "parliament_dot_icon"
+		quadTextureSprite = ""
+		
+	}
+}
+
+
+
+### Insert where you want the diagram to go, feel free to adjust position etc
+
+
+# LEAVE THESE COMMENTS IN SO YOU CAN REGENERATE THIS DIAGRAM
+# IF THE SCRIPT IS IMPROVED DOWN THE LINE
+# YOU HAVE BEEN WARNED
+# Spread: 1.85
+# First Row Radius: 5.7
+# Total Delegates: 200
+gridboxtype = {
+	name = "parliament_diagram"
+	position = { x = 0 y = 0 }
+	size = { width = 100%% height = 100%% }
+	slotsize = { width = 100%% height = 0 }
+	max_slots_horizontal = 1
+	add_horizontal = no
+}
+
+
+
+### Insert into the scripted GUI for the container which holds the parliament_diagram gridboxtype
+
+dynamic_lists = {
+	parliament_diagram = {
+		array = 
+		change_scope = no
+		entry_container = 
+		index = seat_idx
+	}
+}
+
+properties = {
+	parliament_dot_icon = {
+		x = ^seat_idx
+		y = ^seat_idx
+		frame = ^seat_idx
+	}
+}
+
+
+
+### Insert into a history file or scripted effect, this sets up all of the seat positions
+### Note that you'll need to fill out  yourself with the proper frames for each seat
+add_to_array = {  = 0 }
+add_to_array = {  = 181 }
+add_to_array = {  = 12 }
+add_to_array = {  = 181 }
+add_to_array = {  = 23 }
+add_to_array = {  = 181 }
+add_to_array = {  = 35 }
+add_to_array = {  = 181 }
+add_to_array = {  = 46 }
+add_to_array = {  = 181 }
+add_to_array = {  = 58 }
+add_to_array = {  = 181 }
+add_to_array = {  = 70 }
+add_to_array = {  = 181 }
+add_to_array = {  = 81 }
+add_to_array = {  = 181 }
+add_to_array = {  = 2 }
+add_to_array = {  = 164 }
+add_to_array = {  = 13 }
+add_to_array = {  = 164 }
+add_to_array = {  = 25 }
+add_to_array = {  = 164 }
+add_to_array = {  = 37 }
+add_to_array = {  = 163 }
+add_to_array = {  = 49 }
+add_to_array = {  = 163 }
+add_to_array = {  = 61 }
+add_to_array = {  = 162 }
+add_to_array = {  = 5 }
+add_to_array = {  = 147 }
+add_to_array = {  = 73 }
+add_to_array = {  = 162 }
+add_to_array = {  = 17 }
+add_to_array = {  = 146 }
+add_to_array = {  = 29 }
+add_to_array = {  = 146 }
+add_to_array = {  = 85 }
+add_to_array = {  = 161 }
+add_to_array = {  = 42 }
+add_to_array = {  = 145 }
+add_to_array = {  = 10 }
+add_to_array = {  = 131 }
+add_to_array = {  = 54 }
+add_to_array = {  = 145 }
+add_to_array = {  = 23 }
+add_to_array = {  = 129 }
+add_to_array = {  = 67 }
+add_to_array = {  = 144 }
+add_to_array = {  = 35 }
+add_to_array = {  = 130 }
+add_to_array = {  = 79 }
+add_to_array = {  = 144 }
+add_to_array = {  = 16 }
+add_to_array = {  = 115 }
+add_to_array = {  = 48 }
+add_to_array = {  = 128 }
+add_to_array = {  = 30 }
+add_to_array = {  = 113 }
+add_to_array = {  = 61 }
+add_to_array = {  = 128 }
+add_to_array = {  = 93 }
+add_to_array = {  = 142 }
+add_to_array = {  = 42 }
+add_to_array = {  = 114 }
+add_to_array = {  = 24 }
+add_to_array = {  = 99 }
+add_to_array = {  = 75 }
+add_to_array = {  = 126 }
+add_to_array = {  = 57 }
+add_to_array = {  = 112 }
+add_to_array = {  = 38 }
+add_to_array = {  = 98 }
+add_to_array = {  = 88 }
+add_to_array = {  = 127 }
+add_to_array = {  = 70 }
+add_to_array = {  = 113 }
+add_to_array = {  = 51 }
+add_to_array = {  = 99 }
+add_to_array = {  = 33 }
+add_to_array = {  = 85 }
+add_to_array = {  = 48 }
+add_to_array = {  = 83 }
+add_to_array = {  = 67 }
+add_to_array = {  = 97 }
+add_to_array = {  = 86 }
+add_to_array = {  = 111 }
+add_to_array = {  = 105 }
+add_to_array = {  = 124 }
+add_to_array = {  = 43 }
+add_to_array = {  = 71 }
+add_to_array = {  = 62 }
+add_to_array = {  = 85 }
+add_to_array = {  = 81 }
+add_to_array = {  = 98 }
+add_to_array = {  = 100 }
+add_to_array = {  = 112 }
+add_to_array = {  = 60 }
+add_to_array = {  = 70 }
+add_to_array = {  = 79 }
+add_to_array = {  = 83 }
+add_to_array = {  = 55 }
+add_to_array = {  = 59 }
+add_to_array = {  = 74 }
+add_to_array = {  = 72 }
+add_to_array = {  = 99 }
+add_to_array = {  = 96 }
+add_to_array = {  = 94 }
+add_to_array = {  = 85 }
+add_to_array = {  = 73 }
+add_to_array = {  = 58 }
+add_to_array = {  = 68 }
+add_to_array = {  = 47 }
+add_to_array = {  = 119 }
+add_to_array = {  = 109 }
+add_to_array = {  = 93 }
+add_to_array = {  = 71 }
+add_to_array = {  = 115 }
+add_to_array = {  = 98 }
+add_to_array = {  = 88 }
+add_to_array = {  = 61 }
+add_to_array = {  = 87 }
+add_to_array = {  = 47 }
+add_to_array = {  = 81 }
+add_to_array = {  = 37 }
+add_to_array = {  = 114 }
+add_to_array = {  = 84 }
+add_to_array = {  = 109 }
+add_to_array = {  = 74 }
+add_to_array = {  = 108 }
+add_to_array = {  = 61 }
+add_to_array = {  = 103 }
+add_to_array = {  = 51 }
+add_to_array = {  = 96 }
+add_to_array = {  = 28 }
+add_to_array = {  = 102 }
+add_to_array = {  = 38 }
+add_to_array = {  = 131 }
+add_to_array = {  = 88 }
+add_to_array = {  = 137 }
+add_to_array = {  = 98 }
+add_to_array = {  = 125 }
+add_to_array = {  = 65 }
+add_to_array = {  = 131 }
+add_to_array = {  = 75 }
+add_to_array = {  = 118 }
+add_to_array = {  = 42 }
+add_to_array = {  = 124 }
+add_to_array = {  = 52 }
+add_to_array = {  = 111 }
+add_to_array = {  = 20 }
+add_to_array = {  = 118 }
+add_to_array = {  = 30 }
+add_to_array = {  = 149 }
+add_to_array = {  = 80 }
+add_to_array = {  = 142 }
+add_to_array = {  = 58 }
+add_to_array = {  = 135 }
+add_to_array = {  = 36 }
+add_to_array = {  = 127 }
+add_to_array = {  = 14 }
+add_to_array = {  = 134 }
+add_to_array = {  = 24 }
+add_to_array = {  = 141 }
+add_to_array = {  = 46 }
+add_to_array = {  = 149 }
+add_to_array = {  = 68 }
+add_to_array = {  = 156 }
+add_to_array = {  = 90 }
+add_to_array = {  = 144 }
+add_to_array = {  = 9 }
+add_to_array = {  = 152 }
+add_to_array = {  = 31 }
+add_to_array = {  = 151 }
+add_to_array = {  = 19 }
+add_to_array = {  = 159 }
+add_to_array = {  = 53 }
+add_to_array = {  = 159 }
+add_to_array = {  = 41 }
+add_to_array = {  = 167 }
+add_to_array = {  = 75 }
+add_to_array = {  = 167 }
+add_to_array = {  = 64 }
+add_to_array = {  = 161 }
+add_to_array = {  = 6 }
+add_to_array = {  = 169 }
+add_to_array = {  = 28 }
+add_to_array = {  = 169 }
+add_to_array = {  = 17 }
+add_to_array = {  = 176 }
+add_to_array = {  = 86 }
+add_to_array = {  = 177 }
+add_to_array = {  = 51 }
+add_to_array = {  = 177 }
+add_to_array = {  = 39 }
+add_to_array = {  = 178 }
+add_to_array = {  = 5 }
+add_to_array = {  = 187 }
+add_to_array = {  = 74 }
+add_to_array = {  = 187 }
+add_to_array = {  = 62 }
+add_to_array = {  = 187 }
+add_to_array = {  = 27 }
+add_to_array = {  = 187 }
+add_to_array = {  = 16 }
+add_to_array = {  = 195 }
+add_to_array = {  = 5 }
+add_to_array = {  = 196 }
+add_to_array = {  = 39 }
+add_to_array = {  = 196 }
+add_to_array = {  = 51 }
+add_to_array = {  = 197 }
+add_to_array = {  = 86 }
+add_to_array = {  = 204 }
+add_to_array = {  = 17 }
+add_to_array = {  = 204 }
+add_to_array = {  = 28 }
+add_to_array = {  = 212 }
+add_to_array = {  = 6 }
+add_to_array = {  = 206 }
+add_to_array = {  = 64 }
+add_to_array = {  = 206 }
+add_to_array = {  = 75 }
+add_to_array = {  = 214 }
+add_to_array = {  = 41 }
+add_to_array = {  = 214 }
+add_to_array = {  = 53 }
+add_to_array = {  = 222 }
+add_to_array = {  = 19 }
+add_to_array = {  = 222 }
+add_to_array = {  = 31 }
+add_to_array = {  = 229 }
+add_to_array = {  = 9 }
+add_to_array = {  = 217 }
+add_to_array = {  = 90 }
+add_to_array = {  = 225 }
+add_to_array = {  = 68 }
+add_to_array = {  = 232 }
+add_to_array = {  = 46 }
+add_to_array = {  = 239 }
+add_to_array = {  = 24 }
+add_to_array = {  = 246 }
+add_to_array = {  = 14 }
+add_to_array = {  = 239 }
+add_to_array = {  = 36 }
+add_to_array = {  = 232 }
+add_to_array = {  = 58 }
+add_to_array = {  = 225 }
+add_to_array = {  = 80 }
+add_to_array = {  = 255 }
+add_to_array = {  = 30 }
+add_to_array = {  = 262 }
+add_to_array = {  = 20 }
+add_to_array = {  = 249 }
+add_to_array = {  = 52 }
+add_to_array = {  = 255 }
+add_to_array = {  = 42 }
+add_to_array = {  = 243 }
+add_to_array = {  = 75 }
+add_to_array = {  = 249 }
+add_to_array = {  = 65 }
+add_to_array = {  = 237 }
+add_to_array = {  = 98 }
+add_to_array = {  = 242 }
+add_to_array = {  = 88 }
+add_to_array = {  = 271 }
+add_to_array = {  = 38 }
+add_to_array = {  = 277 }
+add_to_array = {  = 28 }
+add_to_array = {  = 271 }
+add_to_array = {  = 51 }
+add_to_array = {  = 265 }
+add_to_array = {  = 61 }
+add_to_array = {  = 264 }
+add_to_array = {  = 74 }
+add_to_array = {  = 259 }
+add_to_array = {  = 84 }
+add_to_array = {  = 292 }
+add_to_array = {  = 37 }
+add_to_array = {  = 286 }
+add_to_array = {  = 47 }
+add_to_array = {  = 285 }
+add_to_array = {  = 61 }
+add_to_array = {  = 259 }
+add_to_array = {  = 98 }
+add_to_array = {  = 280 }
+add_to_array = {  = 71 }
+add_to_array = {  = 254 }
+add_to_array = {  = 109 }
+add_to_array = {  = 306 }
+add_to_array = {  = 47 }
+add_to_array = {  = 300 }
+add_to_array = {  = 58 }
+add_to_array = {  = 279 }
+add_to_array = {  = 85 }
+add_to_array = {  = 274 }
+add_to_array = {  = 96 }
+add_to_array = {  = 299 }
+add_to_array = {  = 72 }
+add_to_array = {  = 318 }
+add_to_array = {  = 59 }
+add_to_array = {  = 294 }
+add_to_array = {  = 83 }
+add_to_array = {  = 313 }
+add_to_array = {  = 70 }
+add_to_array = {  = 273 }
+add_to_array = {  = 112 }
+add_to_array = {  = 292 }
+add_to_array = {  = 98 }
+add_to_array = {  = 311 }
+add_to_array = {  = 85 }
+add_to_array = {  = 330 }
+add_to_array = {  = 71 }
+add_to_array = {  = 269 }
+add_to_array = {  = 124 }
+add_to_array = {  = 287 }
+add_to_array = {  = 111 }
+add_to_array = {  = 306 }
+add_to_array = {  = 97 }
+add_to_array = {  = 325 }
+add_to_array = {  = 83 }
+add_to_array = {  = 340 }
+add_to_array = {  = 85 }
+add_to_array = {  = 322 }
+add_to_array = {  = 99 }
+add_to_array = {  = 303 }
+add_to_array = {  = 113 }
+add_to_array = {  = 285 }
+add_to_array = {  = 127 }
+add_to_array = {  = 335 }
+add_to_array = {  = 98 }
+add_to_array = {  = 317 }
+add_to_array = {  = 112 }
+add_to_array = {  = 298 }
+add_to_array = {  = 126 }
+add_to_array = {  = 349 }
+add_to_array = {  = 99 }
+add_to_array = {  = 331 }
+add_to_array = {  = 114 }
+add_to_array = {  = 280 }
+add_to_array = {  = 142 }
+add_to_array = {  = 312 }
+add_to_array = {  = 128 }
+add_to_array = {  = 344 }
+add_to_array = {  = 113 }
+add_to_array = {  = 325 }
+add_to_array = {  = 128 }
+add_to_array = {  = 357 }
+add_to_array = {  = 115 }
+add_to_array = {  = 294 }
+add_to_array = {  = 144 }
+add_to_array = {  = 338 }
+add_to_array = {  = 130 }
+add_to_array = {  = 307 }
+add_to_array = {  = 144 }
+add_to_array = {  = 351 }
+add_to_array = {  = 129 }
+add_to_array = {  = 320 }
+add_to_array = {  = 145 }
+add_to_array = {  = 363 }
+add_to_array = {  = 131 }
+add_to_array = {  = 332 }
+add_to_array = {  = 145 }
+add_to_array = {  = 288 }
+add_to_array = {  = 161 }
+add_to_array = {  = 344 }
+add_to_array = {  = 146 }
+add_to_array = {  = 356 }
+add_to_array = {  = 146 }
+add_to_array = {  = 300 }
+add_to_array = {  = 162 }
+add_to_array = {  = 368 }
+add_to_array = {  = 147 }
+add_to_array = {  = 312 }
+add_to_array = {  = 162 }
+add_to_array = {  = 324 }
+add_to_array = {  = 163 }
+add_to_array = {  = 336 }
+add_to_array = {  = 163 }
+add_to_array = {  = 348 }
+add_to_array = {  = 164 }
+add_to_array = {  = 360 }
+add_to_array = {  = 164 }
+add_to_array = {  = 372 }
+add_to_array = {  = 164 }
+add_to_array = {  = 292 }
+add_to_array = {  = 181 }
+add_to_array = {  = 304 }
+add_to_array = {  = 181 }
+add_to_array = {  = 315 }
+add_to_array = {  = 181 }
+add_to_array = {  = 327 }
+add_to_array = {  = 181 }
+add_to_array = {  = 338 }
+add_to_array = {  = 181 }
+add_to_array = {  = 350 }
+add_to_array = {  = 181 }
+add_to_array = {  = 362 }
+add_to_array = {  = 181 }
+add_to_array = {  = 373 }
+add_to_array = {  = 181 }
+
+
+

@@ -1,4 +1,6 @@
-spriteType = {
-    name = SWE_government_with_lindholmarna
-    texturefile = gfx/interface/goals/government_with_lindholmarna.dds
+spriteTypes = {
+    spriteType = {
+        name = SWE_government_with_lindholmarna
+        texturefile = gfx/interface/goals/government_with_lindholmarna.dds
+    }
 }
