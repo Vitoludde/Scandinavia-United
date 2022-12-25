@@ -28,3 +28,216 @@ sweden_decision_category = {
         }
     }
 }
+
+
+sweden_parliament_gui_decision_category = {
+    skp_posters = {
+        allowed = {
+            tag = SWE
+        }
+
+        available = {
+            NOT = {
+                has_country_flag = active_parliament_propaganda
+            }
+        }
+
+        visible = {
+            always = yes
+        }
+
+        fire_only_once = no
+        days_remove = 30
+
+        complete_effect = {
+            custom_effect_tooltip = skp_poster_cet
+            set_country_flag = active_parliament_propaganda
+            add_to_variable = { sweden_party_1_monthly_change = 5 }
+        }
+
+        remove_effect = {
+            clr_country_flag = active_parliament_propaganda
+            subtract_from_variable = { sweden_party_1_monthly_change = 5 }
+        }
+    }
+
+    socialdemocrats_posters = {
+        allowed = {
+            tag = SWE
+        }
+
+        available = {
+            NOT = {
+                has_country_flag = active_parliament_propaganda
+            }
+        }
+
+        visible = {
+            always = yes
+        }
+
+        fire_only_once = no
+        days_remove = 30
+
+        complete_effect = {
+            custom_effect_tooltip = socialdemocrats_poster_cet
+            set_country_flag = active_parliament_propaganda
+            add_to_variable = { sweden_party_2_monthly_change = 5 }
+        }
+
+        remove_effect = {
+            clr_country_flag = active_parliament_propaganda
+            subtract_from_variable = { sweden_party_2_monthly_change = 5 }
+        }
+    }
+
+    bonde_posters = {
+        allowed = {
+            tag = SWE
+        }
+
+        available = {
+            NOT = {
+                has_country_flag = active_parliament_propaganda
+            }
+        }
+
+        visible = {
+            always = yes
+        }
+
+        fire_only_once = no
+        days_remove = 30
+
+        complete_effect = {
+            custom_effect_tooltip = bonde_posters_cet
+            set_country_flag = active_parliament_propaganda
+            add_to_variable = { sweden_party_3_monthly_change = 5 }
+        }
+
+        remove_effect = {
+            clr_country_flag = active_parliament_propaganda
+            subtract_from_variable = { sweden_party_3_monthly_change = 5 }
+        }
+    }
+
+    folk_posters = {
+        allowed = {
+            tag = SWE
+        }
+
+        available = {
+            NOT = {
+                has_country_flag = active_parliament_propaganda
+            }
+        }
+
+        visible = {
+            always = yes
+        }
+
+        fire_only_once = no
+        days_remove = 30
+
+        complete_effect = {
+            custom_effect_tooltip = folk_posters_cet
+            set_country_flag = active_parliament_propaganda
+            add_to_variable = { sweden_party_4_monthly_change = 5 }
+        }
+
+        remove_effect = {
+            clr_country_flag = active_parliament_propaganda
+            subtract_from_variable = { sweden_party_4_monthly_change = 5 }
+        }
+    }
+
+    hoger_posters = {
+        allowed = {
+            tag = SWE
+        }
+
+        available = {
+            NOT = {
+                has_country_flag = active_parliament_propaganda
+            }
+        }
+
+        visible = {
+            always = yes
+        }
+
+        fire_only_once = no
+        days_remove = 30
+
+        complete_effect = {
+            custom_effect_tooltip = hoger_poster_cet
+            set_country_flag = active_parliament_propaganda
+            add_to_variable = { sweden_party_5_monthly_change = 5 }
+        }
+
+        remove_effect = {
+            clr_country_flag = active_parliament_propaganda
+            subtract_from_variable = { sweden_party_5_monthly_change = 5 }
+        }
+    }
+
+    monarkisterna_posters = {
+        allowed = {
+            tag = SWE
+        }
+
+        available = {
+            NOT = {
+                has_country_flag = active_parliament_propaganda
+            }
+        }
+
+        visible = {
+            always = yes
+        }
+
+        fire_only_once = no
+        days_remove = 30
+
+        complete_effect = {
+            custom_effect_tooltip = monarkisterna_poster_cet
+            set_country_flag = active_parliament_propaganda
+            add_to_variable = { sweden_party_6_monthly_change = 5 }
+        }
+
+        remove_effect = {
+            clr_country_flag = active_parliament_propaganda
+            subtract_from_variable = { sweden_party_6_monthly_change = 5 }
+        }
+    }
+
+    nsap_posters = {
+        allowed = {
+            tag = SWE
+        }
+
+        available = {
+            NOT = {
+                has_country_flag = active_parliament_propaganda
+            }
+        }
+
+        visible = {
+            always = yes
+        }
+
+        fire_only_once = no
+        days_remove = 30
+
+        complete_effect = {
+            custom_effect_tooltip = nsap_poster_cet
+            set_country_flag = active_parliament_propaganda
+            add_to_variable = { sweden_party_7_monthly_change = 5 }
+        }
+
+        remove_effect = {
+            clr_country_flag = active_parliament_propaganda
+            subtract_from_variable = { sweden_party_7_monthly_change = 5 }
+        }
+    }
+}

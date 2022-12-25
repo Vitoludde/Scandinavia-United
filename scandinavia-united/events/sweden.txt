@@ -389,9 +389,9 @@ news_event = {
 # Russian invasion of sweden
 #
 country_event = {
-	id = nordic_events.russain_invasion_of_sweden
-	title = nordic_events.russain_invasion_of_sweden.t
-	desc = nordic_events.russain_invasion_of_sweden.d
+	id = nordic_events.50
+	title = nordic_events.50.t
+	desc = nordic_events.50.d
 
 	fire_only_once = yes
 
@@ -405,7 +405,7 @@ country_event = {
 	}
 
 	option = {
-		name = nordic_events.russain_invasion_of_sweden.a
+		name = nordic_events.50.a
 		ai_chance =  { factor = 400 }
 		SWE = {
 			add_ideas = {
@@ -413,18 +413,18 @@ country_event = {
 				SWE_Swedish_stubbornes_against_soviet
 				SWE_Swedish_endurance_against_soviet
 			}
-		}
 
-		set_country_flag = su_WarWithUssr
+			set_country_flag = su_WarWithUssr
+		}
 	}
 }
 
 # Russian Invasion has stopped
 
 country_event = {
-	id = nordic_events.russain_war_over
-	title = nordic_events.russain_war_over.t
-	desc = nordic_events.russain_war_over.d
+	id = nordic_events.51
+	title = nordic_events.51.t
+	desc = nordic_events.51.d
 
 	fire_only_once = yes
 
@@ -441,7 +441,7 @@ country_event = {
 	}
 
 	option = {
-		name = nordic_events.russain_war_over.a
+		name = nordic_events.51.a
 		ai_chance =  { factor = 400 }
 		SWE = {
 			remove_ideas = {
@@ -449,8 +449,66 @@ country_event = {
 				SWE_Swedish_stubbornes_against_soviet
 				SWE_Swedish_endurance_against_soviet
 			}
+			clr_country_flag = su_WarWithUssr
 		}
+	}
+}
 
-		clr_country_flag = su_WarWithUssr
+#
+# Parliament
+#
+
+# Fall of democracy again
+
+country_event = {
+	id = nordic_events.52
+	title = nordic_events.52.t
+	desc = nordic_events.52.d
+
+	fire_only_once = yes
+
+	trigger = {
+		NOT = {
+			democratic > 0.5
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = nordic_events.52.a
+		ai_chance =  { factor = 400 }
+		SWE = {
+			set_variable = { swedish_parliament_closed = 1}
+		}
+	}
+}
+
+# Rise of democracy again
+
+country_event = {
+	id = nordic_events.53
+	title = nordic_events.53.t
+	desc = nordic_events.53.d
+
+	fire_only_once = yes
+
+	trigger = {
+		democratic > 0.5
+		check_variable = { swedish_parliament_closed = 1 }
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = nordic_events.53.a
+		ai_chance =  { factor = 400 }
+		SWE = {
+			set_variable = { swedish_parliament_closed = 0 }
+		}
 	}
 }

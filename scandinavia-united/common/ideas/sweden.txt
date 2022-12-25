@@ -408,7 +408,6 @@ ideas = {
 			picture = generic_communist_army
 
 			modifier = {
-				communism_drift = 0.05
 				political_power_factor = 0.1
 				stability_factor = -0.05
 				consumer_goods_factor = -0.05
@@ -540,6 +539,10 @@ ideas = {
 				consumer_goods_factor = -0.1
 			}
 		}
+
+		#
+		# Parliament
+		#
 
 		# Events
 		SWE_Swedish_strenght_against_soviet = {

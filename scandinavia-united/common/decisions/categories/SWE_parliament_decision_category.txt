@@ -1,0 +1,22 @@
+sweden_parliament_gui_decision_category = {
+	icon = usa_congress
+
+	# picture = 
+
+	allowed = { 
+		original_tag = SWE 
+	}
+
+	available = {
+		check_variable = { swedish_parliament_closed = 0 }
+	}
+
+	visible = {
+		check_variable = { swedish_parliament_closed = 0 }
+	}
+
+	priority = 1000
+
+	scripted_gui = parliament_gui
+	visible_when_empty = yes
+}

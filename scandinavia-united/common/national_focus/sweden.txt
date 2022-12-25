@@ -16,185 +16,6 @@ focus_tree = {
 
 	continuous_focus_position = { x = 5000 y = 1000 }
 
-	focus = {
-		id = SWE_enforce_neutrality
-		icon = GFX_goal_generic_neutrality_focus
-
-		cost = 10
-
-		#allow_branch = {
-		#	<trigger>
-		#}
-
-		x = 15
-		y = 0
-
-		#prerequisite = {
-		#	focus = <focus id>
-		#}
-
-		mutually_exclusive = {
-			focus = SWE_abandon_neutrality
-			focus = SWE_support_the_monarchists
-		}
-
-		#available = {
-		#	<trigger>
-		#}
-
-		#bypass = {
-		#	<trigger>
-		#}
-
-		search_filters = {  }
-
-		#select_effect = {
-		#	<command>
-		#}
-		
-		completion_reward = {
-			add_political_power = 50
-		}
-		
-		complete_tooltip = {
-			add_political_power = 50
-		}
-
-		ai_will_do = {
-			factor = 1
-			#modifier = {
-			#	<modifier>
-			#}
-		}
-	}
-
-	focus = {
-		id = SWE_abandon_neutrality
-		icon = GFX_goal_generic_major_war
-
-		cost = 10
-
-		#allow_branch = {
-		#	<trigger>
-		#}
-
-		x = 25
-		y = 0
-
-		#prerequisite = {
-		#	focus = <focus id>
-		#}
-
-		mutually_exclusive = {
-			focus = SWE_enforce_neutrality
-			focus = SWE_support_the_monarchists
-		}
-
-		#available = {
-		#	<trigger>
-		#}
-
-		#bypass = {
-		#	<trigger>
-		#}
-
-		search_filters = {  }
-
-		#select_effect = {
-		#	<command>
-		#}
-		
-		completion_reward = {
-			add_stability = -0.25
-			remove_ideas = {
-				neutrality_idea
-				riksdag_non_supportive_army
-			}
-		}
-		
-		complete_tooltip = {
-			add_stability = -0.25
-			remove_ideas = {
-				neutrality_idea
-				riksdag_non_supportive_army
-			}
-		}
-
-		ai_will_do = {
-			factor = 0
-			#modifier = {
-			#	<modifier>
-			#}
-		}
-	}
-
-	focus = {
-		id = SWE_support_the_monarchists
-		icon = GFX_focus_generic_monarchy_1
-
-		cost = 10
-
-		#allow_branch = {
-		#	<trigger>
-		#}
-
-		x = 5
-		y = 0
-
-		#prerequisite = {
-		#	focus = <focus id>
-		#}
-
-		mutually_exclusive = {
-			focus = SWE_enforce_neutrality
-			focus = SWE_abandon_neutrality
-		}
-
-		#available = {
-		#	<trigger>
-		#}
-
-		#bypass = {
-		#	<trigger>
-		#}
-
-		search_filters = {  }
-
-		#select_effect = {
-		#	<command>
-		#}
-		
-		completion_reward = {
-			remove_ideas = {
-				neutrality_idea
-			}
-			remove_ideas = {
-				en_svensk_tiger
-			}
-			add_ideas = {
-				monarchism_movements_swe
-			}
-			add_political_power = 150
-		}
-		
-		complete_tooltip = {
-			remove_ideas = {
-				neutrality_idea
-				en_svensk_tiger
-			}
-			add_ideas = {
-				monarchism_movements
-			}
-		}
-
-		ai_will_do = {
-			factor = 0
-			#modifier = {
-			#	<modifier>
-			#}
-		}
-	}
-
 	# democratic Path
 
 	focus = {
@@ -208,7 +29,7 @@ focus_tree = {
 		#}
 
 		x = 20
-		y = 1
+		y = 0
 
 		mutually_exclusive = {
 			focus = SWE_gustaf_v
@@ -217,13 +38,17 @@ focus_tree = {
 		}
 
 		prerequisite = {
-			focus = SWE_enforce_neutrality
-			focus = SWE_abandon_neutrality
+			
 		}
 
-		#available = {
-		#	<trigger>
-		#}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = SWE_hansson_trigger_tooltip
+				check_variable = {
+					sweden_largest_party = 1
+				}
+			}
+		}
 
 		#bypass = {
 		#	<trigger>
@@ -237,10 +62,14 @@ focus_tree = {
 		
 		completion_reward = {
 			add_political_power = 150
-			add_popularity = {
-				ideology = democratic
-				popularity = 0.25
-			}
+			
+			set_temp_variable = { temp_member = 2 }
+			set_temp_variable = { temp_seats = 10 }
+
+            sweden_modify_parliament_seat = yes
+
+			custom_effect_tooltip = socialdemocrats_add_ten
+
 			add_war_support = -0.1
 			remove_ideas = {
 				riksdag_non_supportive_army
@@ -249,10 +78,14 @@ focus_tree = {
 		
 		complete_tooltip = {
 			add_political_power = 150
-			add_popularity = {
-				ideology = democratic
-				popularity = 0.25
-			}
+			
+			set_temp_variable = { temp_member = 2 }
+			set_temp_variable = { temp_seats = 10 }
+
+            sweden_modify_parliament_seat = yes
+
+			custom_effect_tooltip = socialdemocrats_add_ten
+
 			add_war_support = -0.1
 			remove_ideas = {
 				riksdag_non_supportive_army
@@ -357,20 +190,28 @@ focus_tree = {
 		
 		completion_reward = {
 			add_political_power = 50
-			add_popularity = {
-				ideology = democratic
-				popularity = 0.1
-			}
+			
+			set_temp_variable = { temp_member = 2 }
+			set_temp_variable = { temp_seats = 5 }
+
+            sweden_modify_parliament_seat = yes
+
+			custom_effect_tooltip = socialdemocrats_add_five
+			
 			add_stability = 0.2
 			add_war_support = -0.1
 		}
 		
 		complete_tooltip = {
 			add_political_power = 50
-			add_popularity = {
-				ideology = democratic
-				popularity = 0.1
-			}
+			
+			set_temp_variable = { temp_member = 2 }
+			set_temp_variable = { temp_seats = 5 }
+
+            sweden_modify_parliament_seat = yes
+
+			custom_effect_tooltip = socialdemocrats_add_five
+			
 			add_stability = 0.2
 			add_war_support = -0.1
 		}
@@ -417,10 +258,14 @@ focus_tree = {
 		
 		completion_reward = {
 			add_political_power = 50
-			add_popularity = {
-				ideology = communism
-				popularity = 0.1
-			}
+
+			set_temp_variable = { temp_member = 1 }
+			set_temp_variable = { temp_seats = 5 }
+
+            sweden_modify_parliament_seat = yes
+
+			custom_effect_tooltip = SWE_folkhemmet_tt
+
 			add_stability = 0.2
 			add_offsite_building = {
 				type = industrial_complex
@@ -431,10 +276,12 @@ focus_tree = {
 		
 		complete_tooltip = {
 			add_political_power = 50
-			add_popularity = {
-				ideology = communism
-				popularity = 0.1
-			}
+
+			set_temp_variable = { temp_member = 0 }
+			set_temp_variable = { temp_seats = sweden_party_3_monthly_change }
+
+            sweden_modify_parliament_seat = yes
+
 			add_stability = 0.2
 			add_offsite_building = {
 				type = industrial_complex
@@ -1013,6 +860,13 @@ focus_tree = {
 				modifier = pro_allied_censoring_axis
 			}
 			add_stability = -0.1
+
+			set_temp_variable = { temp_member = 7 }
+			set_temp_variable = { temp_seats = 10 }
+
+            sweden_modify_parliament_seat = yes
+
+			custom_effect_tooltip = SWE_pro_allied_censoring_tt
 		}
 		
 		complete_tooltip = {
@@ -1619,7 +1473,7 @@ focus_tree = {
 		#}
 
 		x = 5
-		y = 1
+		y = 0
 
 		mutually_exclusive = {
 			focus = SWE_hansson
@@ -1628,7 +1482,7 @@ focus_tree = {
 		}
 
 		prerequisite = {
-			focus = SWE_support_the_monarchists
+			
 		}
 
 		mutually_exclusive = {
@@ -1636,7 +1490,15 @@ focus_tree = {
 		}
 
 		available = {
-			neutrality > 0.5
+			custom_trigger_tooltip = {
+				tooltip = SWE_gustaf_v_trigger_tooltip
+				check_variable = {
+					sweden_largest_party = 5
+				}
+				check_variable = {
+					sweden_majoral_rule = 1
+				}
+			}
 		}
 
 		bypass = {
@@ -2100,7 +1962,43 @@ focus_tree = {
 		}
 
 		available = {
-			
+			# Norway
+			custom_trigger_tooltip = {
+				tooltip = form_country_norway_required_states_tt
+				controls_state = 110
+				controls_state = 142
+				controls_state = 143
+				controls_state = 144
+			}
+			# Sweden
+			custom_trigger_tooltip = {
+				tooltip = form_country_sweden_required_states_tt
+				controls_state = 124
+				controls_state = 138
+				controls_state = 139
+				controls_state = 140
+				controls_state = 141
+				controls_state = 38
+				controls_state = 666
+			}
+			# Denmark
+			custom_trigger_tooltip = {
+				tooltip = form_country_denmark_required_states_tt
+				controls_state = 37
+				controls_state = 99
+				controls_state = 100
+				controls_state = 101
+				controls_state = 337
+			}
+			# Finland
+			custom_trigger_tooltip = {
+				tooltip = form_country_finland_required_states_tt
+				controls_state = 111
+				controls_state = 145
+				controls_state = 148
+				controls_state = 149
+				controls_state = 150
+			}
 		}
 
 		bypass = {
@@ -2199,9 +2097,13 @@ focus_tree = {
 			remove_ideas = {
 				riksdag_non_supportive_army
 			}
-			add_ideas = {
-				SWE_etat_est_moi
-			}
+
+			set_temp_variable = { temp_member = 6 }
+			set_temp_variable = { temp_seats = 10 }
+
+            sweden_modify_parliament_seat = yes
+
+			custom_effect_tooltip = monarkisterna_add_ten
 
 		}
 		
@@ -2209,9 +2111,13 @@ focus_tree = {
 			remove_ideas = {
 				riksdag_non_supportive_army
 			}
-			add_ideas = {
-				SWE_etat_est_moi
-			}
+
+			set_temp_variable = { temp_member = 6 }
+			set_temp_variable = { temp_seats = 10 }
+
+            sweden_modify_parliament_seat = yes
+
+			custom_effect_tooltip = monarkisterna_add_ten
 		}
 
 		ai_will_do = {
@@ -2264,6 +2170,16 @@ focus_tree = {
 			add_political_power = 200
 			add_stability = 0.1
 			add_war_support = 0.2
+
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.5
+			}
+
+			custom_effect_tooltip = SWE_remove_riksdag
+			SWE = {
+				set_variable = { swedish_parliament_closed = 1 }
+			}
 		}
 		
 		complete_tooltip = {
@@ -2274,6 +2190,10 @@ focus_tree = {
 			add_political_power = 200
 			add_stability = 0.1
 			add_war_support = 0.2
+			custom_effect_tooltip = SWE_consolidate_power_tt
+			SWE = {
+				set_variable = { swedish_parliament_closed = 1 }
+			}
 		}
 
 		ai_will_do = {
@@ -2833,7 +2753,7 @@ focus_tree = {
 		#}
 
 		x = 40
-		y = 1
+		y = 0
 
 		mutually_exclusive = {
 			focus = SWE_gustaf_v
@@ -2842,12 +2762,20 @@ focus_tree = {
 		}
 
 		prerequisite = {
-			focus = SWE_abandon_neutrality
+			
 		}
 
-		#available = {
-		#	<trigger>
-		#}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = SWE_lindholmarna_trigger_tooltip
+				check_variable = {
+					sweden_largest_party = 6
+				}
+				check_variable = {
+					sweden_majoral_rule = 1
+				}
+			}
+		}
 
 		#bypass = {
 		#	<trigger>
@@ -2861,20 +2789,12 @@ focus_tree = {
 		
 		completion_reward = {
 			add_political_power = -50
-			add_popularity = {
-				ideology = fascism
-				popularity = 0.1
-			}
 			add_war_support = -0.1
 			add_stability = -0.25
 		}
 		
 		complete_tooltip = {
 			add_political_power = -50
-			add_popularity = {
-				ideology = fascism
-				popularity = 0.25
-			}
 			add_war_support = -0.1
 			add_stability = -0.25
 		}
@@ -2922,27 +2842,27 @@ focus_tree = {
 		#}
 		
 		completion_reward = {
-			add_popularity = {
-				ideology = fascism
-				popularity = 0.1
-			}
 			add_war_support = -0.1
 			add_stability = -0.1
-			add_ideas = {
-				government_vulnerable_to_fascism
-			}
+			
+			set_temp_variable = { temp_member = 7 }
+			set_temp_variable = { temp_seats = 10 }
+
+            sweden_modify_parliament_seat = yes
+
+			custom_effect_tooltip = SWE_pro_allied_censoring_tt
 		}
 		
 		complete_tooltip = {
-			add_popularity = {
-				ideology = fascism
-				popularity = 0.1
-			}
 			add_war_support = -0.1
 			add_stability = -0.1
-			add_ideas = {
-				government_vulnerable_to_fascism
-			}
+			
+			set_temp_variable = { temp_member = 7 }
+			set_temp_variable = { temp_seats = 10 }
+
+            sweden_modify_parliament_seat = yes
+
+			custom_effect_tooltip = SWE_pro_allied_censoring_tt
 		}
 
 		ai_will_do = {
@@ -3056,19 +2976,23 @@ focus_tree = {
 		#}
 		
 		completion_reward = {
-			add_popularity = {
-				ideology = fascism
-				popularity = 0.1
-			}
+			set_temp_variable = { temp_member = 7 }
+			set_temp_variable = { temp_seats = 10 }
+
+            sweden_modify_parliament_seat = yes
+
+			custom_effect_tooltip = SWE_pro_allied_censoring_tt
 			add_war_support = -0.1
 			add_stability = -0.1
 		}
 		
 		complete_tooltip = {
-			add_popularity = {
-				ideology = fascism
-				popularity = 0.1
-			}
+			set_temp_variable = { temp_member = 7 }
+			set_temp_variable = { temp_seats = 10 }
+
+            sweden_modify_parliament_seat = yes
+
+			custom_effect_tooltip = SWE_pro_allied_censoring_tt
 			add_war_support = -0.1
 			add_stability = -0.1
 		}
@@ -3181,6 +3105,10 @@ focus_tree = {
 			remove_ideas = {
 				riksdag_non_supportive_army
 			}
+			custom_effect_tooltip = SWE_remove_riksdag
+			SWE = {
+				set_variable = { swedish_parliament_closed = 1 }
+			}
 		}
 		
 		complete_tooltip = {
@@ -3188,6 +3116,10 @@ focus_tree = {
 			add_war_support = 0.1
 			remove_ideas = {
 				riksdag_non_supportive_army
+			}
+			custom_effect_tooltip = SWE_remove_riksdag
+			SWE = {
+				set_variable = { swedish_parliament_closed = 1 }
 			}
 		}
 
@@ -3712,7 +3644,7 @@ focus_tree = {
 		#}
 
 		x = 30
-		y = 1
+		y = 0
 
 		mutually_exclusive = {
 			focus = SWE_gustaf_v
@@ -3721,12 +3653,20 @@ focus_tree = {
 		}
 
 		prerequisite = {
-			focus = SWE_abandon_neutrality
+			
 		}
 
-		#available = {
-		#	<trigger>
-		#}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = SWE_skp_trigger_tooltip
+				check_variable = {
+					sweden_largest_party = 0
+				}
+				check_variable = {
+					sweden_majoral_rule = 1
+				}
+			}
+		}
 
 		#bypass = {
 		#	<trigger>
@@ -3742,18 +3682,26 @@ focus_tree = {
 			add_political_power = -50
 			add_war_support = -0.1
 			add_stability = -0.25
-			add_ideas = {
-				communists_organizing_swe
-			}
+
+			set_temp_variable = { temp_member = 1 }
+			set_temp_variable = { temp_seats = 5 }
+
+            sweden_modify_parliament_seat = yes
+
+			custom_effect_tooltip = skp_add_five
 		}
 		
 		complete_tooltip = {
 			add_political_power = -50
 			add_war_support = -0.1
 			add_stability = -0.25
-			add_ideas = {
-				communists_organizing_swe
-			}
+			
+			set_temp_variable = { temp_member = 1 }
+			set_temp_variable = { temp_seats = 5 }
+
+            sweden_modify_parliament_seat = yes
+
+			custom_effect_tooltip = skp_add_five
 		}
 
 		ai_will_do = {
@@ -3995,9 +3943,6 @@ focus_tree = {
 		#}
 		
 		completion_reward = {
-			puppet = NOR
-			add_to_faction = NOR
-			
 			NOR = {
 				start_civil_war = {
 					ruling_party = democratic
@@ -4008,18 +3953,24 @@ focus_tree = {
 						143 144
 					}
 				}
+			}
 
+			puppet = NOR
+			add_to_faction = NOR
+
+			NOR = {
 				set_politics = {
 					ruling_party = communism
 					elections_allowed = no
+				}
+				add_popularity = {
+					ideology = communism
+					popularity = 1
 				}
 			}
 		}
 
 		complete_tooltip = {
-			puppet = NOR
-			add_to_faction = NOR
-
 			NOR = {
 				start_civil_war = {
 					ruling_party = democratic
@@ -4030,10 +3981,19 @@ focus_tree = {
 						143 144
 					}
 				}
+			}
 
+			puppet = NOR
+			add_to_faction = NOR
+
+			NOR = {
 				set_politics = {
 					ruling_party = communism
 					elections_allowed = no
+				}
+				add_popularity = {
+					ideology = communism
+					popularity = 1
 				}
 			}
 		}
@@ -4081,45 +4041,57 @@ focus_tree = {
 		#}
 		
 		completion_reward = {
-			puppet = DEN
-			add_to_faction = DEN
-			
 			DEN = {
 				start_civil_war = {
 					ruling_party = democratic
 					ideology = democratic
 					size = 0.2
-					capital = 144
+					capital = 6364
 					states = {
-						143 144
+						99
 					}
 				}
+			}
 
+			puppet = DEN
+			add_to_faction = DEN
+
+			DEN = {
 				set_politics = {
 					ruling_party = communism
 					elections_allowed = no
+				}
+				add_popularity = {
+					ideology = communism
+					popularity = 1
 				}
 			}
 		}
 
 		complete_tooltip = {
-			puppet = DEN
-			add_to_faction = DEN
-			
 			DEN = {
 				start_civil_war = {
 					ruling_party = democratic
 					ideology = democratic
 					size = 0.2
-					capital = 144
+					capital = 6364
 					states = {
-						143 144
+						99
 					}
 				}
+			}
 
+			puppet = DEN
+			add_to_faction = DEN
+
+			DEN = {
 				set_politics = {
 					ruling_party = communism
 					elections_allowed = no
+				}
+				add_popularity = {
+					ideology = communism
+					popularity = 1
 				}
 			}
 		}
@@ -4426,12 +4398,26 @@ focus_tree = {
 		#}
 		
 		completion_reward = {
+			set_temp_variable = { temp_member = 1 }
+			set_temp_variable = { temp_seats = 5 }
+
+            sweden_modify_parliament_seat = yes
+
+			custom_effect_tooltip = skp_add_five
+
 			add_ideas = {
 				folkhemmet
 			}
 		}
 		
 		complete_tooltip = {
+			set_temp_variable = { temp_member = 1 }
+			set_temp_variable = { temp_seats = 5 }
+
+            sweden_modify_parliament_seat = yes
+
+			custom_effect_tooltip = skp_add_five
+
 			add_ideas = {
 				folkhemmet
 			}
@@ -4539,12 +4525,17 @@ focus_tree = {
 		completion_reward = {
 			add_popularity = {
 				ideology = communism
-				popularity = 0.2
+				popularity = 0.5
 			}
 
 			set_politics = {
 				ruling_party = communism
 				elections_allowed = no
+			}
+
+			custom_effect_tooltip = SWE_remove_riksdag
+			SWE = {
+				set_variable = { swedish_parliament_closed = 1 }
 			}
 		}
 		

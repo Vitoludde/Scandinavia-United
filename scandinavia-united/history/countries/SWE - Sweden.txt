@@ -35,7 +35,7 @@ add_ideas = {
 	neutrality_idea
 	riksdag_non_supportive_army
 }
-set_stability = 0.9
+set_stability = 0.7
 set_war_support = 0.1
 
 set_technology = {
@@ -206,10 +206,10 @@ set_politics = {
 	elections_allowed = yes
 }
 set_popularities = {
-	democratic = 75
-	neutrality = 14
-	communism = 8
-	fascism = 3
+	democratic = 100
+	neutrality = 0
+	communism = 0
+	fascism = 0
 }
 
 set_party_name = { 
@@ -570,3 +570,12 @@ if = {
 		}
 	}
 }
+
+
+#
+# MOD PART
+#
+
+# Sossarna is the biggest party
+set_variable = { sweden_largest_party = 1 }
+sweden_parliament_gui_initial = yes
