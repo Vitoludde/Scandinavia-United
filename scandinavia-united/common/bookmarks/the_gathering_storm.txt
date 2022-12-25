@@ -647,8 +647,8 @@ bookmarks = {
 				neutrality_idea
 			}
 			focuses = {
+				SWE_gustaf_v
 				SWE_hansson
-				SWE_support_the_monarchists
 				SWE_lindholmarna
 			}
 		}

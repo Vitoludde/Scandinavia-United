@@ -26,6 +26,24 @@ defined_text = {
 		localization_key = party_4_text
 	}
 	text = {
+		trigger = {
+			check_variable = { v = 5 }
+		}
+		localization_key = party_5_text
+	}
+	text = {
+		trigger = {
+			check_variable = { v = 6 }
+		}
+		localization_key = party_6_text
+	}
+	text = {
+		trigger = {
+			check_variable = { v = 7 }
+		}
+		localization_key = party_7_text
+	}
+	text = {
 		localization_key = "Error"
 	}
 }

@@ -3,7 +3,17 @@ sweden_parliament_gui_decision_category = {
 
 	# picture = 
 
-	allowed = { original_tag = SWE }
+	allowed = { 
+		original_tag = SWE 
+	}
+
+	available = {
+		check_variable = { swedish_parliament_closed = 0 }
+	}
+
+	visible = {
+		check_variable = { swedish_parliament_closed = 0 }
+	}
 
 	priority = 1000
 

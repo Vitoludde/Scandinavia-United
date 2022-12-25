@@ -1,7 +1,7 @@
 ﻿l_english:
   # Events
   election.100.t:0 "The swedish election of 1936"
-  election.100.d:0 "The governemnt lead by Per Albin Hansson was not the greatest but it was for it's time. Now with the new election and with a coalition with the socialist party and the liberal party the government has full controll over the rikstag and can now enact any reform."
+  election.100.d:0 "The government lead by Per Albin Hansson was not the greatest but it was for it's time. Now with the new election and with a coalition with the socialist party and the liberal party the government has full control over the Riksdag and can now enact any reform."
   election.100.a:0 "HURRA!"
   nordic_events.1.t:0 "The partitioning of Finland"
   nordic_events.1.d:0 "The rising power of monarchists in Sweden has led to the government having to abdicate, now the king is looking to regain lost land and now demands our annexation! What do we do?"
@@ -43,9 +43,17 @@
   nordic_events.2.a:0 "What will become of the nordics?"
   nordic_events.2.b:0 "ÖVER NORDEN JAG HÄRKSAR!"
 
-  nordic_events.russain_invasion_of_sweden.t:0 "Soviet invasion of Sweden!"
-  nordic_events.russain_invasion_of_sweden.d:0 "Following the declaration of war from our giant neighbour in the west we must ready the people for war and hold out until the end!"
-  nordic_events.russain_invasion_of_sweden.a:0 "Styrka, envishet och uthållighet"
+  nordic_events.50.t:0 "Soviet invasion of Sweden!"
+  nordic_events.50.d:0 "Following the declaration of war from our giant neighbor in the west we must ready the people for war and hold out until the end!"
+  nordic_events.50.a:0 "Styrka, envishet och uthållighet"
+
+  nordic_events.52.t:0 "The fall of democracy"
+  nordic_events.52.d:0 "Following the decline of democracy in Sweden the parliament no longer has any power to enforce laws, a legislative power without any power to enforce is futile. We must abandon the Riksdag at once."
+  nordic_events.52.a:0 "Abandon the Riksdag"
+
+  nordic_events.53.t:0 "Democracy rises again"
+  nordic_events.53.d:0 "Years of suppression of democracy has finally lead to the Riksdag getting back their power. Now we have a firm legislative organization that can rule Sweden as it's prime but there is still a lot of work left to be done."
+  nordic_events.53.a:0 "Empower the Riksdag"
 
   #
   # National focuses
@@ -54,9 +62,11 @@
   SWE_enforce_neutrality:0 "Enforce Neutrality"
   SWE_abandon_neutrality:0 "Abandon Neutrality"
   SWE_hansson:0 "Hansson government"
+  SWE_hansson_trigger_tooltip:0 "Socialdemokraterna is the largest party."
   SWE_saltsjoavtalen:0 "Saltsjöbadsavtalet"
   SWE_socialreforms:0 "Social Reforms"
   SWE_folkhemmet:0 "Folkhemmet Sverige"
+  SWE_folkhemmet_tt:0 "§RSvenska kommunistiska parti§! gains 5 mandates."
   SWE_ransonering:0 "Ransoneringen"
   SWE_Finska_vinter_kriget:0 "The Finnish Winter War"
   SWE_en_svensk_tiger:0 "En Svensk Tiger"
@@ -66,6 +76,7 @@
   SWE_samlings_regeringen:0 "Samlings Regeringen"
   SWE_choose_our_path:0 "Choose our path"
   SWE_pro_allied_censoring:0 "Pro-Allied Censorship"
+  SWE_pro_allied_censoring_tt:0 "§ONationalsocialistiska arbetarepartiet§! gains 10 mandates"
   SWE_pro_axis_censoring:0 "Pro-Axis Censorship"
   SWE_neutrality_allies_axis:0 "Balance the powers"
   SWE_permittent_trafik:0 "Permittent Trafik"
@@ -77,6 +88,7 @@
   # Neutrality
   SWE_support_the_monarchists:0 "Give support to the monarcists"
   SWE_gustaf_v:0 "Gustaf V"
+  SWE_gustaf_v_trigger_tooltip:0 "Monarkisterna is the largest party and has a majority rule."
   SWE_support_monarchists_in_scandinavia:0 "Spread the monarchist idea"
   SWE_etat_est_moi:0 "L'etat c'est moi"
   SWE_consolidate_power:0 "Expand the kings rights"
@@ -98,6 +110,7 @@
 
   # Fascism
   SWE_lindholmarna:0 "Government with Lindholmarna"
+  SWE_lindholmarna_trigger_tooltip:0 "NSAP is the largest party and has a majority rule."
   SWE_make_government_vulnerable:0 "Make the government vulnerable to fascism"
   SWE_spread_the_ideology_in_the_country:0 "Spread the fascist ideas in the country"
   SWE_sa:0 "Stromavdelningen"
@@ -113,6 +126,7 @@
 
   # Communism
   SWE_skp:0 "SKP"
+  SWE_skp_trigger_tooltip:0 "SKP is the largest party and has a majority rule."
   SWE_send_volunteers_to_spain:0 "Send volunteers to Spain"
   SWE_c_give_the_proletarians_work_in_kiruna:0 "Sponsor work for the proletarians in Kiruna"
   SWE_c_folkhemmet:0 "Folkhemmet"
@@ -173,6 +187,30 @@
   SWE_focus_on_the_air:0 "Focus on the airforce"
 
 
+  # Generic
+  SWE_remove_riksdag:0 "Removes the riksdag"
+
+  skp_add_five:0 "§RSvenska kommunistiska parti§! gains 5 mandates."
+  skp_add_ten:0 "§RSvenska kommunistiska parti§! gains 10 mandates."
+
+  socialdemocrats_add_five:0 "§RSocialdemokraterna§! gains 5 mandates."
+  socialdemocrats_add_ten:0 "§RSocialdemokraterna§! gains 10 mandates."
+
+  bonde_add_five:0 "§GBondepartiet§! gains 5 mandates."
+  bonde_add_ten:0 "§GBondepartiet§! gains 10 mandates."
+
+  folk_add_five:0 "§CFolkpartiet§! gains 5 mandates."
+  folk_add_ten:0 "§CFolkpartiet§! gains 10 mandates."
+
+  hoger_add_five:0 "§BHögern§! gains 5 mandates."
+  hoger_add_ten:0 "§BHögern§! gains 10 mandates."
+
+  monarkisterna_add_five:0 "§gMonarkisterna§! gains 5 mandates."
+  monarkisterna_add_ten:0 "§gMonarkisterna§! gains 10 mandates."
+
+  nsap_add_five:0 "§ONationalsocialistiska arbetarepartiet§! gains 5 mandates."
+  nsap_add_ten:0 "§ONationalsocialistiska arbetarepartiet§! gains 10 mandates."
+
   #
   # Opinion modifiers
   #
@@ -180,6 +218,11 @@
   permittent_trafik_axis:0 "Permittent Trafik"
   support_scandinavian_brothers_allies:0 "Support scandinavian brothers"
   support_scandinavian_brothers_axis:0 "Support scandinavian brothers"
+
+  pro_allied_censoring_allied:0 "Pro-Allied Censoring"
+  pro_allied_censoring_axis:0 "Pro-Allied Censoring"
+  pro_axis_censoring_allied:0 "Pro-Axis Censoring"
+  pro_axis_censoring_axis:0 "Pro-Axis Censoring"
 
   #
   # Ideas
@@ -226,6 +269,7 @@
   send_in_the_reserves:0 "Send in the reserves"
   send_in_the_reserves_desc:0 "In face of our attackers we may need to send in the reserves!"
 
+  sweden_parliament_gui_decision_category:0 "Swedish Politics"
 
   #
   # Parliament
@@ -233,6 +277,23 @@
   # Decisions
   parliament_gui_decision_category:0 "Parliament GUI Examples§!"
   parliament_gui_decision_category_desc:0 "placeholder text\nplaceholder text\nplaceholder text"
+
+  # My decisions
+  skp_poster_cet:0 "§RSvenska kommunistiska parti§! will get 5 more seats per month following this decision"
+  socialdemocrats_poster_cet:0 "§RSocialdemokraterna§! will get 5 more seats per month following this decision"
+  folk_posters_cet:0 "§CFolkpartiet§! will get 5 more seats per month following this decision"
+  bonde_posters_cet:0 "§GBondepartiet§! will get 5 more seats per month following this decision"
+  hoger_poster_cet:0 "§BHögern§! will get 5 more seats per month following this decision"
+  monarkisterna_poster_cet:0 "§gMonarkisterna§! will get 5 more seats per month following this decision"
+  nsap_poster_cet:0 "§ONationalsocialistiska arbetarepartiet§! will get 5 more seats per month following this decision"
+
+  skp_posters:0 "§RSvenska kommunistiska parti§! propaganda posters"
+  socialdemocrats_posters:0 "§RSocialdemokraterna§! propaganda posters"
+  bonde_posters:0 "§GBondepartiet§! propaganda posters"
+  folk_posters:0 "§CFolkpartiet§! propaganda posters"
+  hoger_posters:0 "§BHögern§! propaganda posters"
+  monarkisterna_posters:0 "§gMonarkisterna§! propaganda posters"
+  nsap_posters:0 "§ONationalsocialistiska arbetarepartiet§! propaganda posters"
 
   # Scripted GUIs
   parliament_gui_title:0 "Grid Parliament"
@@ -242,7 +303,10 @@
   parliament_member_text:0 "[GetParliamentPartyName] - [?sweden_parliament_seat_array^parliament_member_index] Seats"
   parliament_modify_button_tt:0 "§GCtrl+Click§! to add §Y5§! Seats from [GetParliamentPartyName]\n§GShift+Click§! to subtract §Y5§! Seats from [GetParliamentPartyName]"
 
-  party_1_text:0 "Party §RSocialdemokraterna§!"
-  party_2_text:0 "Party §YBondeförbundet§!"
-  party_3_text:0 "Party §GFolkpartiet§!"
-  party_4_text:0 "Party §BHögern§!"
+  party_1_text:0 "Party §RSvenska kommunistiska parti§!"
+  party_2_text:0 "Party §RSocialdemokraterna§!"
+  party_3_text:0 "Party §GBondepartiet§!"
+  party_4_text:0 "Party §CFolkpartiet§!"
+  party_5_text:0 "Party §BHögern§!"
+  party_6_text:0 "Party §gMonarkisterna§!"
+  party_7_text:0 "Party §ONationalsocialistiska arbetarepartiet§!"

@@ -2,7 +2,7 @@ guiTypes = {
 	containerWindowType = {
         name = "parliament_gui_container"
         position = { x = 0 y = 0 }
-		size = { width = 400 height = 600 }
+		size = { width = 400 height = 650 }
 
 		instantTextBoxType = {
 			name = "parliament_gui_title"
@@ -47,7 +47,7 @@ guiTypes = {
 		containerWindowType = {
 			name = "parliament_semicircle_main_container"
 			position = { x = 0 y = 275 }
-			size = { width = 490 height = 225 }
+			size = { width = 490 height = 245 }
 
 			background = {
 				name = "Background"
@@ -101,7 +101,7 @@ guiTypes = {
 	containerWindowType = {
         name = "parliament_member_entry"
         position = { x = 0 y = 0 }
-		size = { width = 200 height = 18 }
+		size = { width = 200 height = 40 }
 
 		iconType = {
 			name = "parliament_member_icon"
@@ -118,8 +118,8 @@ guiTypes = {
 			name = "parliament_member_text"
 			position = { x = 0 y = 0 }
 			font = "hoi_16mbs"
-			maxWidth = 200
-			maxHeight = 16
+			maxWidth = 400
+			maxHeight = 40
 			format = left
 			text = "parliament_member_text"
 		}

@@ -3,17 +3,23 @@ sweden_parliament_gui_initial = {
 	# Put simply an array stores a list of things, used here to store the list of parties and list of seats.
 
 	# sweden_parliament_seat_array stores the list of seat numbers for each party
-	add_to_array = { sweden_parliament_seat_array = 115 } # Party A
-	add_to_array = { sweden_parliament_seat_array = 47 } # Party B
-	add_to_array = { sweden_parliament_seat_array = 38 } # Party C
-	add_to_array = { sweden_parliament_seat_array = 30 } # Party D
+	add_to_array = { sweden_parliament_seat_array = 5 } # SKP
+	add_to_array = { sweden_parliament_seat_array = 112 } # Sossarna
+	add_to_array = { sweden_parliament_seat_array = 36 } # Bonde
+	add_to_array = { sweden_parliament_seat_array = 27 } # Folk
+	add_to_array = { sweden_parliament_seat_array = 44 } # Högern
+	add_to_array = { sweden_parliament_seat_array = 0 } # Monarkisterna
+	add_to_array = { sweden_parliament_seat_array = 6 } # NSAP
 
 	# sweden_parliament_member_array stores the list of parties
 	# This basically assigns an id for each party, so Party A = 1, Party B = 2, etc. (must start from 1 and is in order)
-	add_to_array = { sweden_parliament_member_array = 1 } # Party A
-	add_to_array = { sweden_parliament_member_array = 2 } # Party B
-	add_to_array = { sweden_parliament_member_array = 3 } # Party C
-	add_to_array = { sweden_parliament_member_array = 4 } # Party D
+	add_to_array = { sweden_parliament_member_array = 1 } # SKP
+	add_to_array = { sweden_parliament_member_array = 2 } # Sossarna
+	add_to_array = { sweden_parliament_member_array = 3 } # Bonde
+	add_to_array = { sweden_parliament_member_array = 4 } # Folk
+	add_to_array = { sweden_parliament_member_array = 5 } # Högern
+	add_to_array = { sweden_parliament_member_array = 6 } # Monarkisterna
+	add_to_array = { sweden_parliament_member_array = 7 } # NSAP
 
 	# Set up the positions of the dots for the semicircle parliament
 	sweden_parliament_gui_positions = yes
@@ -72,7 +78,7 @@ sweden_reload_parliament_gui = {
 }
 
 # Bonus code for adding/subtracting seats
-modify_parliament_seat = {
+sweden_modify_parliament_seat = {
 	subtract_from_temp_variable = { temp_member = 1 }
 
 	# check to see if result overflows
@@ -177,9 +183,47 @@ clear_parliament_gui_arrays = {
 	clear_array = sweden_parliament_y_array
 }
 
+sweden_get_largest_party = {
+	find_highest_in_array = {
+		array = sweden_parliament_seat_array
+		value = seathighest
+		index = seathighestindex
+	}
+
+	set_variable = { sweden_largest_party = seathighestindex }
+}
+
+sweden_get_procentual_majority_1 = {
+	set_temp_variable = {party_1_seats = sweden_parliament_seat_array^1}
+	divide_variable = {party_1_seats = 230}
+
+	set_variable = { sweden_procentual_majority_1 = party_1_seats}
+}
+
+sweden_get_if_majoral_rule = {
+	find_highest_in_array = {
+		array = sweden_parliament_seat_array
+		value = seathighest
+		index = seathighestindex
+	}
+
+	set_variable = { sweden_majoral_rule = 0 }
+
+	if = {
+		limit = { 
+			check_variable = {
+				var = seathighest
+				value = 115
+				compare = greater_than_or_equals
+			}
+		}
+		
+		set_variable = { sweden_majoral_rule = 1 }
+	}
+}
+
 # sweden_parliament_x_array and sweden_parliament_y_array stores the list of x and y positions of the parliament dots in the grid, these are generated from this lovely tool by Flaxbeard:
 # https://github.com/Flaxbeard/hoi4-parliament-diagram
-# I'll be using 200 seats as an example only (you'd have to generate your own if you have a different number of seats)
 sweden_parliament_gui_positions = {
 	add_to_array = { sweden_parliament_x_array = 0 }
 	add_to_array = { sweden_parliament_y_array = 181 }
