@@ -1,53 +1,19 @@
-# 0.7.0
+# 0.8.0
 
-Added a party system for sweden which includes the parties:
+## Scripted Parties
 
-* Svenska kommunistiska partiet (SKP)
-* Socialdemokraterna
-* Bondeförbundet
-* Folkpartiet
-* Högern
-* Monarkisterna
-* Nationalsocialistiska arbetarepartiet (NSAP)
+Removed base game parties from Sweden, now the politics depend entirely on the modded parliament
 
-Events:
+Added a new type of propaganda that costs 50PP but gives 2 times (10) mandates more per propaganda
 
-* Upon war with the soviet union sweden receives buffs
-* If sweden has buffs (the one that you receive from the event above) and they are not at war they will lose them through an event.
-* If democracy (HOI4 base politics) has a popularity below 50% the Riksdags decisions gets removed and paused. They get restored if democracy has a popularity above 50%.
+Propaganda now update the mandates when they finish instead of waiting for a tick, the only tick mission still in use is the one that checks for largest party.
 
-Decisions:
+Added 7 new events:
 
-* There exists propaganda posters for every party, including the monarchists.
-* Removed base game politics decisions.
-
-## Focuses
-
-* You can no longer do Hansson government unless the Socialdemokraterna has a majority, it doesn't matter if they have a majority rule, they must have a majority of mandates.
-* You can no longer do SKP unless SKP has a majority and a majority rule.
-* You can no longer do Gustaf V following the same rules as SKP.
-* You can no longer do Lindholmarna following the same rules as SKP.
-
-The following focuses give mandates now instead of party popularity:
-
-* Make the government vulnerable to fascism
-* Spread the fascists ideas in the country
-* SKP
-* Folkhemmet
-* L'etat c'est moi
-* Hansson government
-* Folkhemmet (democratic version)
-* Social reforms
-* Pro-allied censorship
-
-These changes have been made so that the player can use their time focusing on economy and technology while still being able to influence the politics.
-
-Removed following focuses:
-
-* Give support to the monarchists
-* Enforce Neutrality
-* Abandon Neutrality
-
-These focuses have been made obsolete following the creation of the parliament system
-
-You can interact with these parties as you wish with the ability to boost and crack down on certain parties. It is planned so the popularity of the parties determine which focuses you can do.
+* When SKP gains a majority and controls more than 115 mandates they seize power and an event fires that changes the ruling party to communism (base game politics system)
+* When NSAP gains a majority and controls more than 115 mandates they seize power and an event fires that changes the ruling party to fascism (base game politics system)
+* When Monarkisterna gains a majority and controls more than 115 mandates they seize power and an event fires that changes the ruling party to non-aligned (base game politics system)
+* When Socialdemokraterna gains a majority an event fires that gives Sweden an idea that's named Socialdemokraternas regering that gain certain buffs according to their ideology.
+* When Högern gains a majority an event fires that gives Sweden an idea that's named Högerns regering that gain certain buffs according to their ideology.
+* When Bondepartiet gains a majority an event fires that gives Sweden an idea that's named Bondepartiets regering that gain certain buffs according to their ideology.
+* When Folkpartiet gains a majority an event fires that gives Sweden an idea that's named Folkpartiets regering that gain certain buffs according to their ideology.
