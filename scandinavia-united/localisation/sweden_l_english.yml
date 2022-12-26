@@ -47,13 +47,37 @@
   nordic_events.50.d:0 "Following the declaration of war from our giant neighbor in the west we must ready the people for war and hold out until the end!"
   nordic_events.50.a:0 "Styrka, envishet och uthållighet"
 
-  nordic_events.52.t:0 "The fall of democracy"
-  nordic_events.52.d:0 "Following the decline of democracy in Sweden the parliament no longer has any power to enforce laws, a legislative power without any power to enforce is futile. We must abandon the Riksdag at once."
-  nordic_events.52.a:0 "Abandon the Riksdag"
+  nordic_events.51.t:0 "Socialdemokraterna takes majority in the Riksdag!"
+  nordic_events.51.d:0 "Now with a socialist majority we will surely notice a change in ideology!"
+  nordic_events.51.a:0 "Socialdemokraterna is the majority"
 
-  nordic_events.53.t:0 "Democracy rises again"
-  nordic_events.53.d:0 "Years of suppression of democracy has finally lead to the Riksdag getting back their power. Now we have a firm legislative organization that can rule Sweden as it's prime but there is still a lot of work left to be done."
-  nordic_events.53.a:0 "Empower the Riksdag"
+  nordic_events.52.t:0 "Högern takes majority in the Riksdag!"
+  nordic_events.52.d:0 "Now with a right majority we will surely notice a change in ideology!"
+  nordic_events.52.a:0 "Högern is the majority"
+
+  nordic_events.53.t:0 "Folkpartiet takes majority in the Riksdag!"
+  nordic_events.53.d:0 "Now with a liberal majority we will surely notice a change in ideology!"
+  nordic_events.53.a:0 "Folkpartiet is the majority"
+
+  nordic_events.54.t:0 "Bondepartiet takes majority in the Riksdag!"
+  nordic_events.54.d:0 "Now with a liberal majority we will surely notice a change in ideology!"
+  nordic_events.54.a:0 "Bondepartiet is the majority"
+
+  nordic_events.55.t:0 "NSAP Controls the Riksdag"
+  nordic_events.55.d:0 "Democracy has failed, the Riksdag has changed and now the NSAP is the leading party. This will lead to a political shift in ideologies and a new government with NSAP at it's core."
+  nordic_events.55.a:0 "What will happen now?"
+
+  nordic_events.56.t:0 "SKP Controls the Riksdag"
+  nordic_events.56.d:0 "Democracy has failed, the Riksdag has changed and now the SKP is the leading party. This will lead to a political shift in ideologies and a new government with SKP at it's core."
+  nordic_events.56.a:0 "What will happen now?"
+
+  nordic_events.57.t:0 "Monarkisterna Controls the Riksdag"
+  nordic_events.57.d:0 "Democracy has failed. The king now has control over the country with his party Monarkisterna backing him. How will this change the future of Sweden? All we know now is that there will be a political shift in ideology in Sweden."
+  nordic_events.57.a:0 "Seize the power"
+
+  nordic_events.58.t:0 "Democracy returns to the Riksdag!"
+  nordic_events.58.d:0 "Democracy has failed. The king now has control over the country with his party Monarkisterna backing him. How will this change the future of Sweden? All we know now is that there will be a political shift in ideology in Sweden."
+  nordic_events.58.a:0 "Seize the power"
 
   #
   # National focuses
@@ -260,6 +284,14 @@
   fascism_sa:0 "SA"
   SWE_Swedish_SSE_against_soviet:0 "Styrka, envishet och uthållighet"
 
+  #
+  # IDEAS PARLIAMENT PART
+  #
+  SWE_socialdemocrat_regering:0 "§RSocialdemokraternas§! regering"
+  SWE_hoger_regering:0 "§BHögerns§! regering"
+  SWE_folk_regering:0 "§CFolkpartiets§! regering"
+  SWE_bonde_regering:0 "§GBondepartiets§! regering"
+
 
   #
   # Decisions
@@ -279,13 +311,22 @@
   parliament_gui_decision_category_desc:0 "placeholder text\nplaceholder text\nplaceholder text"
 
   # My decisions
-  skp_poster_cet:0 "§RSvenska kommunistiska parti§! will get 5 more seats per month following this decision"
-  socialdemocrats_poster_cet:0 "§RSocialdemokraterna§! will get 5 more seats per month following this decision"
-  folk_posters_cet:0 "§CFolkpartiet§! will get 5 more seats per month following this decision"
-  bonde_posters_cet:0 "§GBondepartiet§! will get 5 more seats per month following this decision"
-  hoger_poster_cet:0 "§BHögern§! will get 5 more seats per month following this decision"
-  monarkisterna_poster_cet:0 "§gMonarkisterna§! will get 5 more seats per month following this decision"
-  nsap_poster_cet:0 "§ONationalsocialistiska arbetarepartiet§! will get 5 more seats per month following this decision"
+  skp_poster_cet:0 "§RSvenska kommunistiska parti§! will get 5 more seats at the end of this decision"
+  socialdemocrats_poster_cet:0 "§RSocialdemokraterna§! will get 5 more seats at the end of this decision"
+  folk_posters_cet:0 "§CFolkpartiet§! will get 5 more seats at the end of this decision"
+  bonde_posters_cet:0 "§GBondepartiet§! will get 5 more seats at the end of this decision"
+  hoger_poster_cet:0 "§BHögern§! will get 5 more seats at the end of this decision"
+  monarkisterna_poster_cet:0 "§gMonarkisterna§! will get 5 more seats at the end of this decision"
+  nsap_poster_cet:0 "§ONationalsocialistiska arbetarepartiet§! will get 5 more seats at the end of this decision"
+
+  skp_2_poster_cet:0 "§RSvenska kommunistiska parti§! will get 10 more seats at the end of this decision"
+  socialdemocrats_2_poster_cet:0 "§RSocialdemokraterna§! will get 10 more seats at the end of this decision"
+  folk_2_posters_cet:0 "§CFolkpartiet§! will get 10 more seats at the end of this decision"
+  bonde_2_posters_cet:0 "§GBondepartiet§! will get 10 more seats at the end of this decision"
+  hoger_2_poster_cet:0 "§BHögern§! will get 10 more seats at the end of this decision"
+  monarkisterna_2_poster_cet:0 "§gMonarkisterna§! will get 10 more seats at the end of this decision"
+  nsap_2_poster_cet:0 "§ONationalsocialistiska arbetarepartiet§! will get 10 more seats at the end of this decision"
+
 
   skp_posters:0 "§RSvenska kommunistiska parti§! propaganda posters"
   socialdemocrats_posters:0 "§RSocialdemokraterna§! propaganda posters"
@@ -294,6 +335,14 @@
   hoger_posters:0 "§BHögern§! propaganda posters"
   monarkisterna_posters:0 "§gMonarkisterna§! propaganda posters"
   nsap_posters:0 "§ONationalsocialistiska arbetarepartiet§! propaganda posters"
+
+  skp_2_posters:0 "§RSvenska kommunistiska parti§! aggressive propaganda posters"
+  socialdemocrats_2_posters:0 "§RSocialdemokraterna§! aggressive propaganda posters"
+  bonde_2_posters:0 "§GBondepartiet§! aggressive propaganda posters"
+  folk_2_posters:0 "§CFolkpartiet§! aggressive propaganda posters"
+  hoger_2_posters:0 "§BHögern§! aggressive propaganda posters"
+  monarkisterna_2_posters:0 "§gMonarkisterna§! aggressive propaganda posters"
+  nsap_2_posters:0 "§ONationalsocialistiska arbetarepartiet§! aggressive propaganda posters"
 
   # Scripted GUIs
   parliament_gui_title:0 "Grid Parliament"

@@ -52,12 +52,50 @@ sweden_parliament_gui_decision_category = {
         complete_effect = {
             custom_effect_tooltip = skp_poster_cet
             set_country_flag = active_parliament_propaganda
-            add_to_variable = { sweden_party_1_monthly_change = 5 }
         }
 
         remove_effect = {
             clr_country_flag = active_parliament_propaganda
-            subtract_from_variable = { sweden_party_1_monthly_change = 5 }
+
+            set_temp_variable = { temp_member = 1 }
+			set_temp_variable = { temp_seats = 5 }
+
+            sweden_modify_parliament_seat = yes
+        }
+    }
+
+    skp_2_posters = {
+        cost = 50
+
+        allowed = {
+            tag = SWE
+        }
+
+        available = {
+            NOT = {
+                has_country_flag = active_parliament_propaganda_2
+            }
+        }
+
+        visible = {
+            always = yes
+        }
+
+        fire_only_once = no
+        days_remove = 30
+
+        complete_effect = {
+            custom_effect_tooltip = skp_2_poster_cet
+            set_country_flag = active_parliament_propaganda_2
+        }
+
+        remove_effect = {
+            clr_country_flag = active_parliament_propaganda_2
+            
+            set_temp_variable = { temp_member = 1 }
+			set_temp_variable = { temp_seats = 10 }
+
+            sweden_modify_parliament_seat = yes
         }
     }
 
@@ -82,12 +120,50 @@ sweden_parliament_gui_decision_category = {
         complete_effect = {
             custom_effect_tooltip = socialdemocrats_poster_cet
             set_country_flag = active_parliament_propaganda
-            add_to_variable = { sweden_party_2_monthly_change = 5 }
         }
 
         remove_effect = {
             clr_country_flag = active_parliament_propaganda
-            subtract_from_variable = { sweden_party_2_monthly_change = 5 }
+            
+            set_temp_variable = { temp_member = 2 }
+			set_temp_variable = { temp_seats = 5 }
+
+            sweden_modify_parliament_seat = yes
+        }
+    }
+
+    socialdemocrats_2_posters = {
+        cost = 50
+        
+        allowed = {
+            tag = SWE
+        }
+
+        available = {
+            NOT = {
+                has_country_flag = active_parliament_propaganda_2
+            }
+        }
+
+        visible = {
+            always = yes
+        }
+
+        fire_only_once = no
+        days_remove = 30
+
+        complete_effect = {
+            custom_effect_tooltip = socialdemocrats_2_poster_cet
+            set_country_flag = active_parliament_propaganda_2
+        }
+
+        remove_effect = {
+            clr_country_flag = active_parliament_propaganda_2
+            
+            set_temp_variable = { temp_member = 2 }
+			set_temp_variable = { temp_seats = 10 }
+
+            sweden_modify_parliament_seat = yes
         }
     }
 
@@ -112,12 +188,50 @@ sweden_parliament_gui_decision_category = {
         complete_effect = {
             custom_effect_tooltip = bonde_posters_cet
             set_country_flag = active_parliament_propaganda
-            add_to_variable = { sweden_party_3_monthly_change = 5 }
         }
 
         remove_effect = {
             clr_country_flag = active_parliament_propaganda
-            subtract_from_variable = { sweden_party_3_monthly_change = 5 }
+            
+            set_temp_variable = { temp_member = 3 }
+			set_temp_variable = { temp_seats = 5 }
+
+            sweden_modify_parliament_seat = yes
+        }
+    }
+
+    bonde_2_posters = {
+        cost = 50
+
+        allowed = {
+            tag = SWE
+        }
+
+        available = {
+            NOT = {
+                has_country_flag = active_parliament_propaganda_2
+            }
+        }
+
+        visible = {
+            always = yes
+        }
+
+        fire_only_once = no
+        days_remove = 30
+
+        complete_effect = {
+            custom_effect_tooltip = bonde_2_posters_cet
+            set_country_flag = active_parliament_propaganda_2
+        }
+
+        remove_effect = {
+            clr_country_flag = active_parliament_propaganda_2
+            
+            set_temp_variable = { temp_member = 3 }
+			set_temp_variable = { temp_seats = 10 }
+
+            sweden_modify_parliament_seat = yes
         }
     }
 
@@ -142,12 +256,50 @@ sweden_parliament_gui_decision_category = {
         complete_effect = {
             custom_effect_tooltip = folk_posters_cet
             set_country_flag = active_parliament_propaganda
-            add_to_variable = { sweden_party_4_monthly_change = 5 }
         }
 
         remove_effect = {
             clr_country_flag = active_parliament_propaganda
-            subtract_from_variable = { sweden_party_4_monthly_change = 5 }
+            
+            set_temp_variable = { temp_member = 4 }
+			set_temp_variable = { temp_seats = 5 }
+
+            sweden_modify_parliament_seat = yes
+        }
+    }
+
+    folk_2_posters = {
+        cost = 50
+
+        allowed = {
+            tag = SWE
+        }
+
+        available = {
+            NOT = {
+                has_country_flag = active_parliament_propaganda_2
+            }
+        }
+
+        visible = {
+            always = yes
+        }
+
+        fire_only_once = no
+        days_remove = 30
+
+        complete_effect = {
+            custom_effect_tooltip = folk_2_posters_cet
+            set_country_flag = active_parliament_propaganda_2
+        }
+
+        remove_effect = {
+            clr_country_flag = active_parliament_propaganda_2
+            
+            set_temp_variable = { temp_member = 4 }
+			set_temp_variable = { temp_seats = 10 }
+
+            sweden_modify_parliament_seat = yes
         }
     }
 
@@ -172,12 +324,50 @@ sweden_parliament_gui_decision_category = {
         complete_effect = {
             custom_effect_tooltip = hoger_poster_cet
             set_country_flag = active_parliament_propaganda
-            add_to_variable = { sweden_party_5_monthly_change = 5 }
         }
 
         remove_effect = {
             clr_country_flag = active_parliament_propaganda
-            subtract_from_variable = { sweden_party_5_monthly_change = 5 }
+            
+            set_temp_variable = { temp_member = 5 }
+			set_temp_variable = { temp_seats = 5 }
+
+            sweden_modify_parliament_seat = yes
+        }
+    }
+
+    hoger_2_posters = {
+        cost = 50
+
+        allowed = {
+            tag = SWE
+        }
+
+        available = {
+            NOT = {
+                has_country_flag = active_parliament_propaganda_2
+            }
+        }
+
+        visible = {
+            always = yes
+        }
+
+        fire_only_once = no
+        days_remove = 30
+
+        complete_effect = {
+            custom_effect_tooltip = hoger_2_poster_cet
+            set_country_flag = active_parliament_propaganda_2
+        }
+
+        remove_effect = {
+            clr_country_flag = active_parliament_propaganda_2
+            
+            set_temp_variable = { temp_member = 5 }
+			set_temp_variable = { temp_seats = 10 }
+
+            sweden_modify_parliament_seat = yes
         }
     }
 
@@ -202,12 +392,50 @@ sweden_parliament_gui_decision_category = {
         complete_effect = {
             custom_effect_tooltip = monarkisterna_poster_cet
             set_country_flag = active_parliament_propaganda
-            add_to_variable = { sweden_party_6_monthly_change = 5 }
         }
 
         remove_effect = {
             clr_country_flag = active_parliament_propaganda
-            subtract_from_variable = { sweden_party_6_monthly_change = 5 }
+            
+            set_temp_variable = { temp_member = 6 }
+			set_temp_variable = { temp_seats = 5 }
+
+            sweden_modify_parliament_seat = yes
+        }
+    }
+
+    monarkisterna_2_posters = {
+        cost = 50
+
+        allowed = {
+            tag = SWE
+        }
+
+        available = {
+            NOT = {
+                has_country_flag = active_parliament_propaganda_2
+            }
+        }
+
+        visible = {
+            always = yes
+        }
+
+        fire_only_once = no
+        days_remove = 30
+
+        complete_effect = {
+            custom_effect_tooltip = monarkisterna_2_poster_cet
+            set_country_flag = active_parliament_propaganda_2
+        }
+
+        remove_effect = {
+            clr_country_flag = active_parliament_propaganda_2
+            
+            set_temp_variable = { temp_member = 6 }
+			set_temp_variable = { temp_seats = 10 }
+
+            sweden_modify_parliament_seat = yes
         }
     }
 
@@ -232,12 +460,50 @@ sweden_parliament_gui_decision_category = {
         complete_effect = {
             custom_effect_tooltip = nsap_poster_cet
             set_country_flag = active_parliament_propaganda
-            add_to_variable = { sweden_party_7_monthly_change = 5 }
         }
 
         remove_effect = {
             clr_country_flag = active_parliament_propaganda
-            subtract_from_variable = { sweden_party_7_monthly_change = 5 }
+            
+            set_temp_variable = { temp_member = 7 }
+			set_temp_variable = { temp_seats = 5 }
+
+            sweden_modify_parliament_seat = yes
+        }
+    }
+
+    nsap_2_posters = {
+        cost = 50
+
+        allowed = {
+            tag = SWE
+        }
+
+        available = {
+            NOT = {
+                has_country_flag = active_parliament_propaganda_2
+            }
+        }
+
+        visible = {
+            always = yes
+        }
+
+        fire_only_once = no
+        days_remove = 30
+
+        complete_effect = {
+            custom_effect_tooltip = nsap_2_poster_cet
+            set_country_flag = active_parliament_propaganda_2
+        }
+
+        remove_effect = {
+            clr_country_flag = active_parliament_propaganda_2
+            
+            set_temp_variable = { temp_member = 7 }
+			set_temp_variable = { temp_seats = 10 }
+
+            sweden_modify_parliament_seat = yes
         }
     }
 }

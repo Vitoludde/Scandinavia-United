@@ -422,9 +422,9 @@ country_event = {
 # Russian Invasion has stopped
 
 country_event = {
-	id = nordic_events.51
-	title = nordic_events.51.t
-	desc = nordic_events.51.d
+	id = nordic_events.511
+	title = nordic_events.511.t
+	desc = nordic_events.511.d
 
 	fire_only_once = yes
 
@@ -441,7 +441,7 @@ country_event = {
 	}
 
 	option = {
-		name = nordic_events.51.a
+		name = nordic_events.511.a
 		ai_chance =  { factor = 400 }
 		SWE = {
 			remove_ideas = {
@@ -458,8 +458,180 @@ country_event = {
 # Parliament
 #
 
-# Fall of democracy again
 
+
+#
+# SCRIPTED PARTIES
+#
+
+# NSAP Gains control over the riksdag
+country_event = {
+	id = nordic_events.55
+	title = nordic_events.55.t
+	desc = nordic_events.55.d
+
+	fire_only_once = yes
+
+	trigger = {
+		check_variable = { sweden_largest_party = 6 }
+		check_variable = { sweden_majoral_rule = 1 }
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = nordic_events.55.a
+		ai_chance =  { factor = 400 }
+		SWE = {
+			set_politics = {
+				ruling_party = fascism
+			}
+
+			set_variable = { sweden_party_has_changed = 1 }
+		}
+	}
+}
+
+# SKP Gains control over the riksdag
+country_event = {
+	id = nordic_events.56
+	title = nordic_events.56.t
+	desc = nordic_events.56.d
+
+	fire_only_once = yes
+
+	trigger = {
+		check_variable = { sweden_largest_party = 0 }
+		check_variable = { sweden_majoral_rule = 1 }
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = nordic_events.56.a
+		ai_chance =  { factor = 400 }
+		SWE = {
+			set_politics = {
+				ruling_party = communism
+			}
+
+			set_variable = { sweden_party_has_changed = 1 }
+		}
+	}
+}
+
+# Monarkisterna Gains control over the riksdag
+country_event = {
+	id = nordic_events.57
+	title = nordic_events.57.t
+	desc = nordic_events.57.d
+
+	fire_only_once = yes
+
+	trigger = {
+		check_variable = { sweden_largest_party = 5 }
+		check_variable = { sweden_majoral_rule = 1 }
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = nordic_events.57.a
+		ai_chance =  { factor = 400 }
+		SWE = {
+			set_politics = {
+				ruling_party = neutrality
+			}
+
+			set_variable = { sweden_party_has_changed = 1 }
+		}
+	}
+}
+
+# Democracy returns
+country_event = {
+	id = nordic_events.58
+	title = nordic_events.58.t
+	desc = nordic_events.58.d
+
+	fire_only_once = yes
+
+	trigger = {
+		NOT = {
+			check_variable = { sweden_largest_party = 5 }
+		}
+		NOT = {
+			check_variable = { sweden_largest_party = 0 }
+		}
+		NOT = {
+			check_variable = { sweden_largest_party = 6 }
+		}
+
+		check_variable = { sweden_party_has_changed = 1 }
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = nordic_events.58.a
+		ai_chance =  { factor = 400 }
+		SWE = {
+			set_politics = {
+				ruling_party = democratic
+			}
+
+			set_variable = { sweden_party_has_changed = 0 }
+		}
+	}
+}
+
+
+#
+# Democracy
+#
+
+# Socialist majority
+country_event = {
+	id = nordic_events.51
+	title = nordic_events.51.t
+	desc = nordic_events.51.d
+
+	fire_only_once = yes
+
+	trigger = {
+		check_variable = { sweden_largest_party = 1 }
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = nordic_events.51.a
+		ai_chance =  { factor = 400 }
+		SWE = {
+			add_ideas = {
+				SWE_socialdemocrat_regering
+			}
+
+			remove_ideas = {
+				SWE_folk_regering
+				SWE_hoger_regering
+				SWE_bonde_regering
+			}
+		}
+	}
+}
+
+# Höger majority
 country_event = {
 	id = nordic_events.52
 	title = nordic_events.52.t
@@ -468,9 +640,7 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		NOT = {
-			democratic > 0.5
-		}
+		check_variable = { sweden_largest_party = 4 }
 	}
 
 	mean_time_to_happen = {
@@ -481,13 +651,20 @@ country_event = {
 		name = nordic_events.52.a
 		ai_chance =  { factor = 400 }
 		SWE = {
-			set_variable = { swedish_parliament_closed = 1}
+			add_ideas = {
+				SWE_hoger_regering
+			}
+
+			remove_ideas = {
+				SWE_folk_regering
+				SWE_socialdemocrat_regering
+				SWE_bonde_regering
+			}
 		}
 	}
 }
 
-# Rise of democracy again
-
+# Folk majority
 country_event = {
 	id = nordic_events.53
 	title = nordic_events.53.t
@@ -496,8 +673,7 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		democratic > 0.5
-		check_variable = { swedish_parliament_closed = 1 }
+		check_variable = { sweden_largest_party = 3 }
 	}
 
 	mean_time_to_happen = {
@@ -508,7 +684,47 @@ country_event = {
 		name = nordic_events.53.a
 		ai_chance =  { factor = 400 }
 		SWE = {
-			set_variable = { swedish_parliament_closed = 0 }
+			add_ideas = {
+				SWE_folk_regering
+			}
+
+			remove_ideas = {
+				SWE_hoger_regering
+				SWE_socialdemocrat_regering
+				SWE_bonde_regering
+			}
+		}
+	}
+}
+
+# Bonde majority
+country_event = {
+	id = nordic_events.54
+	title = nordic_events.54.t
+	desc = nordic_events.54.d
+
+	fire_only_once = yes
+
+	trigger = {
+		check_variable = { sweden_largest_party = 2 }
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = nordic_events.54.a
+		ai_chance =  { factor = 400 }
+		SWE = {
+			add_ideas = {
+				SWE_bonde_regering
+			}
+			remove_ideas = {
+				SWE_folk_regering
+				SWE_hoger_regering
+				SWE_socialdemocrat_regering
+			}
 		}
 	}
 }

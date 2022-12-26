@@ -5,120 +5,25 @@ hidden_ticks_decision_category = {
         }
 
         available = {
-            always = yes
+            always = no
         }
 
         visible = {
             is_debug = yes
         }
 
-        cancel_trigger = {
-            always = no
-        }
-
         icon = mission_icon
-        is_good = yes
         days_mission_timeout = 5
-        selectable_mission = yes
-        timeout_effect = {
-            sweden_get_largest_party = yes
-            sweden_get_if_majoral_rule = yes
-        }
-        complete_effect = {
-            sweden_get_largest_party = yes
-            sweden_get_if_majoral_rule = yes
-        }
-    }
-
-    update_parties = {
-        activation = {
-            always = yes
-        }
-
-        available = {
-            always = yes
-        }
-
-        visible = {
-            is_debug = yes
-        }
-
-        cancel_trigger = {
-            always = no
-        }
-
-        icon = mission_icon
         is_good = yes
-        days_mission_timeout = 30
-        selectable_mission = yes
 
         timeout_effect = {
-            set_temp_variable = { temp_member = 1 }
-			set_temp_variable = { temp_seats = sweden_party_1_monthly_change }
-
-            sweden_modify_parliament_seat = yes
-
-            set_temp_variable = { temp_member = 2 }
-			set_temp_variable = { temp_seats = sweden_party_2_monthly_change }
-
-            sweden_modify_parliament_seat = yes
-
-            set_temp_variable = { temp_member = 3 }
-			set_temp_variable = { temp_seats = sweden_party_3_monthly_change }
-
-            sweden_modify_parliament_seat = yes
-
-            set_temp_variable = { temp_member = 4 }
-			set_temp_variable = { temp_seats = sweden_party_4_monthly_change }
-
-            sweden_modify_parliament_seat = yes
-
-            set_temp_variable = { temp_member = 5 }
-			set_temp_variable = { temp_seats = sweden_party_5_monthly_change }
-
-            sweden_modify_parliament_seat = yes
-
-            set_temp_variable = { temp_member = 6 }
-			set_temp_variable = { temp_seats = sweden_party_6_monthly_change }
-
-            sweden_modify_parliament_seat = yes
+            sweden_get_largest_party = yes
+            sweden_get_if_majoral_rule = yes
         }
 
         complete_effect = {
-            set_temp_variable = { temp_member = 1 }
-			set_temp_variable = { temp_seats = sweden_party_1_monthly_change }
-
-            sweden_modify_parliament_seat = yes
-
-            set_temp_variable = { temp_member = 2 }
-			set_temp_variable = { temp_seats = sweden_party_2_monthly_change }
-
-            sweden_modify_parliament_seat = yes
-
-            set_temp_variable = { temp_member = 3 }
-			set_temp_variable = { temp_seats = sweden_party_3_monthly_change }
-
-            sweden_modify_parliament_seat = yes
-
-            set_temp_variable = { temp_member = 4 }
-			set_temp_variable = { temp_seats = sweden_party_4_monthly_change }
-
-            sweden_modify_parliament_seat = yes
-
-            set_temp_variable = { temp_member = 5 }
-			set_temp_variable = { temp_seats = sweden_party_5_monthly_change }
-
-            sweden_modify_parliament_seat = yes
-
-            set_temp_variable = { temp_member = 6 }
-			set_temp_variable = { temp_seats = sweden_party_6_monthly_change }
-
-            sweden_modify_parliament_seat = yes
-
-            set_temp_variable = { temp_member = 7 }
-			set_temp_variable = { temp_seats = sweden_party_7_monthly_change }
-
-            sweden_modify_parliament_seat = yes
+            sweden_get_largest_party = yes
+            sweden_get_if_majoral_rule = yes
         }
     }
 }

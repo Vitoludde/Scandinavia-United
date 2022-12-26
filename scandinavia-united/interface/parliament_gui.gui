@@ -108,12 +108,6 @@ guiTypes = {
 			spriteType = "GFX_parliament_party_icon"
 			position = { x = -20 y = 0 }
 		}
-		buttonType = {
-			name = "parliament_modify_button"
-			spriteType = "GFX_parliament_empty_button"
-			position = { x = -20 y = 0 }
-			pdx_tooltip = "parliament_modify_button_tt"
-		}
 		instantTextboxType = {
 			name = "parliament_member_text"
 			position = { x = 0 y = 0 }

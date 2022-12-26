@@ -205,8 +205,15 @@ set_politics = {
 	election_frequency = 48
 	elections_allowed = yes
 }
+#set_popularities = {
+#	democratic = 100
+#	neutrality = 0
+#	communism = 0
+#	fascism = 0
+#}
+
 set_popularities = {
-	democratic = 100
+	democratic = 0
 	neutrality = 0
 	communism = 0
 	fascism = 0
@@ -578,4 +585,6 @@ if = {
 
 # Sossarna is the biggest party
 set_variable = { sweden_largest_party = 1 }
+set_variable = { swedish_parliament_closed = 0 }
+set_variable = { sweden_party_has_changed = 0 }
 sweden_parliament_gui_initial = yes
