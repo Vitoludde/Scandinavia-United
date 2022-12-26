@@ -1,7 +1,7 @@
 
 # Scandinavia United
 
-Version: 0.7.0 Swedish politics
+Version: 0.8.0 Swedish politics part 2
 
 Supported Game Version: 1.12.*
 
