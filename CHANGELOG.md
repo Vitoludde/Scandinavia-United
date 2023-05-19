@@ -42,3 +42,8 @@ Added the following ideas:
 ## Icons
 
 Fixed the icon for Lindholmarnas focus
+
+## ETC
+
+Added descriptions for Sweden for the two bookmark starts
+Added a bookmark start for Sweden in the Blitzkrieg start

@@ -109,7 +109,27 @@ if = {
 	add_command_power = 100
 	
 	#generic focuses
-	
+	complete_national_focus = SWE_hansson
+	complete_national_focus = SWE_saltsjoavtalen
+	complete_national_focus = SWE_socialreforms
+	complete_national_focus = SWE_folkhemmet
+	complete_national_focus = SWE_ransonering
+	complete_national_focus = SWE_civilian_economy_focus
+	complete_national_focus = SWE_expand_the_railways
+	complete_national_focus = SWE_focus_on_the_economy
+	complete_national_focus = SWE_expand_the_mining_industry
+	complete_national_focus = SWE_expand_mining_in_the_north
+	complete_national_focus = SWE_expand_the_forestry
+	complete_national_focus = SWE_focus_on_the_economy_2
+	complete_national_focus = SWE_rearment
+	complete_national_focus = SWE_focus_on_the_army
+	complete_national_focus = SWE_defensive_focus
+	complete_national_focus = SWE_expand_gevarsfaktoriet
+	complete_national_focus = SWE_artillery_corps
+	complete_national_focus = SWE_construct_new_factories
+	complete_national_focus = SWE_focus_on_the_navy
+	complete_national_focus = SWE_coastal_defences
+
 	
 	oob = "SWE_1939"
 	if = {
@@ -233,10 +253,10 @@ set_party_name = {
 		elections_allowed = yes
 	}
 	set_popularities = {
-		democratic = 85
-		neutrality = 10
-		communism = 4
-		fascism = 1
+		democratic = 0
+		neutrality = 0
+		communism = 0
+		fascism = 0
 	}
 }
 
