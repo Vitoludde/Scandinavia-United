@@ -9,7 +9,7 @@ hidden_ticks_decision_category = {
         }
 
         visible = {
-            is_debug = yes
+            always = no
         }
 
         icon = mission_icon

@@ -1,6 +1,77 @@
 ideas = {
 	country = {
 	
+
+		#
+		# Bagge regering
+		#
+
+		bagge_swedish_work = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = SOV_second_five_year_plan
+			
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				consumer_goods_factor = -0.05
+				political_power_factor = 0.05
+			}
+		}
+
+		bagge_freedom_and_defence = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = SOV_second_five_year_plan
+			
+			modifier = {
+				production_speed_arms_factory_factor = 0.1
+				production_speed_bunker_factor = 0.1
+			}
+		}
+
+		bagge_freedom_and_defence_2 = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = SOV_second_five_year_plan
+			
+			modifier = {
+				production_speed_arms_factory_factor = 0.1
+				production_speed_dockyard_factor = 0.1
+				production_speed_bunker_factor = 0.1
+			}
+		}
+
+		bagge_swedish_work_2 = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = SOV_third_five_year_plan
+			
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				consumer_goods_factor = -0.05
+				political_power_factor = 0.05
+				fuel_gain_factor = 0.1
+				global_building_slots_factor = 0.4
+			}
+		}
+
+
 		en_svensk_tiger = {
 			
 			allowed = {
@@ -97,7 +168,6 @@ ideas = {
 
 			modifier = {
 				drift_defence_factor = 0.25
-				neutrality_drift = 0.1
 			}
 		}
 
@@ -112,7 +182,6 @@ ideas = {
 
 			modifier = {
 				drift_defence_factor = 0.25
-				neutrality_drift = 0.1
 				stability_factor = 0.25
 			}
 		}
@@ -415,16 +484,17 @@ ideas = {
 			}
 		}
 
-		abolished_monarchy = {
+		swe_spanish_volunteers = {
 			allowed = {
-				always = no # Triggered via event
+				always = no
 			}
 
-			picture = generic_communism_drift_bonus
-			
+			picture = generic_communist_army
+
 			modifier = {
-				communism_drift = 0.1
-				neutrality_drift = 0.1
+				send_volunteer_divisions_required = -0.25
+				send_volunteer_factor = 0.1
+				air_volunteer_cap = 200
 			}
 		}
 
@@ -451,8 +521,8 @@ ideas = {
 			#picture = scaunite_sweden_flag_gfx
 
 			modifier = {
-				fascism_drift = 0.1
 				drift_defence_factor = -0.25
+				stability_factor = -0.25
 			}
 		}
 
@@ -464,8 +534,8 @@ ideas = {
 			#picture = scaunite_sweden_flag_gfx
 
 			modifier = {
-				fascism_drift = 0.1
 				drift_defence_factor = -0.25
+				stability_factor = -0.25
 				political_power_gain = 0.1
 			}
 		}
@@ -478,8 +548,8 @@ ideas = {
 			#picture = scaunite_sweden_flag_gfx
 
 			modifier = {
-				fascism_drift = 0.1
 				drift_defence_factor = -0.25
+				stability_factor = 0.05
 				political_power_gain = 0.1
 				subjects_autonomy_gain = -0.5
 				mobilization_laws_cost_factor = -0.25
@@ -494,8 +564,8 @@ ideas = {
 			#picture = scaunite_sweden_flag_gfx
 
 			modifier = {
-				fascism_drift = 0.1
 				conscription_factor = 0.1
+				political_power_gain = 0.1
 			}
 		}
 

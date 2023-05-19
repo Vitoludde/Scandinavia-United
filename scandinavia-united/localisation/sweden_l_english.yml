@@ -82,7 +82,7 @@
   #
   # National focuses
   #
-  # Democratic Path
+  # Socialist Path
   SWE_enforce_neutrality:0 "Enforce Neutrality"
   SWE_abandon_neutrality:0 "Abandon Neutrality"
   SWE_hansson:0 "Hansson government"
@@ -108,6 +108,49 @@
   SWE_join_the_war_On_allies_side:0 "Join the allies"
   SWE_Guarentees_both:0 "World Guarantees"
   SWE_cave_to_germans:0 "Cave to the germans"
+
+  # Högern path
+  SWE_bagge:0 "Government with Gösta Bagge"
+  SWE_bagge_trigger_tooltip:0 "Högern is the largest party."
+
+  SWE_build_the_country:0 "Build the country"
+  SWE_build_the_country_desc:0 "We can't stand still just because the world around is crumbling! We need to safegaurd the future of Sweden! We must build our country!"
+
+  SWE_freedom_and_defence:0 "Freedom and defence"
+  SWE_freedom_and_defence_desc:0 "Now with the economy underway we need to safeguard our national sovereignty!"
+
+  SWE_aftermath_of_the_split:0 "Aftermath of the split"
+  SWE_aftermath_of_the_split_desc:0 "Following Hitlers rise to power in Germany 1933 a fragmentation of our party begun, some were for nazism and some were against nazism, now we have a fragmentet party and we need to fix this!"
+
+  SWE_root_out_party_nazism:0 "Root out the Nazi tendencies in the party"
+  SWE_root_out_party_nazism_desc:0 "Following the fragmentation our party has some Nazi sympathisers, we must remove these parasites from the party! This will remove a few of our mandates but we won't have any Nazi tendencies"
+
+  SWE_enforce_nazism_in_the_party:0 "Enforce the Nazi tendencies in the party"
+  SWE_enforce_nazism_in_the_party_desc:0 "Following the fragmentation our party has some Nazi sympathisers, maybe it's time to follow the path the world is taking! We are heading towards a dictatorial world and we must follow suit!"
+
+  SWE_overthrow_the_government:0 "Overthrow the government"
+  SWE_overthrow_the_government_desc:0 "Now we have the control we need! We need to take to the streets. It's time for a coup d'état!"
+
+  SWE_end_kilboms_balance_of_power:0 "End Kilbloms balance of power"
+  SWE_end_kilboms_balance_of_power_desc:0 "Kilblom has for too long been able to control our countrys politics! It's time to remove their mandates so that they may never interfere with our politics!"
+
+  SWE_fight_against_red_dictatorship:0 "Fight against the red dictatorship"
+  SWE_fight_against_red_dictatorship_desc:0 "The worst dictatorship is those led by those communists! We must faight against this! This will lead to the communists losing mandates but this may also lead to a rise in right extremism"
+
+  SWE_ethiopias_fate_cant_be_swedens:0 "Ethopias fate won't be Swedens"
+  SWE_ethiopias_fate_cant_be_swedens_desc:0 "Abessiniens öde får aldrig bli Sveriges - Trygga försvarsfermormens genomförande - Svensk samling. Abyssinia fate can't ever be Swedens! - Secure the defence reforms - Svensk Samling"
+
+  SWE_build_the_military:0 "Build the military"
+  SWE_build_the_military_desc:0 "Now that we have more control we must go even harder for freedom and defence!"
+
+  SWE_build_the_country_2:0 "Build the country"
+  SWE_build_the_country_2_desc:0 "Now that we have more control we must go even harder for our nations future!"
+
+
+  # Pehrsson path
+  SWE_pehrsson:0 "Government with Axel Pehrsson-Bramstorp"
+  SWE_pehrsson_trigger_tooltip:0 "Bondeförbundet is the largest party."
+
 
   # Neutrality
   SWE_support_the_monarchists:0 "Give support to the monarcists"
@@ -147,6 +190,7 @@
   SWE_f_choose_our_path:0 "Choose our path"
   SWE_f_axis_focus:0 "Join the axis"
   SWE_scandinavia_focus:0 "Focus on scandinavia"
+  SWE_propaganda:0 "Propaganda"
 
   # Communism
   SWE_skp:0 "SKP"
@@ -235,6 +279,12 @@
   nsap_add_five:0 "§ONationalsocialistiska arbetarepartiet§! gains 5 mandates."
   nsap_add_ten:0 "§ONationalsocialistiska arbetarepartiet§! gains 10 mandates."
 
+  skp_remove_five:0 "§RSvenska kommunistiska parti§! loses 5 mandates."
+  skp_remove_ten:0 "§RSvenska kommunistiska parti§! loses 10 mandates."
+
+  hoger_remove_five:0 "§BHögern§! loses 5 mandates."
+  hoger_remove_ten:0 "§BHögern§! loses 10 mandates."
+
   #
   # Opinion modifiers
   #
@@ -255,7 +305,7 @@
   en_svensk_tiger_2:0 "En Svensk Tiger"
   c_bureau:0 "C-Byrån"
   samlings_regeringen:0 "Samlings Regeringen"
-  riksdag_non_supportive_army:0 "Riksdag non supportive of military reforms"
+  riksdag_non_supportive_army:0 "The Riksdag is not supporting the defence reforms"
   SWE_etat_est_moi_2:0 "L'etat c'est moi"
   SWE_lessons_of_war_idea:0 "Lessons of war"
   SWE_lion_from_the_north_idea:0 "Lejonet från norden"
@@ -283,6 +333,23 @@
   fascism_in_the_land:0 "Fascism in the land"
   fascism_sa:0 "SA"
   SWE_Swedish_SSE_against_soviet:0 "Styrka, envishet och uthållighet"
+
+  # Communism
+  swe_spanish_volunteers:0 "Spanish Volunteers"
+
+  # Bagge
+  bagge_swedish_work:0 "Build the country"
+  bagge_swedish_work_desc:0 "Skydd för svenskt arbete! Förbättra jordbruksfolkets ställning! Välj med §BHögern§!"
+
+  bagge_freedom_and_defence:0 "Frihet och försvar"
+  bagge_freedom_and_defence_desc:0 "Arbete och självförsörjning - Rättsordningens värnande - Frihet och försvar - Välj med de §Bborgerliga§!"
+
+  bagge_swedish_work_2:0 "Build the country"
+  bagge_swedish_work_desc:0 "Skydd för svenskt arbete! Förbättra jordbruksfolkets ställning! Välj med §BHögern§!"
+
+  bagge_freedom_and_defence_2:0 "Frihet och försvar"
+  bagge_freedom_and_defence_desc:0 "Arbete och självförsörjning - Rättsordningens värnande - Frihet och försvar - Välj med de §Bborgerliga§!"
+
 
   #
   # IDEAS PARLIAMENT PART

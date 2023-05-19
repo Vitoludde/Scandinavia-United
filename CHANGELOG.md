@@ -17,3 +17,28 @@ Added 7 new events:
 * When Högern gains a majority an event fires that gives Sweden an idea that's named Högerns regering that gain certain buffs according to their ideology.
 * When Bondepartiet gains a majority an event fires that gives Sweden an idea that's named Bondepartiets regering that gain certain buffs according to their ideology.
 * When Folkpartiet gains a majority an event fires that gives Sweden an idea that's named Folkpartiets regering that gain certain buffs according to their ideology.
+
+## Parties and the focus tree
+
+Changed:
+
+* Multiple communism and fascism focus so they don't screw over our newly built political system
+
+Added the following to the focus tree:
+
+* A new democratic branch where the right-leaning called Svensk Samling or Högerpartiet leads Sweden through the second world war, they want a better industry and a military that can withstand.
+
+## Ideas
+
+Changed:
+
+* Multiple communism and fascism ideas so they don't screw over our newly built political system
+
+Added the following ideas:
+
+* Bagge Swedish works 1 & 2
+* Bagge Freedom and security 1 & 2
+
+## Icons
+
+Fixed the icon for Lindholmarnas focus
