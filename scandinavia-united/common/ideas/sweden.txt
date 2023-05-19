@@ -610,6 +610,62 @@ ideas = {
 			}
 		}
 
+		# Bonde
+		SWE_isolationalist_bylaws = {
+			allowed = {
+				always = no
+			}
+
+			picture = anti_soviet_pact
+
+			modifier = {
+				improve_relations_maintain_cost_factor = 0.5
+				trade_opinion_factor = -0.1
+				consumer_goods_factor = -0.1
+				stability_factor = -0.1
+			}
+		}
+
+		SWE_liberal_bylaws = {
+			allowed = {
+				always = no
+			}
+
+			picture = anti_soviet_pact
+
+			modifier = {
+				trade_opinion_factor = 0.1
+				consumer_goods_factor = 0.1
+				stability_factor = 0.15
+			}
+		}
+
+		SWE_offence_question = {
+			allowed = {
+				always = no
+			}
+
+			picture = anti_soviet_pact
+
+			modifier = {
+				trade_opinion_factor = -0.1
+				conscription_factor = 0.1
+			}
+		}
+
+		SWE_defence_question = {
+			allowed = {
+				always = no
+			}
+
+			picture = anti_soviet_pact
+
+			modifier = {
+				trade_opinion_factor = 0.1
+				forced_surrender_limit = 0.25
+			}
+		}
+
 		#
 		# Parliament
 		#

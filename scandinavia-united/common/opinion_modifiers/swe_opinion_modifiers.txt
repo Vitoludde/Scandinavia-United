@@ -30,4 +30,20 @@ opinion_modifiers = {
 	permittent_trafik_allies = {
 		value = -50
 	}
+
+	right_leaning_axis = {
+		value = 100
+	}
+
+	right_leaning_allies = {
+		value = -50
+	}
+
+	allied_leaning_axis = {
+		value = -50
+	}
+
+	allied_leaning_allies = {
+		value = 100
+	}
 }

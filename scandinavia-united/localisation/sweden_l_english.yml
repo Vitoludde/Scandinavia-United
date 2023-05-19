@@ -151,6 +151,38 @@
   SWE_pehrsson:0 "Government with Axel Pehrsson-Bramstorp"
   SWE_pehrsson_trigger_tooltip:0 "Bondeförbundet is the largest party."
 
+  SWE_aftermath_of_the_kohandel:0 "Aftermath of the Kohandel"
+  SWE_aftermath_of_the_kohandel_desc:0 "The kohandel trade was a famous event between the parties Bondeförbundet and Socialdemokraterna. Now that we are in power we can use this event to make sure that our own politics are what the majority of the people follow"
+
+  SWE_develop_the_countryside:0 "Develop the countryside"
+  SWE_develop_the_countryside_desc:0 "The countryside is vast! Why souldn't we develop it?"
+
+  SWE_agriculture:0 "Agricultural focus"
+  SWE_agriculture_desc:0 "The farmers are what drives our economy forward! Without farmers we won't have any food and we will all starve!"
+
+  SWE_isolationalist_party_bylaws:0 "Isolationalist Bylaws"
+  SWE_isolationalist_party_bylaws_desc:0 "Bondeförbundet has had a xenophobic attitude to other people than Swedes, this has saved our economy, it's time to enforce this!"
+
+  SWE_liberal_party_bylaws:0 "Liberal Bylaws"
+  SWE_liberal_party_bylaws_desc:0 "Bondeförbundet has had a xenophobic attitude to other people than Swedes. This is an outraging polical stance! Everyone are humans so we can't be xenophobic!"
+
+  SWE_swedens_best_intent:0 "For Swedens best"
+  SWE_swedens_best_intent_desc:0 "We need to safeguard Swedens best!"
+
+  SWE_the_swedes_best_intent:0 "For Swedes best"
+  SWE_the_swedes_best_intent_desc:0 "We need to safeguard us Swedes best!"
+
+  SWE_defence_question:0 "Defence question"
+  SWE_defence_question_desc:0 "The question between defence or offence has been a thorn in the side!"
+
+  SWE_offensive_question:0 "Defence question"
+  SWE_offensive_question_desc:0 "The question between defence or offence has been a thorn in the side!"
+
+  SWE_right_leanings:0 "Right leanings"
+  SWE_right_leanings_desc:0 "We have right leanings and it's time to utilize it!"
+
+  SWE_allied_leanings:0 "Allied leanings"
+  SWE_allied_leanings_desc:0 "We have allied leanings and it's time to utilize it!"
 
   # Neutrality
   SWE_support_the_monarchists:0 "Give support to the monarcists"
@@ -298,6 +330,11 @@
   pro_axis_censoring_allied:0 "Pro-Axis Censoring"
   pro_axis_censoring_axis:0 "Pro-Axis Censoring"
 
+  right_leaning_axis:0 "Right leaning"
+  right_leaning_allies:0 "Right leaning"
+  allied_leaning_axis:0 "Allied leaning"
+  allied_leaning_allies:0 "Allied leaning"
+
   #
   # Ideas
   #
@@ -350,6 +387,8 @@
   bagge_freedom_and_defence_2:0 "Frihet och försvar"
   bagge_freedom_and_defence_desc:0 "Arbete och självförsörjning - Rättsordningens värnande - Frihet och försvar - Välj med de §Bborgerliga§!"
 
+  # Pehrsson
+  SWE_offence_question:0 "Offence question"
 
   #
   # IDEAS PARLIAMENT PART

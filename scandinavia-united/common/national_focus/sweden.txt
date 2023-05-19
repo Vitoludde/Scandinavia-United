@@ -2025,7 +2025,7 @@ focus_tree = {
 		#	<trigger>
 		#}
 
-		x = 19
+		x = 17
 		y = 0
 
 		mutually_exclusive = {
@@ -2088,6 +2088,723 @@ focus_tree = {
 			add_war_support = -0.1
 			remove_ideas = {
 				riksdag_non_supportive_army
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = SWE_aftermath_of_the_kohandel
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 10
+
+		#allow_branch = {
+		#	<trigger>
+		#}
+
+		x = -1
+		y = 1
+		relative_position_id = SWE_pehrsson
+
+
+		prerequisite = {
+			focus = SWE_pehrsson
+		}
+
+		available = {
+		}
+
+		bypass = {
+			
+		}
+
+		search_filters = {  }
+
+		#select_effect = {
+		#	<command>
+		#}
+		
+		completion_reward = {
+			add_political_power = 50
+			add_war_support = -0.1
+			add_stability = 0.1
+		}
+		
+		complete_tooltip = {
+			add_political_power = 50
+			add_war_support = -0.1
+			add_stability = 0.1
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = SWE_develop_the_countryside
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 10
+
+		#allow_branch = {
+		#	<trigger>
+		#}
+
+		x = 0
+		y = 1
+		relative_position_id = SWE_aftermath_of_the_kohandel
+
+
+		prerequisite = {
+			focus = SWE_aftermath_of_the_kohandel
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		search_filters = {  }
+
+		#select_effect = {
+		#	<command>
+		#}
+		
+		completion_reward = {
+			add_political_power = 50
+			666 = {
+				add_building_construction = {
+				    type = industrial_complex
+				    level = 1
+				    instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			38 = {
+				add_building_construction = {
+				    type = industrial_complex
+				    level = 1
+				    instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+		
+		complete_tooltip = {
+			add_political_power = 50
+			666 = {
+				add_building_construction = {
+				    type = industrial_complex
+				    level = 1
+				    instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			38 = {
+				add_building_construction = {
+				    type = industrial_complex
+				    level = 1
+				    instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = SWE_agriculture
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 10
+
+		#allow_branch = {
+		#	<trigger>
+		#}
+
+		x = 0
+		y = 1
+		relative_position_id = SWE_develop_the_countryside
+
+
+		prerequisite = {
+			focus = SWE_develop_the_countryside
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		search_filters = {  }
+
+		#select_effect = {
+		#	<command>
+		#}
+		
+		completion_reward = {
+			add_political_power = 50
+			139 = {
+				add_building_construction = {
+				    type = industrial_complex
+				    level = 1
+				    instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			138 = {
+				add_building_construction = {
+				    type = industrial_complex
+				    level = 1
+				    instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+		
+		complete_tooltip = {
+			add_political_power = 50
+			139 = {
+				add_building_construction = {
+				    type = industrial_complex
+				    level = 1
+				    instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			138 = {
+				add_building_construction = {
+				    type = industrial_complex
+				    level = 1
+				    instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = SWE_isolationalist_party_bylaws
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 10
+
+		#allow_branch = {
+		#	<trigger>
+		#}
+
+		x = 1
+		y = 1
+		relative_position_id = SWE_pehrsson
+
+
+		prerequisite = {
+			focus = SWE_pehrsson
+		}
+
+		mutually_exclusive = {
+			focus = SWE_liberal_party_bylaws
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		search_filters = {  }
+
+		#select_effect = {
+		#	<command>
+		#}
+		
+		completion_reward = {
+			add_political_power = -150
+			add_war_support = -0.25
+
+			set_temp_variable = { temp_member = 3 }
+			set_temp_variable = { temp_seats = 10 }
+
+            sweden_modify_parliament_seat = yes
+
+			custom_effect_tooltip = bonde_add_ten
+
+			set_temp_variable = { temp_member = 7 }
+			set_temp_variable = { temp_seats = 5 }
+
+            sweden_modify_parliament_seat = yes
+
+			custom_effect_tooltip = nsap_add_five
+		}
+		
+		complete_tooltip = {
+			add_political_power = -150
+			add_war_support = -0.25
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = SWE_swedens_best_intent
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 10
+
+		#allow_branch = {
+		#	<trigger>
+		#}
+
+		x = 0
+		y = 1
+		relative_position_id = SWE_isolationalist_party_bylaws
+
+
+		prerequisite = {
+			focus = SWE_isolationalist_party_bylaws
+		}
+
+		available = {
+		}
+
+		bypass = {
+			
+		}
+
+		search_filters = {  }
+
+		#select_effect = {
+		#	<command>
+		#}
+		
+		completion_reward = {
+			add_political_power = -50
+			add_stability = -0.1
+			add_war_support = 0.1
+			add_ideas = {
+				SWE_isolationalist_bylaws
+			}
+		}
+		
+		complete_tooltip = {
+			add_political_power = -50
+			add_stability = -0.1
+			add_war_support = 0.1
+			add_ideas = {
+				SWE_isolationalist_bylaws
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = SWE_liberal_party_bylaws
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 10
+
+		#allow_branch = {
+		#	<trigger>
+		#}
+
+		x = 3
+		y = 1
+		relative_position_id = SWE_pehrsson
+
+
+		prerequisite = {
+			focus = SWE_pehrsson
+		}
+
+		mutually_exclusive = {
+			focus = SWE_isolationalist_party_bylaws
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		search_filters = {  }
+
+		#select_effect = {
+		#	<command>
+		#}
+		
+		completion_reward = {
+			add_political_power = 50
+			set_temp_variable = { temp_member = 3 }
+			set_temp_variable = { temp_seats = 10 }
+
+            sweden_modify_parliament_seat = yes
+
+			custom_effect_tooltip = bonde_add_ten
+
+			set_temp_variable = { temp_member = 4 }
+			set_temp_variable = { temp_seats = 5 }
+
+            sweden_modify_parliament_seat = yes
+
+			custom_effect_tooltip = folk_add_five
+		}
+		
+		complete_tooltip = {
+			add_political_power = 50
+			set_temp_variable = { temp_member = 3 }
+			set_temp_variable = { temp_seats = 10 }
+
+            sweden_modify_parliament_seat = yes
+
+			custom_effect_tooltip = bonde_add_ten
+
+			set_temp_variable = { temp_member = 4 }
+			set_temp_variable = { temp_seats = 5 }
+
+            sweden_modify_parliament_seat = yes
+
+			custom_effect_tooltip = folk_add_five
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = SWE_the_swedes_best_intent
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 10
+
+		#allow_branch = {
+		#	<trigger>
+		#}
+
+		x = 0
+		y = 1
+		relative_position_id = SWE_liberal_party_bylaws
+
+
+		prerequisite = {
+			focus = SWE_liberal_party_bylaws
+		}
+
+		available = {
+		}
+
+		bypass = {
+			
+		}
+
+		search_filters = {  }
+
+		#select_effect = {
+		#	<command>
+		#}
+		
+		completion_reward = {
+			add_political_power = -50
+			add_stability = -0.1
+			add_war_support = 0.1
+			add_ideas = {
+				SWE_liberal_bylaws
+			}
+		}
+		
+		complete_tooltip = {
+			add_political_power = -50
+			add_stability = -0.1
+			add_war_support = 0.1
+			add_ideas = {
+				SWE_liberal_bylaws
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = SWE_defence_question
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 10
+
+		#allow_branch = {
+		#	<trigger>
+		#}
+
+		x = 2
+		y = 1
+		relative_position_id = SWE_swedens_best_intent
+
+
+		prerequisite = {
+			focus = SWE_swedens_best_intent
+			focus = SWE_the_swedes_best_intent
+		}
+
+		mutually_exclusive = {
+			focus = SWE_offensive_question
+		}
+
+		available = {
+		}
+
+		bypass = {
+			
+		}
+
+		search_filters = {  }
+
+		#select_effect = {
+		#	<command>
+		#}
+		
+		completion_reward = {
+			add_stability = 0.1
+			add_war_support = -0.1
+			add_ideas = {
+				SWE_defence_question
+			}
+		}
+		
+		complete_tooltip = {
+			add_stability = 0.1
+			add_war_support = -0.1
+			add_ideas = {
+				SWE_defence_question
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = SWE_offensive_question
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 10
+
+		#allow_branch = {
+		#	<trigger>
+		#}
+
+		x = 0
+		y = 1
+		relative_position_id = SWE_swedens_best_intent
+
+
+		prerequisite = {
+			focus = SWE_swedens_best_intent
+			focus = SWE_the_swedes_best_intent
+		}
+
+		mutually_exclusive = {
+			focus = SWE_defence_question
+		}
+
+		available = {
+		}
+
+		bypass = {
+			
+		}
+
+		search_filters = {  }
+
+		#select_effect = {
+		#	<command>
+		#}
+		
+		completion_reward = {
+			add_stability = -0.1
+			add_war_support = 0.1
+			add_ideas = {
+				SWE_offence_question
+			}
+		}
+		
+		complete_tooltip = {
+			add_stability = -0.1
+			add_war_support = 0.1
+			add_ideas = {
+				SWE_offence_question
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = SWE_right_leanings
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 10
+
+		#allow_branch = {
+		#	<trigger>
+		#}
+
+		x = 0
+		y = 1
+		relative_position_id = SWE_offensive_question
+
+
+		prerequisite = {
+			focus = SWE_offensive_question
+			focus = SWE_defence_question
+		}
+
+		mutually_exclusive = {
+			focus = SWE_allied_leanings
+		}
+
+		available = {
+		}
+
+		bypass = {
+			
+		}
+
+		search_filters = {  }
+
+		#select_effect = {
+		#	<command>
+		#}
+		
+		completion_reward = {
+			reverse_add_opinion_modifier = {
+				target = GER
+				modifier = right_leaning_axis
+			}
+			reverse_add_opinion_modifier = {
+				target = ENG
+				modifier = right_leaning_allies
+			}
+			reverse_add_opinion_modifier = {
+				target = FRA
+				modifier = right_leaning_allies
+			}
+		}
+		
+		complete_tooltip = {
+			reverse_add_opinion_modifier = {
+				target = GER
+				modifier = right_leaning_axis
+			}
+			reverse_add_opinion_modifier = {
+				target = ENG
+				modifier = right_leaning_allies
+			}
+			reverse_add_opinion_modifier = {
+				target = FRA
+				modifier = right_leaning_allies
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = SWE_allied_leanings
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 10
+
+		#allow_branch = {
+		#	<trigger>
+		#}
+
+		x = 2
+		y = 1
+		relative_position_id = SWE_offensive_question
+
+
+		prerequisite = {
+			focus = SWE_offensive_question
+			focus = SWE_defence_question
+		}
+
+		mutually_exclusive = {
+			focus = SWE_right_leanings
+		}
+
+		available = {
+		}
+
+		bypass = {
+			
+		}
+
+		search_filters = {  }
+
+		#select_effect = {
+		#	<command>
+		#}
+		
+		completion_reward = {
+			reverse_add_opinion_modifier = {
+				target = GER
+				modifier = allied_leaning_axis
+			}
+			reverse_add_opinion_modifier = {
+				target = ENG
+				modifier = allied_leaning_allies
+			}
+			reverse_add_opinion_modifier = {
+				target = FRA
+				modifier = allied_leaning_allies
+			}
+		}
+		
+		complete_tooltip = {
+			reverse_add_opinion_modifier = {
+				target = GER
+				modifier = allied_leaning_axis
+			}
+			reverse_add_opinion_modifier = {
+				target = ENG
+				modifier = allied_leaning_allies
+			}
+			reverse_add_opinion_modifier = {
+				target = FRA
+				modifier = allied_leaning_allies
 			}
 		}
 
