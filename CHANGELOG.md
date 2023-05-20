@@ -42,6 +42,17 @@ Added the following ideas:
 ## Icons
 
 Fixed the icon for Lindholmarnas focus
+Added following Idea/National spirit icons:
+
+* Socialist government
+* Högern government
+* Bondeförbundet government (Uses modern day Centerpartiet)
+* Folkpartiet government (Uses an older variant of modern day Liberalerna)
+
+## Balancing
+
+Changed certain ideas so they have less modifiers
+Changed amount of resources gained from expanding northern mining
 
 ## ETC
 

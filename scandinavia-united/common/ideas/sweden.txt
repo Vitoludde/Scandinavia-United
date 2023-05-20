@@ -109,6 +109,39 @@ ideas = {
 			}
 		}
 
+		SWE_recent_socialreforms = {
+			
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_constitutional_guarantees
+			
+			modifier = {
+				political_advisor_cost_factor = -0.1
+				economy_cost_factor = -0.1
+				political_power_gain = -0.5
+			}
+		}
+
+		SWE_socialreforms = {
+			
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_constitutional_guarantees
+			
+			modifier = {
+				political_advisor_cost_factor = -0.1
+				economy_cost_factor = -0.1
+			}
+		}
+
 		c_bureau = {
 
 			allowed = {
@@ -133,7 +166,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = generic_constitutional_guarantees
+			picture = generic_pp_unity_bonus
 
 			modifier = {
 				drift_defence_factor = 0.5
@@ -719,12 +752,9 @@ ideas = {
 				check_variable = { sweden_largest_party = 1 }
 			}
 
-			picture = generic_constitutional_guarantees
-
 			modifier = {
-				consumer_goods_factor = -0.1
-				political_power_factor = 0.1
-				stability_factor = 0.2
+				consumer_goods_factor = -0.05
+				political_power_factor = 0.05
 			}
 
 			rule = {
@@ -744,12 +774,10 @@ ideas = {
 				check_variable = { sweden_largest_party = 4 }
 			}
 
-			picture = generic_constitutional_guarantees
-
 			modifier = {
-				production_factory_efficiency_gain_factor = 0.25
-				production_factory_max_efficiency_factor = 0.25				
-				production_speed_arms_factory_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.15
+				production_factory_max_efficiency_factor = 0.15				
+				production_speed_arms_factory_factor = 0.05
 			}
 
 			rule = {
@@ -759,7 +787,7 @@ ideas = {
 				can_force_government = no
 				can_join_factions = yes
 				can_only_justify_war_on_threat_country = yes
-				can_puppet = no
+				can_puppet = yes
 				can_join_opposite_factions = no
 			}
 		}
@@ -769,12 +797,10 @@ ideas = {
 				check_variable = { sweden_largest_party = 3 }
 			}
 
-			picture = generic_constitutional_guarantees
-
 			modifier = {
-				production_speed_buildings_factor = 0.15
-				stability_factor = 0.1
-				war_stability_factor = -0.1
+				production_speed_buildings_factor = 0.075
+				stability_factor = 0.05
+				war_stability_factor = -0.15
 			}
 
 			rule = {
@@ -793,14 +819,12 @@ ideas = {
 			allowed = {
 				check_variable = { sweden_largest_party = 2 }
 			}
-
-			picture = generic_constitutional_guarantees
-
+			
 			modifier = {
-				production_speed_buildings_factor = 0.15
-				stability_factor = 0.1
+				production_speed_buildings_factor = 0.05
+				stability_factor = 0.05
 				consumer_goods_factor = -0.05
-				research_speed_factor = 0.05
+				research_speed_factor = 0.025
 			}
 
 			rule = {

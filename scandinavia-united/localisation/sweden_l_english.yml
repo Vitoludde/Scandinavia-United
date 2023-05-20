@@ -389,6 +389,11 @@
 
   # Pehrsson
   SWE_offence_question:0 "Offence question"
+  SWE_isolationalist_bylaws:0 "Isolationalist bylaws"
+  SWE_liberal_bylaws:0 "Liberal bylaws"
+
+  # Hansson
+  SWE_recent_socialreforms:0 "Recent socialreforms"
 
   #
   # IDEAS PARLIAMENT PART

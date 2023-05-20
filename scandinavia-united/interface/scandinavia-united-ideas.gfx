@@ -1,0 +1,18 @@
+spriteTypes = {
+    spriteType = {
+        name = GFX_idea_SWE_socialdemocrat_regering
+        texturefile = gfx/interface/ideas/swe_idea_icon_sap.dds
+    }
+    spriteType = {
+        name = GFX_idea_SWE_hoger_regering
+        texturefile = gfx/interface/ideas/swe_idea_hoger_regering.dds
+    }
+    spriteType = {
+        name = GFX_idea_SWE_bonde_regering
+        texturefile = gfx/interface/ideas/swe_idea_bonde_regering.dds
+    }
+    spriteType = {
+        name = GFX_idea_SWE_folk_regering
+        texturefile = gfx/interface/ideas/swe_idea_folk_regering.dds
+    }
+}

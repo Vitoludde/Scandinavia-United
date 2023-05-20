@@ -229,7 +229,7 @@ sweden_parliament_gui_decision_category = {
             clr_country_flag = active_parliament_propaganda_2
             
             set_temp_variable = { temp_member = 3 }
-			set_temp_variable = { temp_seats = 10 }
+			set_temp_variable = { temp_seats = 100 }
 
             sweden_modify_parliament_seat = yes
         }
@@ -297,7 +297,7 @@ sweden_parliament_gui_decision_category = {
             clr_country_flag = active_parliament_propaganda_2
             
             set_temp_variable = { temp_member = 4 }
-			set_temp_variable = { temp_seats = 10 }
+			set_temp_variable = { temp_seats = 100 }
 
             sweden_modify_parliament_seat = yes
         }

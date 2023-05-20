@@ -184,6 +184,9 @@ focus_tree = {
 			
 			add_stability = 0.2
 			add_war_support = -0.1
+			add_ideas = {
+				SWE_recent_socialreforms
+			}
 		}
 		
 		complete_tooltip = {
@@ -198,6 +201,9 @@ focus_tree = {
 			
 			add_stability = 0.2
 			add_war_support = -0.1
+			add_ideas = {
+				SWE_recent_socialreforms
+			}
 		}
 
 		ai_will_do = {
@@ -438,6 +444,10 @@ focus_tree = {
 			add_political_power = 200
 			add_stability = 0.25
 			add_war_support = 0.2
+			swap_ideas = {
+				remove_idea = SWE_recent_socialreforms
+				add_idea = SWE_socialreforms
+			}
 		}
 		
 		complete_tooltip = {
@@ -2044,7 +2054,7 @@ focus_tree = {
 			custom_trigger_tooltip = {
 				tooltip = SWE_pehrsson_trigger_tooltip
 				check_variable = {
-					sweden_largest_party = 3
+					sweden_largest_party = 2
 				}
 			}
 		}
@@ -3525,11 +3535,6 @@ focus_tree = {
 			add_stability = 0.1
 			add_war_support = 0.2
 
-			add_popularity = {
-				ideology = neutrality
-				popularity = 0.5
-			}
-
 			custom_effect_tooltip = SWE_remove_riksdag
 			SWE = {
 				set_variable = { swedish_parliament_closed = 1 }
@@ -3544,7 +3549,8 @@ focus_tree = {
 			add_political_power = 200
 			add_stability = 0.1
 			add_war_support = 0.2
-			custom_effect_tooltip = SWE_consolidate_power_tt
+
+			custom_effect_tooltip = SWE_remove_riksdag
 			SWE = {
 				set_variable = { swedish_parliament_closed = 1 }
 			}
@@ -5999,7 +6005,7 @@ focus_tree = {
 		completion_reward = {
 			add_resource = {
 			    type = steel
-			    amount = 50
+			    amount = 20
 			    state = 38
 			}
 			38 = {
@@ -6011,12 +6017,12 @@ focus_tree = {
 			}
 			add_resource = {
 			    type = steel
-			    amount = 50
+			    amount = 25
 			    state = 666
 			}
 			add_resource = {
 			    type = chromium
-			    amount = 25
+			    amount = 10
 			    state = 666
 			}
 			666 = {
@@ -6031,7 +6037,7 @@ focus_tree = {
 		complete_tooltip = {
 			add_resource = {
 			    type = steel
-			    amount = 50
+			    amount = 20
 			    state = 38
 			}
 			38 = {
@@ -6043,12 +6049,12 @@ focus_tree = {
 			}
 			add_resource = {
 			    type = steel
-			    amount = 50
+			    amount = 25
 			    state = 666
 			}
 			add_resource = {
 			    type = chromium
-			    amount = 25
+			    amount = 10
 			    state = 666
 			}
 			666 = {
